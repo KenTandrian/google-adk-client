@@ -12,26 +12,29 @@ A TypeScript client library for the Google ADK (Agent Development Kit).
 ## Installation
 
 ```bash
-npm install @google-adk/client
+npm install @kentandrian/google-adk
 ```
 
 ## Usage
 
 ### `AdkClient`
 
-The core of the library is the `AdkClient` class. It provides methods for all the Google ADK agent API endpoints.
+The core of the library is the `AdkClient` class. It provides methods for all the Google ADK agent API endpoints, organized into logical groups.
 
 ```typescript
-import { AdkClient } from "@google-adk/client";
+import { AdkClient } from "@kentandrian/google-adk";
+
+// The client can be configured with environment variables:
+// process.env.ADK_BASE_URL = "https://my-adk-agent.example.com";
+// process.env.ADK_APP_NAME = "my-app-name";
 
 const client = new AdkClient({
-  baseUrl: "https://my-adk-agent.example.com",
-  auth: {
-    userId: "user-123",
-  },
+  userId: "user-123",
 });
 
-const session = await client.getSession("my-session-id");
+// Access API groups
+const sessions = await client.sessions.list();
+const artifacts = await client.artifacts.listNames("session-456");
 ```
 
 ### Vercel AI SDK Connectors
@@ -44,8 +47,7 @@ This connector is a function that simplifies handling streaming responses in Nex
 
 ```typescript
 // src/app/api/chat/route.ts
-import { AdkClient } from "@google-adk/client";
-import { createAdkAiSdkStream } from "@google-adk/client/ai-sdk/server";
+import { AdkClient, createAdkAiSdkStream } from "@kentandrian/google-adk";
 import { auth } from "@/lib/auth";
 
 export async function POST(req: Request) {
@@ -56,27 +58,30 @@ export async function POST(req: Request) {
     return new Response("Unauthorized", { status: 401 });
   }
 
-  const client = new AdkClient({ userId: session.user.id });
-  const adkResponse = await client.runSse({ messages });
+  const client = new AdkClient({
+    baseUrl: "https://my-adk-agent.example.com",
+    appName: "my-app-name",
+    userId: session.user.id,
+  });
+
+  const adkResponse = await client.runSse("session-123", messages);
   return createAdkAiSdkStream(adkResponse);
 }
 ```
 
-#### 2. Client-Side Connector (`ChatTransport`)
+#### 2. Client-Side Connector (`AdkChatTransport`)
 
-This connector is a class that implements the `ChatTransport` interface from the `ai/react` package. It allows the `useChat` hook to communicate directly with the Google ADK agent from the client-side.
+This connector is a class that extends the `HttpChatTransport` from the `ai` package. It allows the `useChat` hook to communicate directly with the Google ADK agent from the client-side.
 
 ```typescript
 // Example usage in a React component
 import { useChat } from "@ai-sdk/react";
-import { AdkClient } from "@google-adk/client";
-import { AdkChatTransport } from "@google-adk/client/ai-sdk/client";
+import { AdkClient, AdkChatTransport } from "@kentandrian/google-adk";
 
 const client = new AdkClient({
   baseUrl: "https://my-adk-agent.example.com",
-  auth: {
-    userId: "user-123",
-  },
+  appName: "my-app-name",
+  userId: "user-123",
 });
 
 const transport = new AdkChatTransport(client);
