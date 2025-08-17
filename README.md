@@ -47,7 +47,8 @@ This connector is a function that simplifies handling streaming responses in Nex
 
 ```typescript
 // src/app/api/chat/route.ts
-import { AdkClient, createAdkAiSdkStream } from "@kentandrian/google-adk";
+import { AdkClient } from "@kentandrian/google-adk";
+import { createAdkAiSdkStream } from "@kentandrian/google-adk/ai-sdk";
 import { auth } from "@/lib/auth";
 
 export async function POST(req: Request) {
@@ -76,7 +77,8 @@ This connector is a class that extends the `HttpChatTransport` from the `ai` pac
 ```typescript
 // Example usage in a React component
 import { useChat } from "@ai-sdk/react";
-import { AdkClient, AdkChatTransport } from "@kentandrian/google-adk";
+import { AdkClient } from "@kentandrian/google-adk";
+import { AdkChatTransport } from "@kentandrian/google-adk/ai-sdk";
 
 const client = new AdkClient({
   baseUrl: "https://my-adk-agent.example.com",
