@@ -1,0 +1,34 @@
+{
+  "name": "@kentandrian/google-adk",
+  "version": "0.1.0",
+  "description": "A TypeScript client library for the Google ADK (Agent Development Kit).",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KenTandrian/google-adk-client.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KenTandrian/google-adk-client/issues"
+  },
+  "homepage": "https://github.com/KenTandrian/google-adk-client#readme",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "ai": "^5.0.15",
+    "typescript": "^5.9.2"
+  },
+  "peerDependencies": {
+    "ai": "^5.0.15"
+  }
+}
