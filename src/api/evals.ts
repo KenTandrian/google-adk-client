@@ -1,9 +1,9 @@
-import { ApiClient } from "./sessions";
-import {
+import type {
   AdkGetEvalResponse,
   AdkGetEvalResultResponse,
   AdkRunEvalResponse,
-} from "./types";
+  ApiClient,
+} from "@/types";
 
 export class Evals {
   private client: ApiClient;

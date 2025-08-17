@@ -1,12 +1,12 @@
 import { UIMessage } from "ai";
 
-import { Apps } from "./apps";
-import { Artifacts } from "./artifacts";
-import { Debug } from "./debug";
-import { Evals } from "./evals";
-import { Events } from "./events";
-import { Sessions } from "./sessions";
-import { AdkAgentRunSsePayload } from "./types";
+import { Apps } from "@/api/apps";
+import { Artifacts } from "@/api/artifacts";
+import { Debug } from "@/api/debug";
+import { Evals } from "@/api/evals";
+import { Events } from "@/api/events";
+import { Sessions } from "@/api/sessions";
+import { AdkAgentRunSsePayload } from "@/types";
 
 export interface AdkClientOptions {
   appName?: string;

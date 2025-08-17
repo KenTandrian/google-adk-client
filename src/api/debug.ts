@@ -1,4 +1,4 @@
-import { ApiClient } from "./sessions";
+import type { ApiClient } from "@/types";
 
 export class Debug {
   private client: ApiClient;

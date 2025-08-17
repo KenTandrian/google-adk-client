@@ -1,5 +1,4 @@
-import { ApiClient } from "./sessions";
-import { AdkAgentPart } from "./types";
+import type { AdkAgentPart, ApiClient } from "@/types";
 
 export class Artifacts {
   private client: ApiClient;

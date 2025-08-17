@@ -1,11 +1,4 @@
-import { AdkAgentSession } from "./types";
-
-export interface ApiClient {
-  appName: string;
-  userId: string;
-  requestJson: <T>(endpoint: string, options?: RequestInit) => Promise<T>;
-  request: (endpoint: string, options?: RequestInit) => Promise<Response>;
-}
+import type { AdkAgentSession, ApiClient } from "@/types";
 
 export class Sessions {
   private client: ApiClient;

@@ -1,4 +1,4 @@
-import { ApiClient } from "./sessions";
+import type { ApiClient } from "@/types";
 
 export class Apps {
   private client: ApiClient;
