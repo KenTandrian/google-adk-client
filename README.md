@@ -104,7 +104,7 @@ To get started with development, clone the repository and install the dependenci
 ```bash
 git clone https://github.com/KenTandrian/google-adk-client.git
 cd google-adk-client
-npm install
+pnpm install
 ```
 
 ### Testing
@@ -112,5 +112,5 @@ npm install
 To run the tests, use the following command:
 
 ```bash
-npm test
+pnpm test
 ```

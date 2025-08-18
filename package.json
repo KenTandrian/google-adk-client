@@ -2,12 +2,13 @@
   "name": "@kentandrian/google-adk",
   "version": "0.1.1",
   "description": "A TypeScript client library for the Google ADK (Agent Development Kit).",
+  "packageManager": "pnpm@10.14.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "pnpm run build"
   },
   "exports": {
     ".": "./dist/index.js",
