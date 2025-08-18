@@ -13,8 +13,14 @@
     "test": "vitest"
   },
   "exports": {
-    ".": "./dist/index.js",
-    "./ai-sdk": "./dist/ai-sdk/index.js"
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./ai-sdk": {
+      "import": "./dist/ai-sdk/index.js",
+      "types": "./dist/ai-sdk/index.d.ts"
+    }
   },
   "files": [
     "dist"
