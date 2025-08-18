@@ -3,7 +3,7 @@ import type {
   AdkGetEvalResultResponse,
   AdkRunEvalResponse,
   ApiClient,
-} from "@/types";
+} from "../types";
 
 export class Evals {
   private client: ApiClient;

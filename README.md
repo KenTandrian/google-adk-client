@@ -49,7 +49,7 @@ This connector is a function that simplifies handling streaming responses in Nex
 // src/app/api/chat/route.ts
 import { AdkClient } from "@kentandrian/google-adk";
 import { createAdkAiSdkStream } from "@kentandrian/google-adk/ai-sdk";
-import { auth } from "@/lib/auth";
+import { auth } from "lib/auth";
 
 export async function POST(req: Request) {
   const { messages } = await req.json();

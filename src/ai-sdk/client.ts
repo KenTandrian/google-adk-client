@@ -5,8 +5,8 @@ import {
   type UIMessageChunk,
 } from "ai";
 
-import { generateUUID } from "@/utils";
 import type { AdkClient } from "..";
+import { generateUUID } from "../utils";
 
 /**
  * A transport class for handling chat messages in the ADK client.

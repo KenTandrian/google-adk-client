@@ -1,4 +1,4 @@
-import type { ApiClient } from "@/types";
+import type { ApiClient } from "../types";
 
 export class Events {
   private client: ApiClient;

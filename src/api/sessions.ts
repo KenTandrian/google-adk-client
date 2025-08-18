@@ -1,4 +1,4 @@
-import type { AdkAgentSession, ApiClient } from "@/types";
+import type { AdkAgentSession, ApiClient } from "../types";
 
 export class Sessions {
   private client: ApiClient;

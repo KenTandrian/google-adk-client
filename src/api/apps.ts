@@ -1,4 +1,4 @@
-import type { ApiClient } from "@/types";
+import type { ApiClient } from "../types";
 
 export class Apps {
   private client: ApiClient;
