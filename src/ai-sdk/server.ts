@@ -9,6 +9,7 @@ import { generateUUID } from "../utils";
  * with start and end markers.
  *
  * @param response - The response from the server containing the SSE stream.
+ * @param options - Optional parameters to customize the stream creation.
  * @throws Will throw an error if the response body is not available.
  * @returns A stream response that can be used to send messages to the UI.
  * @example
@@ -16,7 +17,19 @@ import { generateUUID } from "../utils";
  * const response = await client.runSse(sessionId, messages);
  * return createAdkAiSdkStream(response);
  */
-export function createAdkAiSdkStream(response: Response) {
+export function createAdkAiSdkStream(
+  response: Response,
+  options: {
+    createUIMessageStream?: Omit<
+      Parameters<typeof createUIMessageStream>[0],
+      "execute" | "generateId"
+    >;
+    createUIMessageStreamResponse?: Omit<
+      Parameters<typeof createUIMessageStreamResponse>[0],
+      "stream"
+    >;
+  } = {}
+) {
   if (!response.body) {
     throw new Error("No response body");
   }
@@ -68,6 +81,9 @@ export function createAdkAiSdkStream(response: Response) {
           id: messageId,
         });
       },
+      generateId: generateUUID,
+      ...options.createUIMessageStream,
     }),
+    ...options.createUIMessageStreamResponse,
   });
 }
