@@ -7,6 +7,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "lint": "biome check ./src",
+    "lint:fix": "biome check --write ./src",
     "prepublishOnly": "pnpm run build",
     "test": "vitest"
   },
@@ -29,10 +31,11 @@
   },
   "homepage": "https://github.com/KenTandrian/google-adk-client#readme",
   "devDependencies": {
-    "@types/node": "^24.3.0",
-    "ai": "^5.0.15",
-    "typescript": "^5.9.2",
-    "vitest": "^3.2.4"
+    "@biomejs/biome": "2.2.0",
+    "@types/node": "24.3.0",
+    "ai": "5.0.15",
+    "typescript": "5.9.2",
+    "vitest": "3.2.4"
   },
   "peerDependencies": {
     "ai": "^5.0.15"
