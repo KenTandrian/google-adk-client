@@ -1,5 +1,6 @@
-import { generateUUID } from "@/utils";
 import { createUIMessageStream, createUIMessageStreamResponse } from "ai";
+
+import { generateUUID } from "@/utils";
 
 /**
  * Creates a stream response for UI messages from an SSE stream.

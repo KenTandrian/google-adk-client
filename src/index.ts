@@ -1,4 +1,4 @@
-import { UIMessage } from "ai";
+import type { UIMessage } from "ai";
 
 import { Apps } from "@/api/apps";
 import { Artifacts } from "@/api/artifacts";
@@ -6,7 +6,7 @@ import { Debug } from "@/api/debug";
 import { Evals } from "@/api/evals";
 import { Events } from "@/api/events";
 import { Sessions } from "@/api/sessions";
-import { AdkAgentRunSsePayload } from "@/types";
+import type { AdkAgentRunSsePayload } from "@/types";
 
 export interface AdkClientOptions {
   appName?: string;
@@ -138,7 +138,7 @@ export class AdkClient {
       switch (part.type) {
         case "text":
           return { text: part.text };
-        case "file":
+        case "file": {
           const [_, base64Data] = part.url.split(",");
           return {
             inlineData: {
@@ -147,6 +147,7 @@ export class AdkClient {
               mimeType: part.mediaType,
             },
           };
+        }
         default:
           return {};
       }

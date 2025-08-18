@@ -1,12 +1,12 @@
 import {
-  ChatRequestOptions,
+  type ChatRequestOptions,
   HttpChatTransport,
-  UIMessage,
-  UIMessageChunk,
+  type UIMessage,
+  type UIMessageChunk,
 } from "ai";
 
 import { generateUUID } from "@/utils";
-import { AdkClient } from "..";
+import type { AdkClient } from "..";
 
 /**
  * A transport class for handling chat messages in the ADK client.
