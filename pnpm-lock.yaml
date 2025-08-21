@@ -15,8 +15,8 @@ importers:
         specifier: 24.3.0
         version: 24.3.0
       ai:
-        specifier: 5.0.15
-        version: 5.0.15(zod@3.25.76)
+        specifier: 5.0.19
+        version: 5.0.19(zod@3.25.76)
       typescript:
         specifier: 5.9.2
         version: 5.9.2
@@ -26,14 +26,14 @@ importers:
 
 packages:
 
-  '@ai-sdk/gateway@1.0.7':
-    resolution: {integrity: sha512-Athrq7OARuNc0iHZJP6InhSQ53tImCc990vMWyR1UHaZgPZJbXjKhIMiOj54F0I0Nlemx48V4fHYUTfLkJotnQ==}
+  '@ai-sdk/gateway@1.0.9':
+    resolution: {integrity: sha512-kIfwunyUUwyBLg2KQcaRtjRQ1bDuJYPNIs4CNWaWPpMZ4SV5cRL1hLGMuX4bhfCJYDXHMGvJGLtUK6+iAJH2ZQ==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4
 
-  '@ai-sdk/provider-utils@3.0.3':
-    resolution: {integrity: sha512-kAxIw1nYmFW1g5TvE54ZB3eNtgZna0RnLjPUp1ltz1+t9xkXJIuDT4atrwfau9IbS0BOef38wqrI8CjFfQrxhw==}
+  '@ai-sdk/provider-utils@3.0.4':
+    resolution: {integrity: sha512-/3Z6lfUp8r+ewFd9yzHkCmPlMOJUXup2Sx3aoUyrdXLhOmAfHRl6Z4lDbIdV0uvw/QYoBcVLJnvXN7ncYeS3uQ==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4
@@ -402,8 +402,8 @@ packages:
   '@vitest/utils@3.2.4':
     resolution: {integrity: sha512-fB2V0JFrQSMsCo9HiSq3Ezpdv4iYaXRG1Sx8edX3MwxfyNn83mKiGzOcH+Fkxt4MHxr3y42fQi1oeAInqgX2QA==}
 
-  ai@5.0.15:
-    resolution: {integrity: sha512-EX5hF+NVFm6R11mvdZRbg6eJEjyMlniI4/xOnyTh4VtDQ457lhIgi3kDGrHW3/qw9ELon9m2e7AK3g5z5sLwsQ==}
+  ai@5.0.19:
+    resolution: {integrity: sha512-I0yQO68Z1DdvjMc9be5scMYdsuBvpNneQDh6TUuUVlFXdCxAIm7yATnOaomfYTE2KaRDsrO+OSRPjJm4FSKioA==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4
@@ -647,13 +647,13 @@ packages:
 
 snapshots:
 
-  '@ai-sdk/gateway@1.0.7(zod@3.25.76)':
+  '@ai-sdk/gateway@1.0.9(zod@3.25.76)':
     dependencies:
       '@ai-sdk/provider': 2.0.0
-      '@ai-sdk/provider-utils': 3.0.3(zod@3.25.76)
+      '@ai-sdk/provider-utils': 3.0.4(zod@3.25.76)
       zod: 3.25.76
 
-  '@ai-sdk/provider-utils@3.0.3(zod@3.25.76)':
+  '@ai-sdk/provider-utils@3.0.4(zod@3.25.76)':
     dependencies:
       '@ai-sdk/provider': 2.0.0
       '@standard-schema/spec': 1.0.0
@@ -898,11 +898,11 @@ snapshots:
       loupe: 3.2.0
       tinyrainbow: 2.0.0
 
-  ai@5.0.15(zod@3.25.76):
+  ai@5.0.19(zod@3.25.76):
     dependencies:
-      '@ai-sdk/gateway': 1.0.7(zod@3.25.76)
+      '@ai-sdk/gateway': 1.0.9(zod@3.25.76)
       '@ai-sdk/provider': 2.0.0
-      '@ai-sdk/provider-utils': 3.0.3(zod@3.25.76)
+      '@ai-sdk/provider-utils': 3.0.4(zod@3.25.76)
       '@opentelemetry/api': 1.9.0
       zod: 3.25.76
 
