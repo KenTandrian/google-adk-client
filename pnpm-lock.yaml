@@ -15,8 +15,8 @@ importers:
         specifier: 24.3.0
         version: 24.3.0
       ai:
-        specifier: 5.0.28
-        version: 5.0.28(zod@3.25.76)
+        specifier: 5.0.29
+        version: 5.0.29(zod@3.25.76)
       typescript:
         specifier: 5.9.2
         version: 5.9.2
@@ -402,8 +402,8 @@ packages:
   '@vitest/utils@3.2.4':
     resolution: {integrity: sha512-fB2V0JFrQSMsCo9HiSq3Ezpdv4iYaXRG1Sx8edX3MwxfyNn83mKiGzOcH+Fkxt4MHxr3y42fQi1oeAInqgX2QA==}
 
-  ai@5.0.28:
-    resolution: {integrity: sha512-tnybAqoDFzuK6O1NOMHX1d/wH7Eug8y0H4l/Gl6swi8BYGtlTPDjniKnGYzgTpLTdpj7SI3qjZuomz7evph9+w==}
+  ai@5.0.29:
+    resolution: {integrity: sha512-jA/d6X5hn3r/PxgZjwzDUMJiEkLBIVVD2gcbpcT/FD4MSLxm5sn6fH1y2VFXVgBEd95mNzQ8ALQubysc6E8Y9g==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4
@@ -892,7 +892,7 @@ snapshots:
       loupe: 3.2.0
       tinyrainbow: 2.0.0
 
-  ai@5.0.28(zod@3.25.76):
+  ai@5.0.29(zod@3.25.76):
     dependencies:
       '@ai-sdk/gateway': 1.0.15(zod@3.25.76)
       '@ai-sdk/provider': 2.0.0
