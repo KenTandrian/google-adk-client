@@ -39,7 +39,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.3.2",
     "@types/node": "24.9.1",
-    "ai": "5.0.83",
+    "ai": "5.0.85",
     "typescript": "5.9.3",
     "vitest": "4.0.5"
   },
