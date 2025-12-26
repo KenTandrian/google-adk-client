@@ -39,6 +39,34 @@ export interface GroundingChunkWeb {
   uri?: string;
 }
 
+/** Metadata returned to client when grounding is enabled. */
+export interface GroundingMetadata {
+  /** Optional. Output only. Resource name of the Google Maps widget context token to be used with the PlacesContextElement widget to render contextual data. This is populated only for Google Maps grounding. This field is not supported in Gemini API. */
+  googleMapsWidgetContextToken?: string;
+  /** List of supporting references retrieved from specified grounding source. */
+  groundingChunks?: GroundingChunk[];
+  /** Optional. List of grounding support. */
+  groundingSupports?: GroundingSupport[];
+  /** Optional. Output only. Retrieval metadata. */
+  retrievalMetadata?: RetrievalMetadata;
+  /** Optional. Queries executed by the retrieval tools. This field is not supported in Gemini API. */
+  retrievalQueries?: string[];
+  /** Optional. Google search entry for the following-up web searches. */
+  searchEntryPoint?: SearchEntryPoint;
+  /** Optional. Output only. List of source flagging uris. This is currently populated only for Google Maps grounding. This field is not supported in Gemini API. */
+  sourceFlaggingUris?: GroundingMetadataSourceFlaggingUri[];
+  /** Optional. Web search queries for the following-up web search. */
+  webSearchQueries?: string[];
+}
+
+/** Source content flagging uri for a place or review. This is currently populated only for Google Maps grounding. This data type is not supported in Gemini API. */
+export interface GroundingMetadataSourceFlaggingUri {
+  /** A link where users can flag a problem with the source (place or review). */
+  flagContentUri?: string;
+  /** Id of the place or review. */
+  sourceId?: string;
+}
+
 /** Grounding support. */
 export interface GroundingSupport {
   /** Confidence score of the support references. Ranges from 0 to 1. 1 is the most confident. For Gemini 2.0 and before, this list must have the same size as the grounding_chunk_indices. For Gemini 2.5 and after, this list will be empty and should be ignored. */

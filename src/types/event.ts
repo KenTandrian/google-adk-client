@@ -1,7 +1,6 @@
 import { AdkAuthConfig } from "./auth";
 import { ToolConfirmation } from "./google-adk";
-import { Content } from "./google-genai";
-import { AdkAgentGroundingMetadata } from "./grounding";
+import { Content, GroundingMetadata } from "./google-genai";
 import { AdkAgentUsageMetadata } from "./usage";
 
 /**
@@ -9,7 +8,7 @@ import { AdkAgentUsageMetadata } from "./usage";
  */
 export interface AdkAgentEvent {
   content: Content;
-  groundingMetadata?: AdkAgentGroundingMetadata;
+  groundingMetadata?: GroundingMetadata;
   partial?: boolean;
   turnComplete?: boolean;
   errorCode?: string;
