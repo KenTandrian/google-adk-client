@@ -1,21 +1,15 @@
 import type {
-  GroundingChunkRetrievedContext,
-  GroundingChunkWeb,
+  GroundingChunk,
   GroundingSupport,
   RetrievalMetadata,
   SearchEntryPoint
 } from "./google-genai";
 
 export interface AdkAgentGroundingMetadata {
-  groundingChunks: AdkAgentGroundingChunk[];
+  groundingChunks: GroundingChunk[];
   groundingSupports: GroundingSupport[];
   retrievalMetadata: RetrievalMetadata;
   retrievalQueries: string[];
   searchEntryPoint: SearchEntryPoint;
   webSearchQueries: string[];
-}
-
-export interface AdkAgentGroundingChunk {
-  retrievedContext?: GroundingChunkRetrievedContext;
-  web?: GroundingChunkWeb;
 }

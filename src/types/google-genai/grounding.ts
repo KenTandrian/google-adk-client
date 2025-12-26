@@ -7,6 +7,14 @@
  * @see https://github.com/googleapis/js-genai/blob/main/src/types.ts
  */
 
+/** Grounding chunk. */
+export interface GroundingChunk {
+  /** Grounding chunk from context retrieved by the retrieval tools. This field is not supported in Gemini API. */
+  retrievedContext?: GroundingChunkRetrievedContext;
+  /** Grounding chunk from the web. */
+  web?: GroundingChunkWeb;
+}
+
 /** Chunk from context retrieved by the retrieval tools. This data type is not supported in Gemini API. */
 export interface GroundingChunkRetrievedContext {
   /** Output only. The full document name for the referenced Vertex AI Search document. */
