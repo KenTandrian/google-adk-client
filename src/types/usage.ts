@@ -1,3 +1,5 @@
+import type { MediaModality, TrafficType } from "./google-genai";
+
 export interface AdkAgentUsageMetadata {
   cacheTokensDetails?: AdkAgentTokenDetails[];
   cachedContentTokenCount?: number;
@@ -9,10 +11,10 @@ export interface AdkAgentUsageMetadata {
   toolUsePromptTokenCount?: number;
   toolUsePromptTokensDetails?: AdkAgentTokenDetails[];
   totalTokenCount?: number;
-  trafficType: string;
+  trafficType?: TrafficType;
 }
 
 export interface AdkAgentTokenDetails {
-  modality: string;
+  modality?: MediaModality;
   tokenCount: number;
 }

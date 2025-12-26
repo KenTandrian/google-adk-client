@@ -1,3 +1,7 @@
+import type {
+  FunctionResponseScheduling, Language, Outcome
+} from "./google-genai";
+
 export interface AdkAgentContent {
   parts: AdkAgentPart[];
   role: string;
@@ -35,13 +39,13 @@ export interface AdkAgentFileData {
 }
 
 export interface AdkAgentCodeExecutionResult {
-  outcome: string;
+  outcome?: Outcome;
   output: string;
 }
 
 export interface AdkAgentExecutableCode {
   code: string;
-  language: string;
+  language?: Language;
 }
 
 export interface AdkAgentFunctionCall {
@@ -52,7 +56,7 @@ export interface AdkAgentFunctionCall {
 
 export interface AdkAgentFunctionResponse {
   willContinue: boolean;
-  scheduling: string;
+  scheduling?: FunctionResponseScheduling;
   id: string;
   name: string;
   response: Record<string, unknown>;

@@ -19,7 +19,7 @@ export interface AdkAgentEvent {
   usageMetadata?: AdkAgentUsageMetadata;
   invocationId: string;
   author: string;
-  actions?: AdkEventActions;
+  actions: AdkEventActions;
   longRunningToolIds?: string[];
   branch?: string;
   id: string;
@@ -31,10 +31,10 @@ export interface AdkAgentEvent {
  */
 export interface AdkEventActions {
   skipSummarization?: boolean;
-  stateDelta?: Record<string, unknown>;
-  artifactDelta?: Record<string, number>;
+  stateDelta: Record<string, unknown>;
+  artifactDelta: Record<string, number>;
   transferToAgent?: string;
   escalate?: boolean;
-  requestedAuthConfigs?: Record<string, AdkAuthConfig>;
+  requestedAuthConfigs: Record<string, AdkAuthConfig>;
   requestedToolConfirmations: Record<string, AdkToolConfirmation>;
 }
