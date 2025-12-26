@@ -1,4 +1,5 @@
 import type {
+  GroundingChunkWeb,
   GroundingSupport,
   RetrievalMetadata,
   SearchEntryPoint
@@ -15,7 +16,7 @@ export interface AdkAgentGroundingMetadata {
 
 export interface AdkAgentGroundingChunk {
   retrievedContext?: AdkAgentRetrievedContext;
-  web?: AdkAgentWeb;
+  web?: GroundingChunkWeb;
 }
 
 export interface AdkAgentRetrievedContext {
@@ -33,10 +34,4 @@ export interface AdkAgentRagChunk {
 export interface AdkAgentPageSpan {
   firstPage: number;
   lastPage: number;
-}
-
-export interface AdkAgentWeb {
-  domain: string;
-  title: string;
-  uri: string;
 }

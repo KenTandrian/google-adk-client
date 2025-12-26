@@ -7,6 +7,16 @@
  * @see https://github.com/googleapis/js-genai/blob/main/src/types.ts
  */
 
+/** Chunk from the web. */
+export interface GroundingChunkWeb {
+  /** Domain of the (original) URI. This field is not supported in Gemini API. */
+  domain?: string;
+  /** Title of the chunk. */
+  title?: string;
+  /** URI reference of the chunk. */
+  uri?: string;
+}
+
 /** Grounding support. */
 export interface GroundingSupport {
   /** Confidence score of the support references. Ranges from 0 to 1. 1 is the most confident. For Gemini 2.0 and before, this list must have the same size as the grounding_chunk_indices. For Gemini 2.5 and after, this list will be empty and should be ignored. */
