@@ -7,6 +7,20 @@
  * @see https://github.com/googleapis/js-genai/blob/main/src/types.ts
  */
 
+/** Chunk from context retrieved by the retrieval tools. This data type is not supported in Gemini API. */
+export interface GroundingChunkRetrievedContext {
+  /** Output only. The full document name for the referenced Vertex AI Search document. */
+  documentName?: string;
+  /** Additional context for the RAG retrieval result. This is only populated when using the RAG retrieval tool. */
+  ragChunk?: RagChunk;
+  /** Text of the attribution. */
+  text?: string;
+  /** Title of the attribution. */
+  title?: string;
+  /** URI reference of the attribution. */
+  uri?: string;
+}
+
 /** Chunk from the web. */
 export interface GroundingChunkWeb {
   /** Domain of the (original) URI. This field is not supported in Gemini API. */

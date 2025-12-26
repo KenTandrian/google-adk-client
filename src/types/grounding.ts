@@ -1,7 +1,7 @@
 import type {
+  GroundingChunkRetrievedContext,
   GroundingChunkWeb,
   GroundingSupport,
-  RagChunk,
   RetrievalMetadata,
   SearchEntryPoint
 } from "./google-genai";
@@ -16,13 +16,6 @@ export interface AdkAgentGroundingMetadata {
 }
 
 export interface AdkAgentGroundingChunk {
-  retrievedContext?: AdkAgentRetrievedContext;
+  retrievedContext?: GroundingChunkRetrievedContext;
   web?: GroundingChunkWeb;
-}
-
-export interface AdkAgentRetrievedContext {
-  ragChunk: RagChunk;
-  text: string;
-  title: string;
-  uri: string;
 }
