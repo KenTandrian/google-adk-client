@@ -1,26 +1,16 @@
 import { AdkAuthConfig } from "./auth";
-import { ToolConfirmation } from "./google-adk";
-import { Content, GroundingMetadata, UsageMetadata } from "./google-genai";
+import { LlmResponse, ToolConfirmation } from "./google-adk";
 
 /**
  * Represents an event in a conversation between agents and users.
  */
-export interface AdkAgentEvent {
-  content: Content;
-  groundingMetadata?: GroundingMetadata;
-  partial?: boolean;
-  turnComplete?: boolean;
-  errorCode?: string;
-  errorMessage?: string;
-  interrupted?: boolean;
-  customMetadata?: Record<string, unknown>;
-  usageMetadata?: UsageMetadata;
+export interface AdkAgentEvent extends LlmResponse {
+  id: string;
   invocationId: string;
   author: string;
   actions: AdkEventActions;
   longRunningToolIds?: string[];
   branch?: string;
-  id: string;
   timestamp: number;
 }
 
