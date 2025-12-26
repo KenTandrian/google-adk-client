@@ -21,3 +21,15 @@ export interface SearchEntryPoint {
    * @remarks Encoded as base64 string. */
   sdkBlob?: string;
 }
+
+/** Segment of the content. */
+export interface Segment {
+  /** Output only. End index in the given Part, measured in bytes. Offset from the start of the Part, exclusive, starting at zero. */
+  endIndex?: number;
+  /** Output only. The index of a Part object within its parent Content object. */
+  partIndex?: number;
+  /** Output only. Start index in the given Part, measured in bytes. Offset from the start of the Part, inclusive, starting at zero. */
+  startIndex?: number;
+  /** Output only. The text corresponding to the segment from the response. */
+  text?: string;
+}
