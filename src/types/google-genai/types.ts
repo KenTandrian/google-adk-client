@@ -27,6 +27,19 @@ export interface FileData {
   mimeType?: string;
 }
 
+/** A function call. */
+export interface FunctionCall {
+  /** The unique id of the function call. If populated, the client to execute the
+   `function_call` and return the response with the matching `id`. */
+  id?: string;
+  /** Optional. The function parameters and values in JSON object format. See [FunctionDeclaration.parameters] for parameter details. */
+  args?: Record<string, unknown>;
+  /** Optional. The name of the function to call. Matches [FunctionDeclaration.name]. */
+  name?: string;
+  /** Optional. Whether this is the last part of the FunctionCall. If true, another partial message for the current FunctionCall is expected to follow. This field is not supported in Gemini API. */
+  willContinue?: boolean;
+}
+
 /** Metadata describes the input video content. */
 export interface VideoMetadata {
   /** Optional. The end offset of the video. */

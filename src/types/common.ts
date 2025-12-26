@@ -1,6 +1,7 @@
 import type {
   CodeExecutionResult,
   FileData,
+  FunctionCall,
   FunctionResponseScheduling,
   Language,
   VideoMetadata
@@ -19,7 +20,7 @@ export interface AdkAgentPart {
   thoughtSignature?: string;
   codeExecutionResult?: CodeExecutionResult;
   executableCode?: AdkAgentExecutableCode;
-  functionCall?: AdkAgentFunctionCall;
+  functionCall?: FunctionCall;
   functionResponse?: AdkAgentFunctionResponse;
   text?: string;
 }
@@ -33,12 +34,6 @@ export interface AdkAgentInlineData {
 export interface AdkAgentExecutableCode {
   code: string;
   language?: Language;
-}
-
-export interface AdkAgentFunctionCall {
-  id: string;
-  args: Record<string, unknown>;
-  name: string;
 }
 
 export interface AdkAgentFunctionResponse {
