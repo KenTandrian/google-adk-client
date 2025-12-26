@@ -4,7 +4,7 @@ import type {
   ExecutableCode,
   FileData,
   FunctionCall,
-  FunctionResponseScheduling,
+  FunctionResponse,
   VideoMetadata
 } from "./google-genai";
 
@@ -22,14 +22,6 @@ export interface AdkAgentPart {
   codeExecutionResult?: CodeExecutionResult;
   executableCode?: ExecutableCode;
   functionCall?: FunctionCall;
-  functionResponse?: AdkAgentFunctionResponse;
+  functionResponse?: FunctionResponse;
   text?: string;
-}
-
-export interface AdkAgentFunctionResponse {
-  willContinue: boolean;
-  scheduling?: FunctionResponseScheduling;
-  id: string;
-  name: string;
-  response: Record<string, unknown>;
 }

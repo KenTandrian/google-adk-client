@@ -7,7 +7,7 @@
  * @see https://github.com/googleapis/js-genai/blob/main/src/types.ts
  */
 
-import { Language, Outcome } from "./enums";
+import { FunctionResponseScheduling, Language, Outcome } from "./enums";
 
 /** Content blob. */
 export interface Blob {
@@ -57,6 +57,20 @@ export interface FunctionCall {
   name?: string;
   /** Optional. Whether this is the last part of the FunctionCall. If true, another partial message for the current FunctionCall is expected to follow. This field is not supported in Gemini API. */
   willContinue?: boolean;
+}
+
+/** A function response. */
+export interface FunctionResponse {
+  /** Signals that function call continues, and more responses will be returned, turning the function call into a generator. Is only applicable to NON_BLOCKING function calls (see FunctionDeclaration.behavior for details), ignored otherwise. If false, the default, future responses will not be considered. Is only applicable to NON_BLOCKING function calls, is ignored otherwise. If set to false, future responses will not be considered. It is allowed to return empty `response` with `will_continue=False` to signal that the function call is finished. */
+  willContinue?: boolean;
+  /** Specifies how the response should be scheduled in the conversation. Only applicable to NON_BLOCKING function calls, is ignored otherwise. Defaults to WHEN_IDLE. */
+  scheduling?: FunctionResponseScheduling;
+  /** Optional. The id of the function call this response is for. Populated by the client to match the corresponding function call `id`. */
+  id?: string;
+  /** Required. The name of the function to call. Matches [FunctionDeclaration.name] and [FunctionCall.name]. */
+  name?: string;
+  /** Required. The function response in JSON object format. Use "output" key to specify function output and "error" key to specify error details (if any). If "output" and "error" keys are not specified, then whole "response" is treated as function output. */
+  response?: Record<string, unknown>;
 }
 
 /** Metadata describes the input video content. */
