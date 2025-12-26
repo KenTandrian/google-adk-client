@@ -1,9 +1,9 @@
 import type {
   CodeExecutionResult,
+  ExecutableCode,
   FileData,
   FunctionCall,
   FunctionResponseScheduling,
-  Language,
   VideoMetadata
 } from "./google-genai";
 
@@ -19,7 +19,7 @@ export interface AdkAgentPart {
   fileData?: FileData;
   thoughtSignature?: string;
   codeExecutionResult?: CodeExecutionResult;
-  executableCode?: AdkAgentExecutableCode;
+  executableCode?: ExecutableCode;
   functionCall?: FunctionCall;
   functionResponse?: AdkAgentFunctionResponse;
   text?: string;
@@ -29,11 +29,6 @@ export interface AdkAgentInlineData {
   displayName: string;
   data: string;
   mimeType: string;
-}
-
-export interface AdkAgentExecutableCode {
-  code: string;
-  language?: Language;
 }
 
 export interface AdkAgentFunctionResponse {
