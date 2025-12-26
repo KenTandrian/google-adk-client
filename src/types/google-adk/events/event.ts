@@ -4,7 +4,7 @@
  * These types are copied locally to keep the client library lightweight.
  * Update when @google/adk changes significantly.
  * 
- * @see https://github.com/google/adk-js/blob/main/core/src/events/event_actions.ts
+ * @see https://github.com/google/adk-js/blob/main/core/src/events/event.ts
  */
 
 import { LlmResponse } from '../models/llm_response';

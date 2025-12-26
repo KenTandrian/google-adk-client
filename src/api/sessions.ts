@@ -1,8 +1,8 @@
 import type {
-  AdkAgentSession,
   AdkCreateSessionOptions,
   ApiClient
 } from "../types";
+import { Session } from "../types/google-adk";
 
 export class Sessions {
   private client: ApiClient;
@@ -16,7 +16,7 @@ export class Sessions {
    * @param options Optional initial state and events for the session.
    * @returns The created session.
    */
-  async create(options?: AdkCreateSessionOptions): Promise<AdkAgentSession> {
+  async create(options?: AdkCreateSessionOptions): Promise<Session> {
     return this.client.requestJson(
       `/apps/${this.client.appName}/users/${this.client.userId}/sessions`,
       {
@@ -30,7 +30,7 @@ export class Sessions {
    * Lists all sessions for the user.
    * @returns A list of user's sessions.
    */
-  async list(): Promise<AdkAgentSession[]> {
+  async list(): Promise<Session[]> {
     return this.client.requestJson(
       `/apps/${this.client.appName}/users/${this.client.userId}/sessions`
     );
@@ -45,7 +45,7 @@ export class Sessions {
   async createWithId(
     sessionId: string,
     initialState?: Record<string, unknown>
-  ): Promise<AdkAgentSession> {
+  ): Promise<Session> {
     return this.client.requestJson(
       `/apps/${this.client.appName}/users/${this.client.userId}/sessions/${sessionId}`,
       {
@@ -60,7 +60,7 @@ export class Sessions {
    * @param sessionId The ID of the session to retrieve.
    * @returns The requested session.
    */
-  async get(sessionId: string): Promise<AdkAgentSession> {
+  async get(sessionId: string): Promise<Session> {
     return this.client.requestJson(
       `/apps/${this.client.appName}/users/${this.client.userId}/sessions/${sessionId}`
     );
