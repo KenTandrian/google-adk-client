@@ -10,7 +10,7 @@ describe("AdkClient sessions", () => {
     userId: "user-123",
   });
 
-  it("should call the correct endpoint for sessions.create", async () => {
+  it("should call the correct endpoint for sessions.create (without options)", async () => {
     const mockResponse = createMockResponse({ id: "new-session" });
     (fetch as any).mockResolvedValue(mockResponse);
 
@@ -28,7 +28,32 @@ describe("AdkClient sessions", () => {
     );
   });
 
-  it("should call the correct endpoint for sessions.createWithId", async () => {
+  it("should call the correct endpoint for sessions.create (with options)", async () => {
+    const mockResponse = createMockResponse({ id: "new-session" });
+    (fetch as any).mockResolvedValue(mockResponse);
+
+    await client.sessions.create({
+      state: { foo: "bar" },
+      events: [],
+    });
+
+    expect(fetch).toHaveBeenCalledWith(
+      "https://example.com/apps/test-app/users/user-123/sessions",
+      {
+        method: "POST",
+        headers: {
+          accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          state: { foo: "bar" },
+          events: [],
+        }),
+      }
+    );
+  });
+
+  it("should call the correct endpoint for sessions.createWithId (without initial state)", async () => {
     const mockResponse = createMockResponse({ id: "session-123" });
     (fetch as any).mockResolvedValue(mockResponse);
 
@@ -42,6 +67,25 @@ describe("AdkClient sessions", () => {
           accept: "application/json, text/plain, */*",
           "Content-Type": "application/json",
         },
+      }
+    );
+  });
+
+  it("should call the correct endpoint for sessions.createWithId (with initial state)", async () => {
+    const mockResponse = createMockResponse({ id: "session-123" });
+    (fetch as any).mockResolvedValue(mockResponse);
+
+    await client.sessions.createWithId("session-123", { baz: "qux" });
+
+    expect(fetch).toHaveBeenCalledWith(
+      "https://example.com/apps/test-app/users/user-123/sessions/session-123",
+      {
+        method: "POST",
+        headers: {
+          accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ baz: "qux" }),
       }
     );
   });

@@ -7,6 +7,11 @@ export interface AdkAgentSession {
   lastUpdateTime: number;
 }
 
+export interface AdkCreateSessionOptions {
+  state?: Record<string, unknown>;
+  events?: AdkAgentEvent[];
+}
+
 export interface AdkAgentEvent {
   content: AdkAgentContent;
   groundingMetadata?: AdkAgentGroundingMetadata;

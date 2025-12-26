@@ -1,4 +1,8 @@
-import type { AdkAgentSession, ApiClient } from "../types";
+import type {
+  AdkAgentSession,
+  AdkCreateSessionOptions,
+  ApiClient
+} from "../types";
 
 export class Sessions {
   private client: ApiClient;
@@ -9,17 +13,15 @@ export class Sessions {
 
   /**
    * Creates a new session.
-   * @param defaultState Optional initial state for the session.
+   * @param options Optional initial state and events for the session.
    * @returns The created session.
    */
-  async create(defaultState?: object): Promise<AdkAgentSession> {
+  async create(options?: AdkCreateSessionOptions): Promise<AdkAgentSession> {
     return this.client.requestJson(
       `/apps/${this.client.appName}/users/${this.client.userId}/sessions`,
       {
         method: "POST",
-        body: defaultState
-          ? JSON.stringify({ state: defaultState })
-          : undefined,
+        body: options ? JSON.stringify(options) : undefined,
       }
     );
   }
@@ -37,20 +39,18 @@ export class Sessions {
   /**
    * Creates a new session with a specific ID.
    * @param sessionId The ID of the session to create.
-   * @param defaultState Optional initial state for the session.
+   * @param initialState Optional initial state for the session.
    * @returns The created session.
    */
   async createWithId(
     sessionId: string,
-    defaultState?: object
+    initialState?: Record<string, unknown>
   ): Promise<AdkAgentSession> {
     return this.client.requestJson(
       `/apps/${this.client.appName}/users/${this.client.userId}/sessions/${sessionId}`,
       {
         method: "POST",
-        body: defaultState
-          ? JSON.stringify({ state: defaultState })
-          : undefined,
+        body: initialState ? JSON.stringify(initialState) : undefined,
       }
     );
   }
