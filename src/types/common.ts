@@ -1,4 +1,5 @@
 import type {
+  Blob,
   CodeExecutionResult,
   ExecutableCode,
   FileData,
@@ -15,7 +16,7 @@ export interface AdkAgentContent {
 export interface AdkAgentPart {
   videoMetadata?: VideoMetadata;
   thought?: boolean;
-  inlineData?: AdkAgentInlineData;
+  inlineData?: Blob;
   fileData?: FileData;
   thoughtSignature?: string;
   codeExecutionResult?: CodeExecutionResult;
@@ -23,12 +24,6 @@ export interface AdkAgentPart {
   functionCall?: FunctionCall;
   functionResponse?: AdkAgentFunctionResponse;
   text?: string;
-}
-
-export interface AdkAgentInlineData {
-  displayName: string;
-  data: string;
-  mimeType: string;
 }
 
 export interface AdkAgentFunctionResponse {

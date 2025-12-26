@@ -9,6 +9,17 @@
 
 import { Language, Outcome } from "./enums";
 
+/** Content blob. */
+export interface Blob {
+  /** Required. Raw bytes.
+   * @remarks Encoded as base64 string. */
+  data?: string;
+  /** Optional. Display name of the blob. Used to provide a label or filename to distinguish blobs. This field is only returned in PromptMessage for prompt management. It is currently used in the Gemini GenerateContent calls only when server side tools (code_execution, google_search, and url_context) are enabled. This field is not supported in Gemini API. */
+  displayName?: string;
+  /** Required. The IANA standard MIME type of the source data. */
+  mimeType?: string;
+}
+
 /** Result of executing the [ExecutableCode]. Only generated when using the [CodeExecution] tool, and always follows a `part` containing the [ExecutableCode]. */
 export interface CodeExecutionResult {
   /** Required. Outcome of the code execution. */
