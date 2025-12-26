@@ -1,12 +1,12 @@
 import type {
+  GroundingSupport,
   RetrievalMetadata,
-  SearchEntryPoint,
-  Segment
+  SearchEntryPoint
 } from "./google-genai";
 
 export interface AdkAgentGroundingMetadata {
   groundingChunks: AdkAgentGroundingChunk[];
-  groundingSupports: AdkAgentGroundingSupport[];
+  groundingSupports: GroundingSupport[];
   retrievalMetadata: RetrievalMetadata;
   retrievalQueries: string[];
   searchEntryPoint: SearchEntryPoint;
@@ -39,10 +39,4 @@ export interface AdkAgentWeb {
   domain: string;
   title: string;
   uri: string;
-}
-
-export interface AdkAgentGroundingSupport {
-  confidenceScores: number[];
-  groundingChunkIndices: number[];
-  segment: Segment;
 }

@@ -7,6 +7,16 @@
  * @see https://github.com/googleapis/js-genai/blob/main/src/types.ts
  */
 
+/** Grounding support. */
+export interface GroundingSupport {
+  /** Confidence score of the support references. Ranges from 0 to 1. 1 is the most confident. For Gemini 2.0 and before, this list must have the same size as the grounding_chunk_indices. For Gemini 2.5 and after, this list will be empty and should be ignored. */
+  confidenceScores?: number[];
+  /** A list of indices (into 'grounding_chunk') specifying the citations associated with the claim. For instance [1,3,4] means that grounding_chunk[1], grounding_chunk[3], grounding_chunk[4] are the retrieved content attributed to the claim. */
+  groundingChunkIndices?: number[];
+  /** Segment of the content this support belongs to. */
+  segment?: Segment;
+}
+
 /** Metadata related to retrieval in the grounding flow. */
 export interface RetrievalMetadata {
   /** Optional. Score indicating how likely information from Google Search could help answer the prompt. The score is in the range `[0, 1]`, where 0 is the least likely and 1 is the most likely. This score is only populated when Google Search grounding and dynamic retrieval is enabled. It will be compared to the threshold to determine whether to trigger Google Search. */
