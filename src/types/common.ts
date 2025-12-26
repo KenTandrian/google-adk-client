@@ -1,4 +1,5 @@
 import type {
+  FileData,
   FunctionResponseScheduling,
   Language,
   Outcome,
@@ -14,7 +15,7 @@ export interface AdkAgentPart {
   videoMetadata?: VideoMetadata;
   thought?: boolean;
   inlineData?: AdkAgentInlineData;
-  fileData?: AdkAgentFileData;
+  fileData?: FileData;
   thoughtSignature?: string;
   codeExecutionResult?: AdkAgentCodeExecutionResult;
   executableCode?: AdkAgentExecutableCode;
@@ -26,12 +27,6 @@ export interface AdkAgentPart {
 export interface AdkAgentInlineData {
   displayName: string;
   data: string;
-  mimeType: string;
-}
-
-export interface AdkAgentFileData {
-  displayName: string;
-  fileUri: string;
   mimeType: string;
 }
 
