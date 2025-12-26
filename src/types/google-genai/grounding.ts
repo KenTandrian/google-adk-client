@@ -27,6 +27,14 @@ export interface GroundingSupport {
   segment?: Segment;
 }
 
+/** A RagChunk includes the content of a chunk of a RagFile, and associated metadata. This data type is not supported in Gemini API. */
+export interface RagChunk {
+  /** If populated, represents where the chunk starts and ends in the document. */
+  pageSpan?: RagChunkPageSpan;
+  /** The content of the chunk. */
+  text?: string;
+}
+
 /** Represents where the chunk starts and ends in the document. This data type is not supported in Gemini API. */
 export interface RagChunkPageSpan {
   /** Page where chunk starts in the document. Inclusive. 1-indexed. */

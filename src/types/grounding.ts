@@ -1,7 +1,7 @@
 import type {
   GroundingChunkWeb,
   GroundingSupport,
-  RagChunkPageSpan,
+  RagChunk,
   RetrievalMetadata,
   SearchEntryPoint
 } from "./google-genai";
@@ -21,13 +21,8 @@ export interface AdkAgentGroundingChunk {
 }
 
 export interface AdkAgentRetrievedContext {
-  ragChunk: AdkAgentRagChunk;
+  ragChunk: RagChunk;
   text: string;
   title: string;
   uri: string;
-}
-
-export interface AdkAgentRagChunk {
-  pageSpan: RagChunkPageSpan;
-  text: string;
 }
