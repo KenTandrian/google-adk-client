@@ -7,6 +7,16 @@
  * @see https://github.com/googleapis/js-genai/blob/main/src/types.ts
  */
 
+import { Outcome } from "./enums";
+
+/** Result of executing the [ExecutableCode]. Only generated when using the [CodeExecution] tool, and always follows a `part` containing the [ExecutableCode]. */
+export interface CodeExecutionResult {
+  /** Required. Outcome of the code execution. */
+  outcome?: Outcome;
+  /** Optional. Contains stdout when code execution is successful, stderr or other description otherwise. */
+  output?: string;
+}
+
 /** URI based data. */
 export interface FileData {
   /** Optional. Display name of the file data. Used to provide a label or filename to distinguish file datas. This field is only returned in PromptMessage for prompt management. It is currently used in the Gemini GenerateContent calls only when server side tools (code_execution, google_search, and url_context) are enabled. This field is not supported in Gemini API. */
