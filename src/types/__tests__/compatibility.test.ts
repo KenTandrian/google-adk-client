@@ -22,7 +22,7 @@ import type {
  * Strict Type Compatibility Checks
  *
  * These assertions will cause compilation errors if our local types
- * are not assignable to the official @google/adk types.
+ * are not assignable to the official `@google/adk` types.
  */
 
 // Test that our Session can be assigned to the official Session

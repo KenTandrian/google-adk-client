@@ -1,7 +1,9 @@
+import { RetrievalMetadata } from "./google-genai";
+
 export interface AdkAgentGroundingMetadata {
   groundingChunks: AdkAgentGroundingChunk[];
   groundingSupports: AdkAgentGroundingSupport[];
-  retrievalMetadata: AdkAgentRetrievalMetadata;
+  retrievalMetadata: RetrievalMetadata;
   retrievalQueries: string[];
   searchEntryPoint: AdkAgentSearchEntryPoint;
   webSearchQueries: string[];
@@ -46,10 +48,6 @@ export interface AdkAgentSegment {
   partIndex: number;
   startIndex: number;
   text: string;
-}
-
-export interface AdkAgentRetrievalMetadata {
-  googleSearchDynamicRetrievalScore: number;
 }
 
 export interface AdkAgentSearchEntryPoint {
