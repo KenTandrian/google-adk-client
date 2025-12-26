@@ -9,13 +9,17 @@ export class Sessions {
 
   /**
    * Creates a new session.
+   * @param defaultState Optional initial state for the session.
    * @returns The created session.
    */
-  async create(): Promise<AdkAgentSession> {
+  async create(defaultState?: object): Promise<AdkAgentSession> {
     return this.client.requestJson(
       `/apps/${this.client.appName}/users/${this.client.userId}/sessions`,
       {
         method: "POST",
+        body: defaultState
+          ? JSON.stringify({ state: defaultState })
+          : undefined,
       }
     );
   }
@@ -33,13 +37,20 @@ export class Sessions {
   /**
    * Creates a new session with a specific ID.
    * @param sessionId The ID of the session to create.
+   * @param defaultState Optional initial state for the session.
    * @returns The created session.
    */
-  async createWithId(sessionId: string): Promise<AdkAgentSession> {
+  async createWithId(
+    sessionId: string,
+    defaultState?: object
+  ): Promise<AdkAgentSession> {
     return this.client.requestJson(
       `/apps/${this.client.appName}/users/${this.client.userId}/sessions/${sessionId}`,
       {
         method: "POST",
+        body: defaultState
+          ? JSON.stringify({ state: defaultState })
+          : undefined,
       }
     );
   }
