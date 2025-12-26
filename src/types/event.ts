@@ -1,7 +1,7 @@
 import { AdkAuthConfig } from "./auth";
 import { AdkAgentContent } from "./common";
+import { ToolConfirmation } from "./google-adk";
 import { AdkAgentGroundingMetadata } from "./grounding";
-import { AdkToolConfirmation } from "./tools";
 import { AdkAgentUsageMetadata } from "./usage";
 
 /**
@@ -36,5 +36,5 @@ export interface AdkEventActions {
   transferToAgent?: string;
   escalate?: boolean;
   requestedAuthConfigs: Record<string, AdkAuthConfig>;
-  requestedToolConfirmations: Record<string, AdkToolConfirmation>;
+  requestedToolConfirmations: Record<string, ToolConfirmation>;
 }
