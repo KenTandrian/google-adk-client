@@ -1,4 +1,4 @@
-import { AdkAgentEvent } from "./event";
+import { Event } from "./google-adk";
 
 /**
  * Represents a session in a conversation between agents and users.
@@ -8,7 +8,7 @@ export interface AdkAgentSession {
   appName: string;
   userId: string;
   state: Record<string, unknown>;
-  events: AdkAgentEvent[];
+  events: Event[];
   lastUpdateTime: number;
 }
 
@@ -17,5 +17,5 @@ export interface AdkAgentSession {
  */
 export interface AdkCreateSessionOptions {
   state?: Record<string, unknown>;
-  events?: AdkAgentEvent[];
+  events?: Event[];
 }

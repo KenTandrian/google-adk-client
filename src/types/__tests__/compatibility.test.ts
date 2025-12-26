@@ -13,10 +13,10 @@
 import type { Event, EventActions, Session } from "@google/adk";
 
 import type {
+    Event as AdkEvent,
     EventActions as AdkEventActions
 } from "../google-adk";
 import type {
-    AdkAgentEvent,
     AdkAgentSession
 } from "../index";
 
@@ -32,7 +32,7 @@ const testSession: Session = {} as AdkAgentSession;
 console.log(testSession);
 
 // Test that our Event can be assigned to the official Event
-const testEvent: Event = {} as AdkAgentEvent;
+const testEvent: Event = {} as AdkEvent;
 console.log(testEvent);
 
 // Test that our EventActions can be assigned to the official EventActions
