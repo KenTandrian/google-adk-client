@@ -1,4 +1,5 @@
-import type { AdkAgentPart, ApiClient } from "../types";
+import type { ApiClient } from "../types";
+import { Part } from "../types/google-genai";
 
 export class Artifacts {
   private client: ApiClient;
@@ -22,9 +23,9 @@ export class Artifacts {
    * Loads an artifact by its name for a given session.
    * @param sessionId The ID of the session to load the artifact from.
    * @param artifactName The name of the artifact to load.
-   * @returns The loaded artifact as an AdkAgentPart object.
+   * @returns The loaded artifact as a Part object.
    */
-  async load(sessionId: string, artifactName: string): Promise<AdkAgentPart> {
+  async load(sessionId: string, artifactName: string): Promise<Part> {
     return this.client.requestJson(
       `/apps/${this.client.appName}/users/${this.client.userId}/sessions/${sessionId}/artifacts/${artifactName}`
     );
@@ -64,13 +65,13 @@ export class Artifacts {
    * @param sessionId The ID of the session to load the artifact version from.
    * @param artifactName The name of the artifact to load.
    * @param versionId The ID of the version to load.
-   * @returns The loaded artifact version as an AdkAgentPart object.
+   * @returns The loaded artifact version as a Part object.
    */
   async loadVersion(
     sessionId: string,
     artifactName: string,
     versionId: string
-  ): Promise<AdkAgentPart> {
+  ): Promise<Part> {
     return this.client.requestJson(
       `/apps/${this.client.appName}/users/${this.client.userId}/sessions/${sessionId}/artifacts/${artifactName}/versions/${versionId}`
     );

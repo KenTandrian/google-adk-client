@@ -1,12 +1,12 @@
 import {
-    AdkAgentCodeExecutionResult,
-    AdkAgentExecutableCode,
-    AdkAgentFileData,
-    AdkAgentFunctionCall,
-    AdkAgentFunctionResponse,
-    AdkAgentInlineData,
-    AdkAgentVideoMetadata,
-} from "./common";
+  Blob,
+  CodeExecutionResult,
+  ExecutableCode,
+  FileData,
+  FunctionCall,
+  FunctionResponse,
+  VideoMetadata
+} from "./google-genai";
 
 export interface AdkAgentRunSsePayload {
   appName: string;
@@ -14,15 +14,15 @@ export interface AdkAgentRunSsePayload {
   sessionId: string;
   newMessage: {
     parts: Array<{
-      videoMetadata?: AdkAgentVideoMetadata;
+      videoMetadata?: VideoMetadata;
       thought?: boolean;
-      inlineData?: AdkAgentInlineData;
-      fileData?: AdkAgentFileData;
+      inlineData?: Blob;
+      fileData?: FileData;
       thoughtSignature?: string;
-      codeExecutionResult?: AdkAgentCodeExecutionResult;
-      executableCode?: AdkAgentExecutableCode;
-      functionCall?: AdkAgentFunctionCall;
-      functionResponse?: AdkAgentFunctionResponse;
+      codeExecutionResult?: CodeExecutionResult;
+      executableCode?: ExecutableCode;
+      functionCall?: FunctionCall;
+      functionResponse?: FunctionResponse;
       text?: string;
     }>;
     role: string;

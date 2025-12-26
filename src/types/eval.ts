@@ -1,4 +1,4 @@
-import { AdkAgentContent } from "./common";
+import { Content } from "./google-genai";
 
 export type AdkRunEvalResponse = AdkRunEvalResult[];
 
@@ -28,8 +28,8 @@ export interface AdkEvalMetricResultPerInvocation {
 
 export interface AdkInvocation {
   invocationId: string;
-  userContent: AdkAgentContent;
-  finalResponse: AdkAgentContent;
+  userContent: Content;
+  finalResponse: Content;
   intermediateData: AdkIntermediateData;
   creationTimestamp: number;
 }

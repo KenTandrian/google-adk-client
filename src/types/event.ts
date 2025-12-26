@@ -1,6 +1,6 @@
 import { AdkAuthConfig } from "./auth";
-import { AdkAgentContent } from "./common";
 import { ToolConfirmation } from "./google-adk";
+import { Content } from "./google-genai";
 import { AdkAgentGroundingMetadata } from "./grounding";
 import { AdkAgentUsageMetadata } from "./usage";
 
@@ -8,7 +8,7 @@ import { AdkAgentUsageMetadata } from "./usage";
  * Represents an event in a conversation between agents and users.
  */
 export interface AdkAgentEvent {
-  content: AdkAgentContent;
+  content: Content;
   groundingMetadata?: AdkAgentGroundingMetadata;
   partial?: boolean;
   turnComplete?: boolean;
