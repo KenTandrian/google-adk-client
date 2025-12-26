@@ -1,5 +1,8 @@
 import type {
-  FunctionResponseScheduling, Language, Outcome
+  FunctionResponseScheduling,
+  Language,
+  Outcome,
+  VideoMetadata
 } from "./google-genai";
 
 export interface AdkAgentContent {
@@ -8,7 +11,7 @@ export interface AdkAgentContent {
 }
 
 export interface AdkAgentPart {
-  videoMetadata?: AdkAgentVideoMetadata;
+  videoMetadata?: VideoMetadata;
   thought?: boolean;
   inlineData?: AdkAgentInlineData;
   fileData?: AdkAgentFileData;
@@ -18,12 +21,6 @@ export interface AdkAgentPart {
   functionCall?: AdkAgentFunctionCall;
   functionResponse?: AdkAgentFunctionResponse;
   text?: string;
-}
-
-export interface AdkAgentVideoMetadata {
-  fps: number;
-  endOffset: string;
-  startOffset: string;
 }
 
 export interface AdkAgentInlineData {
