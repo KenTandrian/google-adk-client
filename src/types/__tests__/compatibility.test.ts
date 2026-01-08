@@ -13,12 +13,10 @@
 import type { Event, EventActions, Session } from "@google/adk";
 
 import type {
-    Event as AdkEvent,
-    EventActions as AdkEventActions
+  Session as AdkAgentSession,
+  Event as AdkEvent,
+  EventActions as AdkEventActions,
 } from "../google-adk";
-import type {
-    AdkAgentSession
-} from "../index";
 
 /**
  * Strict Type Compatibility Checks
