@@ -1,6 +1,35 @@
-import { createUIMessageStream, createUIMessageStreamResponse } from "ai";
+import {
+  createUIMessageStream,
+  createUIMessageStreamResponse,
+  type UIMessageStreamWriter,
+} from "ai";
 
 import { generateUUID } from "../utils";
+
+/**
+ * Parses a JSON text line from an SSE stream and writes text deltas to the provided writer.
+ * @param messageId - The message ID associated with the text deltas.
+ * @param jsonText - The JSON text line to parse.
+ * @param writer - The UIMessageStreamWriter to write the text deltas to.
+ */
+function handleDataLine(
+  jsonText: string,
+  messageId: string,
+  writer: UIMessageStreamWriter
+) {
+  try {
+    const json = JSON.parse(jsonText);
+    if (json?.partial && json?.content?.parts?.[0].text) {
+      writer.write({
+        delta: json.content.parts[0].text,
+        id: messageId,
+        type: "text-delta",
+      });
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 /**
  * Creates a stream response for UI messages from an SSE stream.
@@ -60,18 +89,7 @@ export function createAdkAiSdkStream(
           buffer = lines.pop() ?? "";
           for (const line of lines) {
             if (line.startsWith("data: ")) {
-              try {
-                const json = JSON.parse(line.substring(6));
-                if (json?.partial && json?.content?.parts?.[0].text) {
-                  writer.write({
-                    type: "text-delta",
-                    id: messageId,
-                    delta: json.content.parts[0].text,
-                  });
-                }
-              } catch (error) {
-                console.error(error);
-              }
+              handleDataLine(line.substring(6), messageId, writer);
             }
           }
         }
