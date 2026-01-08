@@ -2,7 +2,7 @@ import type { AdkCreateSessionOptions, ApiClient } from "../types";
 import type { Session } from "../types/google-adk";
 
 export class Sessions {
-  private client: ApiClient;
+  private readonly client: ApiClient;
 
   constructor(client: ApiClient) {
     this.client = client;

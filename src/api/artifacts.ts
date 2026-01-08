@@ -2,7 +2,7 @@ import type { ApiClient } from "../types";
 import type { Part } from "../types/google-genai";
 
 export class Artifacts {
-  private client: ApiClient;
+  private readonly client: ApiClient;
 
   constructor(client: ApiClient) {
     this.client = client;

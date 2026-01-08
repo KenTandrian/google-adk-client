@@ -6,7 +6,7 @@ import type {
 } from "../types";
 
 export class Evals {
-  private client: ApiClient;
+  private readonly client: ApiClient;
 
   constructor(client: ApiClient) {
     this.client = client;

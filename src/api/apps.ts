@@ -1,7 +1,7 @@
 import type { ApiClient } from "../types";
 
 export class Apps {
-  private client: ApiClient;
+  private readonly client: ApiClient;
 
   constructor(client: ApiClient) {
     this.client = client;

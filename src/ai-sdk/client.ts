@@ -14,7 +14,7 @@ import { generateUUID } from "../utils";
  * and processing response streams.
  */
 export class AdkChatTransport extends HttpChatTransport<UIMessage> {
-  private adk: AdkClient;
+  private readonly adk: AdkClient;
 
   constructor(adk: AdkClient) {
     super({});
