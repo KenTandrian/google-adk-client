@@ -11,6 +11,7 @@
  */
 
 import type { Event, EventActions, Session } from "@google/adk";
+import { describe, expect, it } from "vitest";
 
 import type {
   Session as AdkAgentSession,
@@ -25,16 +26,19 @@ import type {
  * are not assignable to the official `@google/adk` types.
  */
 
-// Test that our Session can be assigned to the official Session
-const testSession: Session = {} as AdkAgentSession;
-console.log(testSession);
+describe("Type compatibility", () => {
+  // Test that our Event can be assigned to the official Event
+  const testEvent: Event = {} as AdkEvent;
 
-// Test that our Event can be assigned to the official Event
-const testEvent: Event = {} as AdkEvent;
-console.log(testEvent);
+  // Test that our EventActions can be assigned to the official EventActions
+  const testEventActions: EventActions = {} as AdkEventActions;
 
-// Test that our EventActions can be assigned to the official EventActions
-const testEventActions: EventActions = {} as AdkEventActions;
-console.log(testEventActions);
+  // Test that our Session can be assigned to the official Session
+  const testSession: Session = {} as AdkAgentSession;
 
-export const COMPATIBILITY_TEST = "If this file compiles, types are compatible";
+  it("should compile if types are compatible", () => {
+    expect(testEvent).toMatchObject({});
+    expect(testEventActions).toMatchObject({});
+    expect(testSession).toMatchObject({});
+  });
+});
