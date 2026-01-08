@@ -1,4 +1,4 @@
-import { Event } from "./google-adk";
+import type { Event } from "./google-adk";
 
 /**
  * Represents options for creating a session.

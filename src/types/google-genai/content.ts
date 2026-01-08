@@ -1,13 +1,13 @@
 /**
  * Vendored types from @google/genai v1.34.0
- * 
+ *
  * These types are copied locally to keep the client library lightweight.
  * Update when @google/genai changes significantly.
- * 
+ *
  * @see https://github.com/googleapis/js-genai/blob/main/src/types.ts
  */
 
-import { FunctionResponseScheduling, Language, Outcome } from "./enums";
+import type { FunctionResponseScheduling, Language, Outcome } from "./enums";
 
 /** Content blob. */
 export interface Blob {

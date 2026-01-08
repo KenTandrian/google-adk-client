@@ -1,8 +1,5 @@
-import type {
-  AdkCreateSessionOptions,
-  ApiClient
-} from "../types";
-import { Session } from "../types/google-adk";
+import type { AdkCreateSessionOptions, ApiClient } from "../types";
+import type { Session } from "../types/google-adk";
 
 export class Sessions {
   private client: ApiClient;

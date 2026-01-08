@@ -1,9 +1,9 @@
 /**
  * Vendored types from @google/adk v0.2.1
- * 
+ *
  * These types are copied locally to keep the client library lightweight.
  * Update when @google/adk changes significantly.
- * 
+ *
  * @see https://github.com/google/adk-js/blob/main/core/src/tools/tool_confirmation.ts
  */
 

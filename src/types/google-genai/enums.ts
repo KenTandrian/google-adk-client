@@ -1,9 +1,9 @@
 /**
  * Vendored types from @google/genai v1.34.0
- * 
+ *
  * These enums are copied locally to keep the client library lightweight.
  * Update when @google/genai changes significantly.
- * 
+ *
  * @see https://github.com/googleapis/js-genai/blob/main/src/types.ts
  */
 
@@ -12,19 +12,19 @@ export enum FunctionResponseScheduling {
   /**
    * This value is unused.
    */
-  SCHEDULING_UNSPECIFIED = 'SCHEDULING_UNSPECIFIED',
+  SCHEDULING_UNSPECIFIED = "SCHEDULING_UNSPECIFIED",
   /**
    * Only add the result to the conversation context, do not interrupt or trigger generation.
    */
-  SILENT = 'SILENT',
+  SILENT = "SILENT",
   /**
    * Add the result to the conversation context, and prompt to generate output without interrupting ongoing generation.
    */
-  WHEN_IDLE = 'WHEN_IDLE',
+  WHEN_IDLE = "WHEN_IDLE",
   /**
    * Add the result to the conversation context, interrupt ongoing generation and prompt to generate output.
    */
-  INTERRUPT = 'INTERRUPT',
+  INTERRUPT = "INTERRUPT",
 }
 
 /** Programming language of the `code`. */
@@ -32,11 +32,11 @@ export enum Language {
   /**
    * Unspecified language. This value should not be used.
    */
-  LANGUAGE_UNSPECIFIED = 'LANGUAGE_UNSPECIFIED',
+  LANGUAGE_UNSPECIFIED = "LANGUAGE_UNSPECIFIED",
   /**
    * Python >= 3.10, with numpy and simpy available.
    */
-  PYTHON = 'PYTHON',
+  PYTHON = "PYTHON",
 }
 
 /** Server content modalities. */
@@ -64,7 +64,7 @@ export enum MediaModality {
   /**
    * Document, e.g. PDF.
    */
-  DOCUMENT = "DOCUMENT"
+  DOCUMENT = "DOCUMENT",
 }
 
 /** Outcome of the code execution. */
@@ -72,19 +72,19 @@ export enum Outcome {
   /**
    * Unspecified status. This value should not be used.
    */
-  OUTCOME_UNSPECIFIED = 'OUTCOME_UNSPECIFIED',
+  OUTCOME_UNSPECIFIED = "OUTCOME_UNSPECIFIED",
   /**
    * Code execution completed successfully.
    */
-  OUTCOME_OK = 'OUTCOME_OK',
+  OUTCOME_OK = "OUTCOME_OK",
   /**
    * Code execution finished but with a failure. `stderr` should contain the reason.
    */
-  OUTCOME_FAILED = 'OUTCOME_FAILED',
+  OUTCOME_FAILED = "OUTCOME_FAILED",
   /**
    * Code execution ran for too long, and was cancelled. There may or may not be a partial output present.
    */
-  OUTCOME_DEADLINE_EXCEEDED = 'OUTCOME_DEADLINE_EXCEEDED',
+  OUTCOME_DEADLINE_EXCEEDED = "OUTCOME_DEADLINE_EXCEEDED",
 }
 
 /** Output only. The traffic type for this request. This enum is not supported in Gemini API. */
@@ -100,5 +100,5 @@ export enum TrafficType {
   /**
    * Type for Provisioned Throughput traffic.
    */
-  PROVISIONED_THROUGHPUT = "PROVISIONED_THROUGHPUT"
+  PROVISIONED_THROUGHPUT = "PROVISIONED_THROUGHPUT",
 }

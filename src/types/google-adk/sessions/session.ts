@@ -1,13 +1,13 @@
 /**
  * Vendored types from @google/adk v0.2.1
- * 
+ *
  * These types are copied locally to keep the client library lightweight.
  * Update when @google/adk changes significantly.
- * 
+ *
  * @see https://github.com/google/adk-js/blob/main/core/src/sessions/session.ts
  */
 
-import { Event } from '../events/event';
+import type { Event } from "../events/event";
 
 /**
  * Represents a session in a conversation between agents and users.

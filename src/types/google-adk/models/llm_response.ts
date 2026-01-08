@@ -1,16 +1,16 @@
 /**
  * Vendored types from @google/adk v0.2.1
- * 
+ *
  * These types are copied locally to keep the client library lightweight.
  * Update when @google/adk changes significantly.
- * 
+ *
  * @see https://github.com/google/adk-js/blob/main/core/src/models/llm_response.ts
  */
 
 import type {
   Content,
   GroundingMetadata,
-  UsageMetadata
+  UsageMetadata,
 } from "../../google-genai";
 
 /**
@@ -61,7 +61,7 @@ export interface LlmResponse {
    * An optional key-value pair to label an LlmResponse.
    * NOTE: the entire object must be JSON serializable.
    */
-  customMetadata?: {[key: string]: any};
+  customMetadata?: { [key: string]: any };
 
   /**
    * The usage metadata of the LlmResponse.

@@ -1,13 +1,13 @@
 /**
  * Vendored types from @google/adk v0.2.1
- * 
+ *
  * These types are copied locally to keep the client library lightweight.
  * Update when @google/adk changes significantly.
- * 
+ *
  * @see https://github.com/google/adk-js/blob/main/core/src/events/event_actions.ts
  */
 
-import { ToolConfirmation } from '../tools/tool_confirmation';
+import type { ToolConfirmation } from "../tools/tool_confirmation";
 
 // TODO: Replace 'any' with a proper AuthConfig.
 type AuthConfig = any;
@@ -25,13 +25,13 @@ export interface EventActions {
   /**
    * Indicates that the event is updating the state with the given delta.
    */
-  stateDelta: {[key: string]: unknown};
+  stateDelta: { [key: string]: unknown };
 
   /**
    * Indicates that the event is updating an artifact. key is the filename,
    * value is the version.
    */
-  artifactDelta: {[key: string]: number};
+  artifactDelta: { [key: string]: number };
 
   /**
    * If set, the event transfers to the specified agent.
@@ -54,11 +54,11 @@ export interface EventActions {
    * used to identify the function call.
    * - Values: The requested auth config.
    */
-  requestedAuthConfigs: {[key: string]: AuthConfig};
+  requestedAuthConfigs: { [key: string]: AuthConfig };
 
   /**
    * A dict of tool confirmation requested by this event, keyed by the function
    * call id.
    */
-  requestedToolConfirmations: {[key: string]: ToolConfirmation};
+  requestedToolConfirmations: { [key: string]: ToolConfirmation };
 }

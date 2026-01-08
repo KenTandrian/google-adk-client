@@ -1,5 +1,5 @@
 import type { ApiClient } from "../types";
-import { Part } from "../types/google-genai";
+import type { Part } from "../types/google-genai";
 
 export class Artifacts {
   private client: ApiClient;

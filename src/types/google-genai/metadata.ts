@@ -7,7 +7,7 @@
  * @see https://github.com/googleapis/js-genai/blob/main/src/types.ts
  */
 
-import { MediaModality, TrafficType } from "./enums";
+import type { MediaModality, TrafficType } from "./enums";
 
 /** Represents token counting info for a single modality. */
 export interface ModalityTokenCount {
