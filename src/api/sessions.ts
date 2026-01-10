@@ -1,4 +1,4 @@
-import type { AdkCreateSessionOptions, ApiClient } from "../types";
+import type { ApiClient, CreateSessionOptions } from "../types";
 import type { Session } from "../types/google-adk";
 
 export class Sessions {
@@ -13,7 +13,7 @@ export class Sessions {
    * @param options Optional initial state and events for the session.
    * @returns The created session.
    */
-  async create(options?: AdkCreateSessionOptions): Promise<Session> {
+  async create(options?: CreateSessionOptions): Promise<Session> {
     return this.client.requestJson(
       `/apps/${this.client.appName}/users/${this.client.userId}/sessions`,
       {
