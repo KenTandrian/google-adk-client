@@ -4,8 +4,12 @@ on:
   release:
     types: [created]
 
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
+
 jobs:
-  build:
+  publish:
     name: Build and Publish
     if: github.event.release.prerelease == false
     runs-on: ubuntu-latest
@@ -17,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22.x"
+          node-version: "24.x"
           registry-url: "https://registry.npmjs.org"
           cache: "pnpm"
       - name: Install dependencies
@@ -27,6 +31,4 @@ jobs:
       - name: Run tests
         run: pnpm test
       - name: Publish to npm
-        run: pnpm publish --no-git-checks --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public --provenance
