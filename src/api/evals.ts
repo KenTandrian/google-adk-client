@@ -1,8 +1,8 @@
 import type {
-  AdkGetEvalResponse,
-  AdkGetEvalResultResponse,
-  AdkRunEvalResponse,
   ApiClient,
+  GetEvalResponse,
+  GetEvalResultResponse,
+  RunEvalResponse,
 } from "../types";
 
 export class Evals {
@@ -77,7 +77,7 @@ export class Evals {
   async getEval(
     evalSetId: string,
     evalCaseId: string
-  ): Promise<AdkGetEvalResponse> {
+  ): Promise<GetEvalResponse> {
     return this.client.requestJson(
       `/apps/${this.client.appName}/eval_sets/${evalSetId}/evals/${evalCaseId}`
     );
@@ -88,7 +88,7 @@ export class Evals {
    * @param evalResultId The ID of the evaluation result to get.
    * @returns The requested evaluation result.
    */
-  async getEvalResult(evalResultId: string): Promise<AdkGetEvalResultResponse> {
+  async getEvalResult(evalResultId: string): Promise<GetEvalResultResponse> {
     return this.client.requestJson(
       `/apps/${this.client.appName}/eval_results/${evalResultId}`
     );
@@ -126,7 +126,7 @@ export class Evals {
    * @param evalSetId The ID of the evaluation set to run.
    * @returns The response from the API.
    */
-  async runEval(evalSetId: string): Promise<AdkRunEvalResponse> {
+  async runEval(evalSetId: string): Promise<RunEvalResponse> {
     return this.client.requestJson(
       `/apps/${this.client.appName}/eval_sets/${evalSetId}/run_eval`,
       {
@@ -146,7 +146,7 @@ export class Evals {
     evalSetId: string,
     evalCaseId: string,
     data: unknown
-  ): Promise<AdkGetEvalResponse> {
+  ): Promise<GetEvalResponse> {
     return this.client.requestJson(
       `/apps/${this.client.appName}/eval_sets/${evalSetId}/evals/${evalCaseId}`,
       {

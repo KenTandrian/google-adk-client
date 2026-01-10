@@ -6,7 +6,7 @@ import { Debug } from "./api/debug";
 import { Evals } from "./api/evals";
 import { Events } from "./api/events";
 import { Sessions } from "./api/sessions";
-import type { AdkAgentRunSsePayload } from "./types";
+import type { AgentRunSsePayload } from "./types";
 
 export interface AdkClientOptions {
   appName?: string;
@@ -131,7 +131,7 @@ export class AdkClient {
 
   private transformMessagesToAdkNewMessage(
     messages: UIMessage[]
-  ): AdkAgentRunSsePayload["newMessage"] {
+  ): AgentRunSsePayload["newMessage"] {
     const lastMessage = messages[messages.length - 1];
 
     const parts = lastMessage.parts.map((part) => {
@@ -161,7 +161,7 @@ export class AdkClient {
 
   async runSse(sessionId: string, messages: UIMessage[]): Promise<Response> {
     const newMessage = this.transformMessagesToAdkNewMessage(messages);
-    const body: AdkAgentRunSsePayload = {
+    const body: AgentRunSsePayload = {
       appName: this.appName,
       userId: this.userId,
       sessionId: sessionId,
@@ -178,7 +178,7 @@ export class AdkClient {
 
   async run(sessionId: string, messages: UIMessage[]): Promise<Response> {
     const newMessage = this.transformMessagesToAdkNewMessage(messages);
-    const body: AdkAgentRunSsePayload = {
+    const body: AgentRunSsePayload = {
       appName: this.appName,
       userId: this.userId,
       sessionId: sessionId,

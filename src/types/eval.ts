@@ -1,61 +1,61 @@
 import type { Content } from "./google-genai";
 
-export type AdkRunEvalResponse = AdkRunEvalResult[];
+export type RunEvalResponse = RunEvalResult[];
 
-export interface AdkRunEvalResult {
+export interface RunEvalResult {
   evalSetFile: string;
   evalSetId: string;
   evalId: string;
   finalEvalStatus: number;
-  overallEvalMetricResults: AdkOverallEvalMetricResult[];
-  evalMetricResultPerInvocation: AdkEvalMetricResultPerInvocation[];
+  overallEvalMetricResults: OverallEvalMetricResult[];
+  evalMetricResultPerInvocation: EvalMetricResultPerInvocation[];
   userId: string;
   sessionId: string;
 }
 
-export interface AdkOverallEvalMetricResult {
+export interface OverallEvalMetricResult {
   metricName: string;
   threshold: number;
   score: number;
   evalStatus: number;
 }
 
-export interface AdkEvalMetricResultPerInvocation {
-  actualInvocation: AdkInvocation;
-  expectedInvocation: AdkInvocation;
+export interface EvalMetricResultPerInvocation {
+  actualInvocation: Invocation;
+  expectedInvocation: Invocation;
   evalMetricResults: any[];
 }
 
-export interface AdkInvocation {
+export interface Invocation {
   invocationId: string;
   userContent: Content;
   finalResponse: Content;
-  intermediateData: AdkIntermediateData;
+  intermediateData: IntermediateData;
   creationTimestamp: number;
 }
 
-export interface AdkIntermediateData {
+export interface IntermediateData {
   toolUses: any[];
   intermediateResponses: any[];
 }
 
-export interface AdkGetEvalResponse {
+export interface GetEvalResponse {
   evalId: string;
-  conversation: AdkInvocation[];
-  sessionInput: AdkSessionInput;
+  conversation: Invocation[];
+  sessionInput: SessionInput;
   creationTimestamp: number;
 }
 
-export interface AdkSessionInput {
+export interface SessionInput {
   appName: string;
   userId: string;
   state: Record<string, any>;
 }
 
-export interface AdkGetEvalResultResponse {
+export interface GetEvalResultResponse {
   evalSetResultId: string;
   evalSetResultName: string;
   evalSetId: string;
-  evalCaseResults: AdkRunEvalResult[];
+  evalCaseResults: RunEvalResult[];
   creationTimestamp: number;
 }

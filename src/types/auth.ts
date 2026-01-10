@@ -2,10 +2,10 @@
  * The auth config sent by tool asking client to collect auth credentials and
  * adk and client will help to fill in the response.
  */
-export interface AdkAuthConfig {
-  authScheme: AdkAuthScheme;
-  rawAuthCredential?: AdkAuthCredential;
-  exchangedAuthCredential?: AdkAuthCredential;
+export interface AuthConfig {
+  authScheme: AuthScheme;
+  rawAuthCredential?: AuthCredential;
+  exchangedAuthCredential?: AuthCredential;
   credentialKey?: string;
 }
 
@@ -13,7 +13,7 @@ export interface AdkAuthConfig {
  * AuthScheme contains SecuritySchemes from OpenAPI 3.0 and an extra flattened
  * OpenIdConnectWithConfig.
  */
-export interface AdkAuthScheme {
+export interface AuthScheme {
   type: string;
   description: string;
   in: string;
@@ -23,19 +23,19 @@ export interface AdkAuthScheme {
 /**
  * Data class representing an authentication credential.
  */
-export interface AdkAuthCredential {
+export interface AuthCredential {
   authType: string;
   resourceRef?: string;
   apiKey?: string;
-  http?: AdkHttpAuth;
-  serviceAccount?: AdkServiceAccountAuth;
-  oauth2?: AdkOAuth2Auth;
+  http?: HttpAuth;
+  serviceAccount?: ServiceAccountAuth;
+  oauth2?: OAuth2Auth;
 }
 
 /**
  * The credentials and metadata for HTTP authentication.
  */
-export interface AdkHttpAuth {
+export interface HttpAuth {
   scheme: string;
   credentials: {
     username?: string;
@@ -47,8 +47,8 @@ export interface AdkHttpAuth {
 /**
  * Represents Google Service Account configuration.
  */
-export interface AdkServiceAccountAuth {
-  serviceAccountCredential: AdkServiceAccountCredential;
+export interface ServiceAccountAuth {
+  serviceAccountCredential: ServiceAccountCredential;
   scopes: string[];
   useDefaultCredential?: boolean;
 }
@@ -56,7 +56,7 @@ export interface AdkServiceAccountAuth {
 /**
  * Represents Google Service Account configuration.
  */
-export interface AdkServiceAccountCredential {
+export interface ServiceAccountCredential {
   type: string;
   projectId: string;
   privateKeyId: string;
@@ -73,7 +73,7 @@ export interface AdkServiceAccountCredential {
 /**
  * Represents credential value and its metadata for a OAuth2 credential.
  */
-export interface AdkOAuth2Auth {
+export interface OAuth2Auth {
   clientId: string;
   clientSecret: string;
   authUri: string;
