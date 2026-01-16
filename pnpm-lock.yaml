@@ -12,8 +12,8 @@ importers:
         specifier: 2.3.11
         version: 2.3.11
       '@google/adk':
-        specifier: 0.2.2
-        version: 0.2.2(cce4110fa4396019fb9dffba6c13fb77)
+        specifier: 0.2.3
+        version: 0.2.3(cce4110fa4396019fb9dffba6c13fb77)
       '@types/node':
         specifier: 25.0.9
         version: 25.0.9
@@ -299,8 +299,8 @@ packages:
     resolution: {integrity: sha512-r3ZwDMiz4nwW6R922Z1pwpePxyRwE5GdevYX63hRmAQUkUQJcBH/79EnQPDv5cOv1mFBgevdNWQfi3tie3dHrQ==}
     engines: {node: '>=14'}
 
-  '@google/adk@0.2.2':
-    resolution: {integrity: sha512-qhlDFX3mrj6DEnsHXT6hYv/NmM6TSG0S5DWVJAZFDOOQbmzR0enzOwNfNDrINP/0bnG0DE1FoB8rO0dAm4u6cA==}
+  '@google/adk@0.2.3':
+    resolution: {integrity: sha512-hX38ieLh+FQHJk6iHzmPiuJiOiOL49PCXiqTMvp5SCnAU/rZyHgXoaqFC607mdNwVH7sAWxcUttzt6EirPXKRg==}
     peerDependencies:
       '@google-cloud/opentelemetry-cloud-monitoring-exporter': ^0.21.0
       '@google-cloud/opentelemetry-cloud-trace-exporter': ^3.0.0
@@ -335,8 +335,8 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  '@hono/node-server@1.19.8':
-    resolution: {integrity: sha512-0/g2lIOPzX8f3vzW1ggQgvG5mjtFBDBHFAzI5SFAi2DzSqS9luJwqg9T6O/gKYLi+inS7eNxBeIFkkghIPvrMA==}
+  '@hono/node-server@1.19.9':
+    resolution: {integrity: sha512-vHL6w3ecZsky+8P5MD+eFfaGTyCeOHUIFYMGpQGbrBTSmNNoxv0if69rEZ5giu36weC5saFuznL411gRX7bJDw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
@@ -1162,11 +1162,11 @@ packages:
   jws@4.0.1:
     resolution: {integrity: sha512-EKI/M/yqPncGUUh44xz0PxSidXFr/+r0pA70+gIYhjv+et7yxM+s29Y+VGDkovRofQem0fs7Uvf4+YmAdyRduA==}
 
+  lodash-es@4.17.22:
+    resolution: {integrity: sha512-XEawp1t0gxSi9x01glktRZ5HDy0HXqrM0x5pXQM98EaI0NxO6jVM7omDOxsuEo5UIASAnm2bRp1Jt/e0a2XU8Q==}
+
   lodash.camelcase@4.3.0:
     resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==}
-
-  lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
 
   long@5.3.2:
     resolution: {integrity: sha512-mNAgZ1GmyNhD7AuqnTG3/VQ26o760+ZYBPKjPvugO8+nLbYfX6TVpJPseBvopbdY+qpZ/lKUnmEc1LeZYS3QAA==}
@@ -1856,7 +1856,7 @@ snapshots:
       - encoding
       - supports-color
 
-  '@google/adk@0.2.2(cce4110fa4396019fb9dffba6c13fb77)':
+  '@google/adk@0.2.3(cce4110fa4396019fb9dffba6c13fb77)':
     dependencies:
       '@google-cloud/opentelemetry-cloud-monitoring-exporter': 0.21.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.4.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.2.0(@opentelemetry/api@1.9.0))
       '@google-cloud/opentelemetry-cloud-trace-exporter': 3.0.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.4.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0))
@@ -1875,7 +1875,7 @@ snapshots:
       '@opentelemetry/sdk-trace-base': 2.2.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-node': 2.2.0(@opentelemetry/api@1.9.0)
       google-auth-library: 10.5.0
-      lodash: 4.17.21
+      lodash-es: 4.17.22
       zod: 3.25.76
     transitivePeerDependencies:
       - '@cfworker/json-schema'
@@ -1907,7 +1907,7 @@ snapshots:
       protobufjs: 7.5.4
       yargs: 17.7.2
 
-  '@hono/node-server@1.19.8(hono@4.11.2)':
+  '@hono/node-server@1.19.9(hono@4.11.2)':
     dependencies:
       hono: 4.11.2
 
@@ -1926,7 +1926,7 @@ snapshots:
 
   '@modelcontextprotocol/sdk@1.25.2(hono@4.11.2)(zod@3.25.76)':
     dependencies:
-      '@hono/node-server': 1.19.8(hono@4.11.2)
+      '@hono/node-server': 1.19.9(hono@4.11.2)
       ajv: 8.17.1
       ajv-formats: 3.0.1(ajv@8.17.1)
       content-type: 1.0.5
@@ -2801,9 +2801,9 @@ snapshots:
       jwa: 2.0.1
       safe-buffer: 5.2.1
 
-  lodash.camelcase@4.3.0: {}
+  lodash-es@4.17.22: {}
 
-  lodash@4.17.21: {}
+  lodash.camelcase@4.3.0: {}
 
   long@5.3.2: {}
 
