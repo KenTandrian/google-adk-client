@@ -18,8 +18,8 @@ importers:
         specifier: 25.0.9
         version: 25.0.9
       ai:
-        specifier: 6.0.38
-        version: 6.0.38(zod@3.25.76)
+        specifier: 6.0.40
+        version: 6.0.40(zod@3.25.76)
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -477,8 +477,8 @@ packages:
     peerDependencies:
       '@opentelemetry/api': '>=1.0.0 <1.10.0'
 
-  '@opentelemetry/semantic-conventions@1.38.0':
-    resolution: {integrity: sha512-kocjix+/sSggfJhwXqClZ3i9Y/MI0fp7b+g7kCRm6psy2dsf8uApTRclwG18h8Avm7C9+fnt+O36PspJ/OzoWg==}
+  '@opentelemetry/semantic-conventions@1.39.0':
+    resolution: {integrity: sha512-R5R9tb2AXs2IRLNKLBJDynhkfmx7mX0vi8NkhZb3gUkPWHn6HXk5J8iQ/dql0U3ApfWym4kXXmBDRGO+oeOfjg==}
     engines: {node: '>=14'}
 
   '@pkgjs/parseargs@0.11.0':
@@ -717,8 +717,8 @@ packages:
     resolution: {integrity: sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==}
     engines: {node: '>= 14'}
 
-  ai@6.0.38:
-    resolution: {integrity: sha512-X8AaZFrdsPO1RNCAQLsaWfmE/SL9zgsiIZN3XqEHs3jIZ7ycR5aQZRg5XpNtbLWJxKXzK2b1ZXLx13AFOjksSg==}
+  ai@6.0.40:
+    resolution: {integrity: sha512-yzOCNotjmKhwtplPoUe77yV5TYqJxJ0uU6TqpUa452iHPJHVL0I5RShQ0GuUvUc7zyIQrejMJjvyK/PoyDhySQ==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -1818,7 +1818,7 @@ snapshots:
     dependencies:
       '@opentelemetry/core': 2.4.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.2.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.38.0
+      '@opentelemetry/semantic-conventions': 1.39.0
       gcp-metadata: 6.1.1
     transitivePeerDependencies:
       - encoding
@@ -1959,17 +1959,17 @@ snapshots:
   '@opentelemetry/core@2.1.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
-      '@opentelemetry/semantic-conventions': 1.38.0
+      '@opentelemetry/semantic-conventions': 1.39.0
 
   '@opentelemetry/core@2.2.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
-      '@opentelemetry/semantic-conventions': 1.38.0
+      '@opentelemetry/semantic-conventions': 1.39.0
 
   '@opentelemetry/core@2.4.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
-      '@opentelemetry/semantic-conventions': 1.38.0
+      '@opentelemetry/semantic-conventions': 1.39.0
 
   '@opentelemetry/exporter-logs-otlp-http@0.205.0(@opentelemetry/api@1.9.0)':
     dependencies:
@@ -2029,13 +2029,13 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.1.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.38.0
+      '@opentelemetry/semantic-conventions': 1.39.0
 
   '@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.2.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.38.0
+      '@opentelemetry/semantic-conventions': 1.39.0
 
   '@opentelemetry/sdk-logs@0.205.0(@opentelemetry/api@1.9.0)':
     dependencies:
@@ -2061,14 +2061,14 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.1.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.1.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.38.0
+      '@opentelemetry/semantic-conventions': 1.39.0
 
   '@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.2.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.2.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.38.0
+      '@opentelemetry/semantic-conventions': 1.39.0
 
   '@opentelemetry/sdk-trace-node@2.2.0(@opentelemetry/api@1.9.0)':
     dependencies:
@@ -2077,7 +2077,7 @@ snapshots:
       '@opentelemetry/core': 2.2.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 2.2.0(@opentelemetry/api@1.9.0)
 
-  '@opentelemetry/semantic-conventions@1.38.0': {}
+  '@opentelemetry/semantic-conventions@1.39.0': {}
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
@@ -2266,7 +2266,7 @@ snapshots:
 
   agent-base@7.1.4: {}
 
-  ai@6.0.38(zod@3.25.76):
+  ai@6.0.40(zod@3.25.76):
     dependencies:
       '@ai-sdk/gateway': 3.0.16(zod@3.25.76)
       '@ai-sdk/provider': 3.0.4
