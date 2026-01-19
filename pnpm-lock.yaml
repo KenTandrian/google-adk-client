@@ -12,8 +12,8 @@ importers:
         specifier: 2.3.11
         version: 2.3.11
       '@google/adk':
-        specifier: 0.2.3
-        version: 0.2.3(cce4110fa4396019fb9dffba6c13fb77)
+        specifier: 0.2.4
+        version: 0.2.4(cce4110fa4396019fb9dffba6c13fb77)
       '@types/node':
         specifier: 25.0.9
         version: 25.0.9
@@ -299,8 +299,8 @@ packages:
     resolution: {integrity: sha512-r3ZwDMiz4nwW6R922Z1pwpePxyRwE5GdevYX63hRmAQUkUQJcBH/79EnQPDv5cOv1mFBgevdNWQfi3tie3dHrQ==}
     engines: {node: '>=14'}
 
-  '@google/adk@0.2.3':
-    resolution: {integrity: sha512-hX38ieLh+FQHJk6iHzmPiuJiOiOL49PCXiqTMvp5SCnAU/rZyHgXoaqFC607mdNwVH7sAWxcUttzt6EirPXKRg==}
+  '@google/adk@0.2.4':
+    resolution: {integrity: sha512-Jeaz8QWSgSYkSWd2R4cm24ImniDrWypmJTcbOuyWVkjprStZcX8N5Ci48Ny+5mD1xLJTo56XvVTfMER5ddBrXg==}
     peerDependencies:
       '@google-cloud/opentelemetry-cloud-monitoring-exporter': ^0.21.0
       '@google-cloud/opentelemetry-cloud-trace-exporter': ^3.0.0
@@ -317,11 +317,11 @@ packages:
       '@opentelemetry/sdk-trace-base': ^2.1.0
       '@opentelemetry/sdk-trace-node': ^2.1.0
 
-  '@google/genai@1.32.0':
-    resolution: {integrity: sha512-46vaEaHAThIBlqWFTti1fo3xYU6DwCOwnIIotLhYUbNha90wk5cZL79zdf+NoAfKVsx4DPmjCtXvbQNNVPl5ZQ==}
+  '@google/genai@1.37.0':
+    resolution: {integrity: sha512-of85LwNqretPhBHHEljUY05OSsQVUPyw5n1RdNkUpKR36kgHq7CVVEGY4GplVbFaqbdT3DXfLSv5B/Avbe5vXw==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
-      '@modelcontextprotocol/sdk': ^1.24.0
+      '@modelcontextprotocol/sdk': ^1.25.2
     peerDependenciesMeta:
       '@modelcontextprotocol/sdk':
         optional: true
@@ -1856,12 +1856,12 @@ snapshots:
       - encoding
       - supports-color
 
-  '@google/adk@0.2.3(cce4110fa4396019fb9dffba6c13fb77)':
+  '@google/adk@0.2.4(cce4110fa4396019fb9dffba6c13fb77)':
     dependencies:
       '@google-cloud/opentelemetry-cloud-monitoring-exporter': 0.21.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.4.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.2.0(@opentelemetry/api@1.9.0))
       '@google-cloud/opentelemetry-cloud-trace-exporter': 3.0.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.4.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0))
       '@google-cloud/storage': 7.18.0
-      '@google/genai': 1.32.0(@modelcontextprotocol/sdk@1.25.2(hono@4.11.2)(zod@3.25.76))
+      '@google/genai': 1.37.0(@modelcontextprotocol/sdk@1.25.2(hono@4.11.2)(zod@3.25.76))
       '@modelcontextprotocol/sdk': 1.25.2(hono@4.11.2)(zod@3.25.76)
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/api-logs': 0.205.0
@@ -1884,9 +1884,10 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@google/genai@1.32.0(@modelcontextprotocol/sdk@1.25.2(hono@4.11.2)(zod@3.25.76))':
+  '@google/genai@1.37.0(@modelcontextprotocol/sdk@1.25.2(hono@4.11.2)(zod@3.25.76))':
     dependencies:
       google-auth-library: 10.5.0
+      protobufjs: 7.5.4
       ws: 8.19.0
     optionalDependencies:
       '@modelcontextprotocol/sdk': 1.25.2(hono@4.11.2)(zod@3.25.76)
