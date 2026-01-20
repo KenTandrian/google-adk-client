@@ -45,7 +45,7 @@
     "vitest": "4.0.17"
   },
   "peerDependencies": {
-    "ai": "^5.0.0"
+    "ai": "^6.0.0"
   },
   "peerDependenciesMeta": {
     "ai": {
