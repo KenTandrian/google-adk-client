@@ -12,14 +12,14 @@ importers:
         specifier: 2.3.13
         version: 2.3.13
       '@google/adk':
-        specifier: 0.2.5
-        version: 0.2.5(c1acc4ed3b3c730e1dddc6b8734303f6)
+        specifier: 0.3.0
+        version: 0.3.0(c1acc4ed3b3c730e1dddc6b8734303f6)
       '@types/node':
         specifier: 25.2.0
         version: 25.2.0
       ai:
         specifier: 6.0.68
-        version: 6.0.68(zod@3.25.76)
+        version: 6.0.68(zod@4.3.6)
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -299,8 +299,8 @@ packages:
     resolution: {integrity: sha512-r3ZwDMiz4nwW6R922Z1pwpePxyRwE5GdevYX63hRmAQUkUQJcBH/79EnQPDv5cOv1mFBgevdNWQfi3tie3dHrQ==}
     engines: {node: '>=14'}
 
-  '@google/adk@0.2.5':
-    resolution: {integrity: sha512-2puhbLKvxLI8CcQOmBkNkyIrw7e4Qq35DwazQbxEx4tVyR9hRnloMpU9TPNlPHjt4ldtos6MS+akJyPk7tiuWA==}
+  '@google/adk@0.3.0':
+    resolution: {integrity: sha512-X0t4oUOvQVF4jFqcXegYvfFo0eRosu1xXZR82ygKWLWGnh+vkeaP7YA8OIrNBVD56wDSAQLD9uZlfz6VIZhKgQ==}
     peerDependencies:
       '@google-cloud/opentelemetry-cloud-monitoring-exporter': ^0.21.0
       '@google-cloud/opentelemetry-cloud-trace-exporter': ^3.0.0
@@ -317,8 +317,8 @@ packages:
       '@opentelemetry/sdk-trace-base': ^2.1.0
       '@opentelemetry/sdk-trace-node': ^2.1.0
 
-  '@google/genai@1.38.0':
-    resolution: {integrity: sha512-V/4CQVQGovvGHuS73lwJwHKR9x33kCij3zz/ReEQ4A7RJaV0U7m4k1mvYhFk55cGZdF5JLKu2S9BTaFuEs5xTA==}
+  '@google/genai@1.39.0':
+    resolution: {integrity: sha512-Vz7AQsOdBeiIcxmXIQNy/hzDvyAOE1lSpWA10itUQza7h3aQFF6QSGaQ7o1GYsjMD3XslK4Ee/Ol0eLhRXb7gA==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       '@modelcontextprotocol/sdk': ^1.25.2
@@ -1650,24 +1650,24 @@ packages:
     peerDependencies:
       zod: ^3.25 || ^4
 
-  zod@3.25.76:
-    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+  zod@4.3.6:
+    resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
 
 snapshots:
 
-  '@ai-sdk/gateway@3.0.32(zod@3.25.76)':
+  '@ai-sdk/gateway@3.0.32(zod@4.3.6)':
     dependencies:
       '@ai-sdk/provider': 3.0.7
-      '@ai-sdk/provider-utils': 4.0.13(zod@3.25.76)
+      '@ai-sdk/provider-utils': 4.0.13(zod@4.3.6)
       '@vercel/oidc': 3.1.0
-      zod: 3.25.76
+      zod: 4.3.6
 
-  '@ai-sdk/provider-utils@4.0.13(zod@3.25.76)':
+  '@ai-sdk/provider-utils@4.0.13(zod@4.3.6)':
     dependencies:
       '@ai-sdk/provider': 3.0.7
       '@standard-schema/spec': 1.1.0
       eventsource-parser: 3.0.6
-      zod: 3.25.76
+      zod: 4.3.6
 
   '@ai-sdk/provider@3.0.7':
     dependencies:
@@ -1856,13 +1856,13 @@ snapshots:
       - encoding
       - supports-color
 
-  '@google/adk@0.2.5(c1acc4ed3b3c730e1dddc6b8734303f6)':
+  '@google/adk@0.3.0(c1acc4ed3b3c730e1dddc6b8734303f6)':
     dependencies:
       '@google-cloud/opentelemetry-cloud-monitoring-exporter': 0.21.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.5.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.2.0(@opentelemetry/api@1.9.0))
       '@google-cloud/opentelemetry-cloud-trace-exporter': 3.0.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.5.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0))
       '@google-cloud/storage': 7.18.0
-      '@google/genai': 1.38.0(@modelcontextprotocol/sdk@1.25.3(hono@4.11.2)(zod@3.25.76))
-      '@modelcontextprotocol/sdk': 1.25.3(hono@4.11.2)(zod@3.25.76)
+      '@google/genai': 1.39.0(@modelcontextprotocol/sdk@1.25.3(hono@4.11.2)(zod@4.3.6))
+      '@modelcontextprotocol/sdk': 1.25.3(hono@4.11.2)(zod@4.3.6)
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/api-logs': 0.205.0
       '@opentelemetry/exporter-logs-otlp-http': 0.205.0(@opentelemetry/api@1.9.0)
@@ -1876,7 +1876,8 @@ snapshots:
       '@opentelemetry/sdk-trace-node': 2.2.0(@opentelemetry/api@1.9.0)
       google-auth-library: 10.5.0
       lodash-es: 4.17.23
-      zod: 3.25.76
+      zod: 4.3.6
+      zod-to-json-schema: 3.25.1(zod@4.3.6)
     transitivePeerDependencies:
       - '@cfworker/json-schema'
       - bufferutil
@@ -1884,13 +1885,13 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@google/genai@1.38.0(@modelcontextprotocol/sdk@1.25.3(hono@4.11.2)(zod@3.25.76))':
+  '@google/genai@1.39.0(@modelcontextprotocol/sdk@1.25.3(hono@4.11.2)(zod@4.3.6))':
     dependencies:
       google-auth-library: 10.5.0
       protobufjs: 7.5.4
       ws: 8.19.0
     optionalDependencies:
-      '@modelcontextprotocol/sdk': 1.25.3(hono@4.11.2)(zod@3.25.76)
+      '@modelcontextprotocol/sdk': 1.25.3(hono@4.11.2)(zod@4.3.6)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -1925,7 +1926,7 @@ snapshots:
 
   '@js-sdsl/ordered-map@4.4.2': {}
 
-  '@modelcontextprotocol/sdk@1.25.3(hono@4.11.2)(zod@3.25.76)':
+  '@modelcontextprotocol/sdk@1.25.3(hono@4.11.2)(zod@4.3.6)':
     dependencies:
       '@hono/node-server': 1.19.9(hono@4.11.2)
       ajv: 8.17.1
@@ -1941,8 +1942,8 @@ snapshots:
       json-schema-typed: 8.0.2
       pkce-challenge: 5.0.1
       raw-body: 3.0.2
-      zod: 3.25.76
-      zod-to-json-schema: 3.25.1(zod@3.25.76)
+      zod: 4.3.6
+      zod-to-json-schema: 3.25.1(zod@4.3.6)
     transitivePeerDependencies:
       - hono
       - supports-color
@@ -2267,13 +2268,13 @@ snapshots:
 
   agent-base@7.1.4: {}
 
-  ai@6.0.68(zod@3.25.76):
+  ai@6.0.68(zod@4.3.6):
     dependencies:
-      '@ai-sdk/gateway': 3.0.32(zod@3.25.76)
+      '@ai-sdk/gateway': 3.0.32(zod@4.3.6)
       '@ai-sdk/provider': 3.0.7
-      '@ai-sdk/provider-utils': 4.0.13(zod@3.25.76)
+      '@ai-sdk/provider-utils': 4.0.13(zod@4.3.6)
       '@opentelemetry/api': 1.9.0
-      zod: 3.25.76
+      zod: 4.3.6
 
   ajv-formats@3.0.1(ajv@8.17.1):
     optionalDependencies:
@@ -3261,8 +3262,8 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  zod-to-json-schema@3.25.1(zod@3.25.76):
+  zod-to-json-schema@3.25.1(zod@4.3.6):
     dependencies:
-      zod: 3.25.76
+      zod: 4.3.6
 
-  zod@3.25.76: {}
+  zod@4.3.6: {}
