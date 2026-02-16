@@ -13,10 +13,10 @@ importers:
         version: 2.3.14
       '@google/adk':
         specifier: 0.3.0
-        version: 0.3.0(c1acc4ed3b3c730e1dddc6b8734303f6)
+        version: 0.3.0(ba4e6db19461168666c3195c7ec08df1)
       '@types/node':
-        specifier: 25.2.2
-        version: 25.2.2
+        specifier: 25.2.3
+        version: 25.2.3
       ai:
         specifier: 6.0.78
         version: 6.0.78(zod@4.3.6)
@@ -25,7 +25,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.0.18
-        version: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.2.2)
+        version: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.2.3)
 
 packages:
 
@@ -387,8 +387,8 @@ packages:
     peerDependencies:
       '@opentelemetry/api': '>=1.0.0 <1.10.0'
 
-  '@opentelemetry/core@2.5.0':
-    resolution: {integrity: sha512-ka4H8OM6+DlUhSAZpONu0cPBtPPTQKxbxVzC4CzVx5+K4JnroJVBtDzLAMx4/3CDTJXRvVFhpFjtl4SaiTNoyQ==}
+  '@opentelemetry/core@2.5.1':
+    resolution: {integrity: sha512-Dwlc+3HAZqpgTYq0MUyZABjFkcrKTePwuiFVLjahGD8cx3enqihmpAmdgNFO1R4m/sIe5afjJrA25Prqy4NXlA==}
     engines: {node: ^18.19.0 || >=20.6.0}
     peerDependencies:
       '@opentelemetry/api': '>=1.0.0 <1.10.0'
@@ -659,8 +659,8 @@ packages:
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
-  '@types/node@25.2.2':
-    resolution: {integrity: sha512-BkmoP5/FhRYek5izySdkOneRyXYN35I860MFAGupTdebyE66uZaR+bXLHq8k4DirE5DwQi3NuhvRU1jqTVwUrQ==}
+  '@types/node@25.2.3':
+    resolution: {integrity: sha512-m0jEgYlYz+mDJZ2+F4v8D1AyQb+QzsNqRuI7xg1VQX/KlKS0qT9r1Mo16yo5F/MtifXFgaofIFsdFMox2SxIbQ==}
 
   '@types/request@2.48.13':
     resolution: {integrity: sha512-FGJ6udDNUCjd19pp0Q3iTiDkwhYup7J8hpMW9c4k53NrccQFFWKRho6hvtPPEhnXWKvukfwAlB6DbDz4yhH5Gg==}
@@ -1319,6 +1319,10 @@ packages:
     resolution: {integrity: sha512-4EK3+xJl8Ts67nLYNwqw/dsFVnCf+qR7RgXSK9jEEm9unao3njwMDdmsdvoKBKHzxd7tCYz5e5M+SnMjdtXGQQ==}
     engines: {node: '>=0.6'}
 
+  qs@6.15.0:
+    resolution: {integrity: sha512-mAZTtNCeetKMH+pSjrb76NAM8V9a05I9aBZOHztWy/UqcJdQYNsf59vrRKWnojAT9Y+GbIvoTBC++CPHqpDBhQ==}
+    engines: {node: '>=0.6'}
+
   range-parser@1.2.1:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
     engines: {node: '>= 0.6'}
@@ -1787,12 +1791,12 @@ snapshots:
   '@esbuild/win32-x64@0.27.2':
     optional: true
 
-  '@google-cloud/opentelemetry-cloud-monitoring-exporter@0.21.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.5.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.2.0(@opentelemetry/api@1.9.0))':
+  '@google-cloud/opentelemetry-cloud-monitoring-exporter@0.21.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.2.0(@opentelemetry/api@1.9.0))':
     dependencies:
-      '@google-cloud/opentelemetry-resource-util': 3.0.0(@opentelemetry/core@2.5.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))
+      '@google-cloud/opentelemetry-resource-util': 3.0.0(@opentelemetry/core@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))
       '@google-cloud/precise-date': 4.0.0
       '@opentelemetry/api': 1.9.0
-      '@opentelemetry/core': 2.5.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/core': 2.5.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.2.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-metrics': 2.2.0(@opentelemetry/api@1.9.0)
       google-auth-library: 9.15.1
@@ -1801,13 +1805,13 @@ snapshots:
       - encoding
       - supports-color
 
-  '@google-cloud/opentelemetry-cloud-trace-exporter@3.0.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.5.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0))':
+  '@google-cloud/opentelemetry-cloud-trace-exporter@3.0.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0))':
     dependencies:
-      '@google-cloud/opentelemetry-resource-util': 3.0.0(@opentelemetry/core@2.5.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))
+      '@google-cloud/opentelemetry-resource-util': 3.0.0(@opentelemetry/core@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))
       '@grpc/grpc-js': 1.14.3
       '@grpc/proto-loader': 0.8.0
       '@opentelemetry/api': 1.9.0
-      '@opentelemetry/core': 2.5.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/core': 2.5.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.2.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 2.2.0(@opentelemetry/api@1.9.0)
       google-auth-library: 9.15.1
@@ -1815,9 +1819,9 @@ snapshots:
       - encoding
       - supports-color
 
-  '@google-cloud/opentelemetry-resource-util@3.0.0(@opentelemetry/core@2.5.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))':
+  '@google-cloud/opentelemetry-resource-util@3.0.0(@opentelemetry/core@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))':
     dependencies:
-      '@opentelemetry/core': 2.5.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/core': 2.5.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.2.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/semantic-conventions': 1.39.0
       gcp-metadata: 6.1.1
@@ -1857,10 +1861,10 @@ snapshots:
       - encoding
       - supports-color
 
-  '@google/adk@0.3.0(c1acc4ed3b3c730e1dddc6b8734303f6)':
+  '@google/adk@0.3.0(ba4e6db19461168666c3195c7ec08df1)':
     dependencies:
-      '@google-cloud/opentelemetry-cloud-monitoring-exporter': 0.21.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.5.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.2.0(@opentelemetry/api@1.9.0))
-      '@google-cloud/opentelemetry-cloud-trace-exporter': 3.0.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.5.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0))
+      '@google-cloud/opentelemetry-cloud-monitoring-exporter': 0.21.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.2.0(@opentelemetry/api@1.9.0))
+      '@google-cloud/opentelemetry-cloud-trace-exporter': 3.0.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.5.1(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.2.0(@opentelemetry/api@1.9.0))
       '@google-cloud/storage': 7.18.0
       '@google/genai': 1.39.0(@modelcontextprotocol/sdk@1.25.3(hono@4.11.2)(zod@4.3.6))
       '@modelcontextprotocol/sdk': 1.25.3(hono@4.11.2)(zod@4.3.6)
@@ -1969,7 +1973,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/semantic-conventions': 1.39.0
 
-  '@opentelemetry/core@2.5.0(@opentelemetry/api@1.9.0)':
+  '@opentelemetry/core@2.5.1(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/semantic-conventions': 1.39.0
@@ -2021,7 +2025,7 @@ snapshots:
   '@opentelemetry/resource-detector-gcp@0.40.3(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
-      '@opentelemetry/core': 2.5.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/core': 2.5.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.2.0(@opentelemetry/api@1.9.0)
       gcp-metadata: 6.1.1
     transitivePeerDependencies:
@@ -2198,14 +2202,14 @@ snapshots:
 
   '@types/estree@1.0.8': {}
 
-  '@types/node@25.2.2':
+  '@types/node@25.2.3':
     dependencies:
       undici-types: 7.16.0
 
   '@types/request@2.48.13':
     dependencies:
       '@types/caseless': 0.12.5
-      '@types/node': 25.2.2
+      '@types/node': 25.2.3
       '@types/tough-cookie': 4.0.5
       form-data: 2.5.5
 
@@ -2222,13 +2226,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.18(vite@7.3.1(@types/node@25.2.2))':
+  '@vitest/mocker@4.0.18(vite@7.3.1(@types/node@25.2.3))':
     dependencies:
       '@vitest/spy': 4.0.18
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.3.1(@types/node@25.2.2)
+      vite: 7.3.1(@types/node@25.2.3)
 
   '@vitest/pretty-format@4.0.18':
     dependencies:
@@ -2683,7 +2687,7 @@ snapshots:
       extend: 3.0.2
       gaxios: 6.7.1
       google-auth-library: 9.15.1
-      qs: 6.14.1
+      qs: 6.15.0
       url-template: 2.0.8
       uuid: 9.0.1
     transitivePeerDependencies:
@@ -2917,7 +2921,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 25.2.2
+      '@types/node': 25.2.3
       long: 5.3.2
 
   proxy-addr@2.0.7:
@@ -2926,6 +2930,10 @@ snapshots:
       ipaddr.js: 1.9.1
 
   qs@6.14.1:
+    dependencies:
+      side-channel: 1.1.0
+
+  qs@6.15.0:
     dependencies:
       side-channel: 1.1.0
 
@@ -3163,7 +3171,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite@7.3.1(@types/node@25.2.2):
+  vite@7.3.1(@types/node@25.2.3):
     dependencies:
       esbuild: 0.27.2
       fdir: 6.5.0(picomatch@4.0.3)
@@ -3172,13 +3180,13 @@ snapshots:
       rollup: 4.56.0
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 25.2.2
+      '@types/node': 25.2.3
       fsevents: 2.3.3
 
-  vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.2.2):
+  vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.2.3):
     dependencies:
       '@vitest/expect': 4.0.18
-      '@vitest/mocker': 4.0.18(vite@7.3.1(@types/node@25.2.2))
+      '@vitest/mocker': 4.0.18(vite@7.3.1(@types/node@25.2.3))
       '@vitest/pretty-format': 4.0.18
       '@vitest/runner': 4.0.18
       '@vitest/snapshot': 4.0.18
@@ -3195,11 +3203,11 @@ snapshots:
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 7.3.1(@types/node@25.2.2)
+      vite: 7.3.1(@types/node@25.2.3)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@opentelemetry/api': 1.9.0
-      '@types/node': 25.2.2
+      '@types/node': 25.2.3
     transitivePeerDependencies:
       - jiti
       - less
