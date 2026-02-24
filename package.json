@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/KenTandrian/google-adk-client#readme",
   "devDependencies": {
-    "@biomejs/biome": "2.4.1",
+    "@biomejs/biome": "2.4.4",
     "@google/adk": "0.3.0",
     "@types/node": "25.3.0",
     "ai": "6.0.97",
