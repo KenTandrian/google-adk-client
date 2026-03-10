@@ -13,10 +13,10 @@ importers:
         version: 2.4.6
       '@google/adk':
         specifier: 0.4.0
-        version: 0.4.0(3c3b370fd11f8ae33b369b5e9309d7b6)
+        version: 0.4.0(50eea29f84c7170b07ba2ac3543f1a10)
       '@types/node':
-        specifier: 25.3.3
-        version: 25.3.3
+        specifier: 25.4.0
+        version: 25.4.0
       ai:
         specifier: 6.0.116
         version: 6.0.116(zod@4.3.6)
@@ -25,7 +25,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.0.18
-        version: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3)
+        version: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.4.0)
 
 packages:
 
@@ -91,8 +91,8 @@ packages:
     resolution: {integrity: sha512-YKWi9YuCU04B55h25cnOYZHxXYtEvQEbKST5vqRga7hWY9ydd3FZHdeQF8pyh+acWZvppw13M/LMGx0LABUVMA==}
     engines: {node: '>=18.0.0'}
 
-  '@azure/core-rest-pipeline@1.22.2':
-    resolution: {integrity: sha512-MzHym+wOi8CLUlKCQu12de0nwcq9k9Kuv43j4Wa++CsCpJwps2eeBQwD2Bu8snkxTtDKDx4GwjuR9E8yC8LNrg==}
+  '@azure/core-rest-pipeline@1.23.0':
+    resolution: {integrity: sha512-Evs1INHo+jUjwHi1T6SG6Ua/LHOQBCLuKEEE6efIpt4ZOoNonaT1kP32GoOcdNDbfqsD2445CPri3MubBy5DEQ==}
     engines: {node: '>=20.0.0'}
 
   '@azure/core-tracing@1.3.1':
@@ -842,11 +842,11 @@ packages:
   '@types/geojson@7946.0.16':
     resolution: {integrity: sha512-6C8nqWur3j98U6+lXDfTUWIfgvZU+EumvpHKcYjujKH7woYyLj2sUmff0tRhrqM7BohUw7Pz3ZB1jj2gW9Fvmg==}
 
-  '@types/node@24.11.0':
-    resolution: {integrity: sha512-fPxQqz4VTgPI/IQ+lj9r0h+fDR66bzoeMGHp8ASee+32OSGIkeASsoZuJixsQoVef1QJbeubcPBxKk22QVoWdw==}
+  '@types/node@24.12.0':
+    resolution: {integrity: sha512-GYDxsZi3ChgmckRT9HPU0WEhKLP08ev/Yfcq2AstjrDASOYCSXeyjDsHg4v5t4jOj7cyDX3vmprafKlWIG9MXQ==}
 
-  '@types/node@25.3.3':
-    resolution: {integrity: sha512-DpzbrH7wIcBaJibpKo9nnSQL0MTRdnWttGyE5haGwK86xgMOkFLp7vEyfQPGLOJh5wNYiJ3V9PmUMDhV9u8kkQ==}
+  '@types/node@25.4.0':
+    resolution: {integrity: sha512-9wLpoeWuBlcbBpOY3XmzSTG3oscB6xjBEEtn+pYXTfhyXhIxC5FsBer2KTopBlvKEiW9l13po9fq+SJY/5lkhw==}
 
   '@types/readable-stream@4.0.23':
     resolution: {integrity: sha512-wwXrtQvbMHxCbBgjHaMGEmImFTQxxpfMOR/ZoQnXxB1woqkUbdLGFDgauo00Py9IudiaqSeiBiulSV9i6XIPig==}
@@ -2701,7 +2701,7 @@ snapshots:
     dependencies:
       '@azure/abort-controller': 2.1.2
       '@azure/core-auth': 1.10.1
-      '@azure/core-rest-pipeline': 1.22.2
+      '@azure/core-rest-pipeline': 1.23.0
       '@azure/core-tracing': 1.3.1
       '@typespec/ts-http-runtime': 0.3.4
       tslib: 2.8.1
@@ -2724,7 +2724,7 @@ snapshots:
     dependencies:
       '@azure/abort-controller': 2.1.2
       '@azure/core-auth': 1.10.1
-      '@azure/core-rest-pipeline': 1.22.2
+      '@azure/core-rest-pipeline': 1.23.0
       '@azure/core-tracing': 1.3.1
       '@azure/core-util': 1.13.1
       '@azure/logger': 1.3.0
@@ -2732,11 +2732,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@azure/core-http-compat@2.3.2(@azure/core-client@1.10.1)(@azure/core-rest-pipeline@1.22.2)':
+  '@azure/core-http-compat@2.3.2(@azure/core-client@1.10.1)(@azure/core-rest-pipeline@1.23.0)':
     dependencies:
       '@azure/abort-controller': 2.1.2
       '@azure/core-client': 1.10.1
-      '@azure/core-rest-pipeline': 1.22.2
+      '@azure/core-rest-pipeline': 1.23.0
 
   '@azure/core-lro@2.7.2':
     dependencies:
@@ -2751,7 +2751,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@azure/core-rest-pipeline@1.22.2':
+  '@azure/core-rest-pipeline@1.23.0':
     dependencies:
       '@azure/abort-controller': 2.1.2
       '@azure/core-auth': 1.10.1
@@ -2780,7 +2780,7 @@ snapshots:
       '@azure/abort-controller': 2.1.2
       '@azure/core-auth': 1.10.1
       '@azure/core-client': 1.10.1
-      '@azure/core-rest-pipeline': 1.22.2
+      '@azure/core-rest-pipeline': 1.23.0
       '@azure/core-tracing': 1.3.1
       '@azure/core-util': 1.13.1
       '@azure/logger': 1.3.0
@@ -2796,7 +2796,7 @@ snapshots:
       '@azure/abort-controller': 2.1.2
       '@azure/core-auth': 1.10.1
       '@azure/core-client': 1.10.1
-      '@azure/core-rest-pipeline': 1.22.2
+      '@azure/core-rest-pipeline': 1.23.0
       '@azure/core-tracing': 1.3.1
       '@azure/core-util': 1.13.1
       '@azure/logger': 1.3.0
@@ -2809,10 +2809,10 @@ snapshots:
       '@azure-rest/core-client': 2.5.1
       '@azure/abort-controller': 2.1.2
       '@azure/core-auth': 1.10.1
-      '@azure/core-http-compat': 2.3.2(@azure/core-client@1.10.1)(@azure/core-rest-pipeline@1.22.2)
+      '@azure/core-http-compat': 2.3.2(@azure/core-client@1.10.1)(@azure/core-rest-pipeline@1.23.0)
       '@azure/core-lro': 2.7.2
       '@azure/core-paging': 1.6.2
-      '@azure/core-rest-pipeline': 1.22.2
+      '@azure/core-rest-pipeline': 1.23.0
       '@azure/core-tracing': 1.3.1
       '@azure/core-util': 1.13.1
       '@azure/keyvault-common': 2.0.0
@@ -3027,7 +3027,7 @@ snapshots:
       - encoding
       - supports-color
 
-  '@google/adk@0.4.0(3c3b370fd11f8ae33b369b5e9309d7b6)':
+  '@google/adk@0.4.0(50eea29f84c7170b07ba2ac3543f1a10)':
     dependencies:
       '@a2a-js/sdk': 0.3.10(@grpc/grpc-js@1.14.3)(express@5.2.1)
       '@google-cloud/opentelemetry-cloud-monitoring-exporter': 0.21.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.6.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.2.0(@opentelemetry/api@1.9.0))(encoding@0.1.13)
@@ -3037,7 +3037,7 @@ snapshots:
       '@mikro-orm/core': 6.6.8
       '@mikro-orm/mariadb': 6.6.8(@mikro-orm/core@6.6.8)(pg@8.19.0)
       '@mikro-orm/mssql': 6.6.8(@azure/core-client@1.10.1)(@mikro-orm/core@6.6.8)(mariadb@3.4.5)(pg@8.19.0)
-      '@mikro-orm/mysql': 6.6.8(@mikro-orm/core@6.6.8)(@types/node@25.3.3)(mariadb@3.4.5)(pg@8.19.0)
+      '@mikro-orm/mysql': 6.6.8(@mikro-orm/core@6.6.8)(@types/node@25.4.0)(mariadb@3.4.5)(pg@8.19.0)
       '@mikro-orm/postgresql': 6.6.8(@mikro-orm/core@6.6.8)(mariadb@3.4.5)
       '@mikro-orm/reflection': 6.6.8(@mikro-orm/core@6.6.8)
       '@mikro-orm/sqlite': 6.6.8(@mikro-orm/core@6.6.8)(mariadb@3.4.5)(pg@8.19.0)
@@ -3120,11 +3120,11 @@ snapshots:
       mikro-orm: 6.6.8
       reflect-metadata: 0.2.2
 
-  '@mikro-orm/knex@6.6.8(@mikro-orm/core@6.6.8)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@25.3.3))(pg@8.19.0)':
+  '@mikro-orm/knex@6.6.8(@mikro-orm/core@6.6.8)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@25.4.0))(pg@8.19.0)':
     dependencies:
       '@mikro-orm/core': 6.6.8
       fs-extra: 11.3.3
-      knex: 3.1.0(mysql2@3.18.2(@types/node@25.3.3))(pg@8.19.0)
+      knex: 3.1.0(mysql2@3.18.2(@types/node@25.4.0))(pg@8.19.0)
       sqlstring: 2.3.3
     optionalDependencies:
       mariadb: 3.4.5
@@ -3222,11 +3222,11 @@ snapshots:
       - sqlite3
       - supports-color
 
-  '@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.8)(@types/node@25.3.3)(mariadb@3.4.5)(pg@8.19.0)':
+  '@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.8)(@types/node@25.4.0)(mariadb@3.4.5)(pg@8.19.0)':
     dependencies:
       '@mikro-orm/core': 6.6.8
-      '@mikro-orm/knex': 6.6.8(@mikro-orm/core@6.6.8)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@25.3.3))(pg@8.19.0)
-      mysql2: 3.18.2(@types/node@25.3.3)
+      '@mikro-orm/knex': 6.6.8(@mikro-orm/core@6.6.8)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@25.4.0))(pg@8.19.0)
+      mysql2: 3.18.2(@types/node@25.4.0)
     transitivePeerDependencies:
       - '@types/node'
       - better-sqlite3
@@ -3589,22 +3589,22 @@ snapshots:
 
   '@types/geojson@7946.0.16': {}
 
-  '@types/node@24.11.0':
+  '@types/node@24.12.0':
     dependencies:
       undici-types: 7.16.0
 
-  '@types/node@25.3.3':
+  '@types/node@25.4.0':
     dependencies:
       undici-types: 7.18.2
 
   '@types/readable-stream@4.0.23':
     dependencies:
-      '@types/node': 25.3.3
+      '@types/node': 25.4.0
 
   '@types/request@2.48.13':
     dependencies:
       '@types/caseless': 0.12.5
-      '@types/node': 25.3.3
+      '@types/node': 25.4.0
       '@types/tough-cookie': 4.0.5
       form-data: 2.5.5
 
@@ -3631,13 +3631,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.18(vite@7.3.1(@types/node@25.3.3))':
+  '@vitest/mocker@4.0.18(vite@7.3.1(@types/node@25.4.0))':
     dependencies:
       '@vitest/spy': 4.0.18
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.3.1(@types/node@25.3.3)
+      vite: 7.3.1(@types/node@25.4.0)
 
   '@vitest/pretty-format@4.0.18':
     dependencies:
@@ -4566,7 +4566,7 @@ snapshots:
       jwa: 2.0.1
       safe-buffer: 5.2.1
 
-  knex@3.1.0(mysql2@3.18.2(@types/node@25.3.3))(pg@8.19.0):
+  knex@3.1.0(mysql2@3.18.2(@types/node@25.4.0))(pg@8.19.0):
     dependencies:
       colorette: 2.0.19
       commander: 10.0.1
@@ -4583,7 +4583,7 @@ snapshots:
       tarn: 3.0.2
       tildify: 2.0.0
     optionalDependencies:
-      mysql2: 3.18.2(@types/node@25.3.3)
+      mysql2: 3.18.2(@types/node@25.4.0)
       pg: 8.19.0
     transitivePeerDependencies:
       - supports-color
@@ -4714,7 +4714,7 @@ snapshots:
   mariadb@3.4.5:
     dependencies:
       '@types/geojson': 7946.0.16
-      '@types/node': 24.11.0
+      '@types/node': 24.12.0
       denque: 2.1.0
       iconv-lite: 0.6.3
       lru-cache: 10.4.3
@@ -4815,9 +4815,9 @@ snapshots:
 
   ms@2.1.3: {}
 
-  mysql2@3.18.2(@types/node@25.3.3):
+  mysql2@3.18.2(@types/node@25.4.0):
     dependencies:
-      '@types/node': 25.3.3
+      '@types/node': 25.4.0
       aws-ssl-profiles: 1.1.2
       denque: 2.1.0
       generate-function: 2.3.1
@@ -5056,7 +5056,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 25.3.3
+      '@types/node': 25.4.0
       long: 5.3.2
 
   proxy-addr@2.0.7:
@@ -5405,7 +5405,7 @@ snapshots:
       '@azure/identity': 4.13.0
       '@azure/keyvault-keys': 4.10.0(@azure/core-client@1.10.1)
       '@js-joda/core': 5.7.0
-      '@types/node': 25.3.3
+      '@types/node': 25.4.0
       bl: 6.1.6
       iconv-lite: 0.7.2
       js-md4: 0.3.2
@@ -5498,7 +5498,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite@7.3.1(@types/node@25.3.3):
+  vite@7.3.1(@types/node@25.4.0):
     dependencies:
       esbuild: 0.27.2
       fdir: 6.5.0(picomatch@4.0.3)
@@ -5507,13 +5507,13 @@ snapshots:
       rollup: 4.56.0
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 25.3.3
+      '@types/node': 25.4.0
       fsevents: 2.3.3
 
-  vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.3.3):
+  vitest@4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.4.0):
     dependencies:
       '@vitest/expect': 4.0.18
-      '@vitest/mocker': 4.0.18(vite@7.3.1(@types/node@25.3.3))
+      '@vitest/mocker': 4.0.18(vite@7.3.1(@types/node@25.4.0))
       '@vitest/pretty-format': 4.0.18
       '@vitest/runner': 4.0.18
       '@vitest/snapshot': 4.0.18
@@ -5530,11 +5530,11 @@ snapshots:
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 7.3.1(@types/node@25.3.3)
+      vite: 7.3.1(@types/node@25.4.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@opentelemetry/api': 1.9.0
-      '@types/node': 25.3.3
+      '@types/node': 25.4.0
     transitivePeerDependencies:
       - jiti
       - less
