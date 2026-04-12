@@ -40,7 +40,7 @@
     "@biomejs/biome": "2.4.10",
     "@google/adk": "0.6.1",
     "@types/node": "25.5.2",
-    "ai": "6.0.149",
+    "ai": "6.0.158",
     "typescript": "6.0.2",
     "vitest": "4.1.2"
   },
