@@ -13,10 +13,10 @@ importers:
         version: 2.4.11
       '@google/adk':
         specifier: 0.6.1
-        version: 0.6.1(d1e93f49aa87fcbc07f40412c2730f62)
+        version: 0.6.1(2faba5cbeaf16375e17a27ae7af1373a)
       '@types/node':
-        specifier: 25.5.2
-        version: 25.5.2
+        specifier: 25.6.0
+        version: 25.6.0
       ai:
         specifier: 6.0.158
         version: 6.0.158(zod@4.3.6)
@@ -25,7 +25,7 @@ importers:
         version: 6.0.2
       vitest:
         specifier: 4.1.2
-        version: 4.1.2(@opentelemetry/api@1.9.0)(@types/node@25.5.2)(vite@7.3.1(@types/node@25.5.2))
+        version: 4.1.2(@opentelemetry/api@1.9.0)(@types/node@25.6.0)(vite@7.3.1(@types/node@25.6.0))
 
 packages:
 
@@ -847,8 +847,8 @@ packages:
   '@types/node@24.12.2':
     resolution: {integrity: sha512-A1sre26ke7HDIuY/M23nd9gfB+nrmhtYyMINbjI1zHJxYteKR6qSMX56FsmjMcDb3SMcjJg5BiRRgOCC/yBD0g==}
 
-  '@types/node@25.5.2':
-    resolution: {integrity: sha512-tO4ZIRKNC+MDWV4qKVZe3Ql/woTnmHDr5JD8UI5hn2pwBrHEwOEMZK7WlNb5RKB6EoJ02gwmQS9OrjuFnZYdpg==}
+  '@types/node@25.6.0':
+    resolution: {integrity: sha512-+qIYRKdNYJwY3vRCZMdJbPLJAtGjQBudzZzdzwQYkEPQd+PJGixUL5QfvCLDaULoLv+RhT3LDkwEfKaAkgSmNQ==}
 
   '@types/readable-stream@4.0.23':
     resolution: {integrity: sha512-wwXrtQvbMHxCbBgjHaMGEmImFTQxxpfMOR/ZoQnXxB1woqkUbdLGFDgauo00Py9IudiaqSeiBiulSV9i6XIPig==}
@@ -2572,8 +2572,8 @@ packages:
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
-  undici-types@7.18.2:
-    resolution: {integrity: sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==}
+  undici-types@7.19.2:
+    resolution: {integrity: sha512-qYVnV5OEm2AW8cJMCpdV20CDyaN3g0AjDlOGf1OW4iaDEx8MwdtChUp4zu4H0VP3nDRF/8RKWH+IPp9uW0YGZg==}
 
   unique-filename@1.1.1:
     resolution: {integrity: sha512-Vmp0jIp2ln35UTXuryvjzkjGdRyf9b2lTXuSYUiPmzRcl3FDtYqAwOnTJkAngD9SWhnoJzDbTKwaOrZ+STtxNQ==}
@@ -3140,7 +3140,7 @@ snapshots:
       - encoding
       - supports-color
 
-  '@google/adk@0.6.1(d1e93f49aa87fcbc07f40412c2730f62)':
+  '@google/adk@0.6.1(2faba5cbeaf16375e17a27ae7af1373a)':
     dependencies:
       '@a2a-js/sdk': 0.3.13(@grpc/grpc-js@1.14.3)(express@4.22.1)
       '@google-cloud/opentelemetry-cloud-monitoring-exporter': 0.21.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.6.1(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.2.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.2.0(@opentelemetry/api@1.9.0))(encoding@0.1.13)
@@ -3150,7 +3150,7 @@ snapshots:
       '@mikro-orm/core': 6.6.12
       '@mikro-orm/mariadb': 6.6.8(@mikro-orm/core@6.6.12)(pg@8.19.0)
       '@mikro-orm/mssql': 6.6.8(@azure/core-client@1.10.1)(@mikro-orm/core@6.6.12)(mariadb@3.4.5)(pg@8.19.0)
-      '@mikro-orm/mysql': 6.6.8(@mikro-orm/core@6.6.12)(@types/node@25.5.2)(mariadb@3.4.5)(pg@8.19.0)
+      '@mikro-orm/mysql': 6.6.8(@mikro-orm/core@6.6.12)(@types/node@25.6.0)(mariadb@3.4.5)(pg@8.19.0)
       '@mikro-orm/postgresql': 6.6.8(@mikro-orm/core@6.6.12)(mariadb@3.4.5)
       '@mikro-orm/reflection': 6.6.12(@mikro-orm/core@6.6.12)
       '@mikro-orm/sqlite': 6.6.8(@mikro-orm/core@6.6.12)(mariadb@3.4.5)(pg@8.19.0)
@@ -3225,11 +3225,11 @@ snapshots:
       mikro-orm: 6.6.12
       reflect-metadata: 0.2.2
 
-  '@mikro-orm/knex@6.6.8(@mikro-orm/core@6.6.12)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@25.5.2))(pg@8.19.0)':
+  '@mikro-orm/knex@6.6.8(@mikro-orm/core@6.6.12)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@25.6.0))(pg@8.19.0)':
     dependencies:
       '@mikro-orm/core': 6.6.12
       fs-extra: 11.3.3
-      knex: 3.1.0(mysql2@3.18.2(@types/node@25.5.2))(pg@8.19.0)
+      knex: 3.1.0(mysql2@3.18.2(@types/node@25.6.0))(pg@8.19.0)
       sqlstring: 2.3.3
     optionalDependencies:
       mariadb: 3.4.5
@@ -3327,11 +3327,11 @@ snapshots:
       - sqlite3
       - supports-color
 
-  '@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.12)(@types/node@25.5.2)(mariadb@3.4.5)(pg@8.19.0)':
+  '@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.12)(@types/node@25.6.0)(mariadb@3.4.5)(pg@8.19.0)':
     dependencies:
       '@mikro-orm/core': 6.6.12
-      '@mikro-orm/knex': 6.6.8(@mikro-orm/core@6.6.12)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@25.5.2))(pg@8.19.0)
-      mysql2: 3.18.2(@types/node@25.5.2)
+      '@mikro-orm/knex': 6.6.8(@mikro-orm/core@6.6.12)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@25.6.0))(pg@8.19.0)
+      mysql2: 3.18.2(@types/node@25.6.0)
     transitivePeerDependencies:
       - '@types/node'
       - better-sqlite3
@@ -3700,18 +3700,18 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
-  '@types/node@25.5.2':
+  '@types/node@25.6.0':
     dependencies:
-      undici-types: 7.18.2
+      undici-types: 7.19.2
 
   '@types/readable-stream@4.0.23':
     dependencies:
-      '@types/node': 25.5.2
+      '@types/node': 25.6.0
 
   '@types/request@2.48.13':
     dependencies:
       '@types/caseless': 0.12.5
-      '@types/node': 25.5.2
+      '@types/node': 25.6.0
       '@types/tough-cookie': 4.0.5
       form-data: 2.5.5
 
@@ -3740,13 +3740,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.0
 
-  '@vitest/mocker@4.1.2(vite@7.3.1(@types/node@25.5.2))':
+  '@vitest/mocker@4.1.2(vite@7.3.1(@types/node@25.6.0))':
     dependencies:
       '@vitest/spy': 4.1.2
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.3.1(@types/node@25.5.2)
+      vite: 7.3.1(@types/node@25.6.0)
 
   '@vitest/pretty-format@4.1.2':
     dependencies:
@@ -4757,7 +4757,7 @@ snapshots:
       jwa: 2.0.1
       safe-buffer: 5.2.1
 
-  knex@3.1.0(mysql2@3.18.2(@types/node@25.5.2))(pg@8.19.0):
+  knex@3.1.0(mysql2@3.18.2(@types/node@25.6.0))(pg@8.19.0):
     dependencies:
       colorette: 2.0.19
       commander: 10.0.1
@@ -4774,7 +4774,7 @@ snapshots:
       tarn: 3.0.2
       tildify: 2.0.0
     optionalDependencies:
-      mysql2: 3.18.2(@types/node@25.5.2)
+      mysql2: 3.18.2(@types/node@25.6.0)
       pg: 8.19.0
     transitivePeerDependencies:
       - supports-color
@@ -5021,9 +5021,9 @@ snapshots:
 
   ms@2.1.3: {}
 
-  mysql2@3.18.2(@types/node@25.5.2):
+  mysql2@3.18.2(@types/node@25.6.0):
     dependencies:
-      '@types/node': 25.5.2
+      '@types/node': 25.6.0
       aws-ssl-profiles: 1.1.2
       denque: 2.1.0
       generate-function: 2.3.1
@@ -5263,7 +5263,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 25.5.2
+      '@types/node': 25.6.0
       long: 5.3.2
 
   proxy-addr@2.0.7:
@@ -5643,7 +5643,7 @@ snapshots:
       '@azure/identity': 4.13.1
       '@azure/keyvault-keys': 4.10.0(@azure/core-client@1.10.1)
       '@js-joda/core': 5.7.0
-      '@types/node': 25.5.2
+      '@types/node': 25.6.0
       bl: 6.1.6
       iconv-lite: 0.7.2
       js-md4: 0.3.2
@@ -5722,7 +5722,7 @@ snapshots:
 
   undici-types@7.16.0: {}
 
-  undici-types@7.18.2: {}
+  undici-types@7.19.2: {}
 
   unique-filename@1.1.1:
     dependencies:
@@ -5752,7 +5752,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite@7.3.1(@types/node@25.5.2):
+  vite@7.3.1(@types/node@25.6.0):
     dependencies:
       esbuild: 0.27.7
       fdir: 6.5.0(picomatch@4.0.4)
@@ -5761,13 +5761,13 @@ snapshots:
       rollup: 4.60.1
       tinyglobby: 0.2.16
     optionalDependencies:
-      '@types/node': 25.5.2
+      '@types/node': 25.6.0
       fsevents: 2.3.3
 
-  vitest@4.1.2(@opentelemetry/api@1.9.0)(@types/node@25.5.2)(vite@7.3.1(@types/node@25.5.2)):
+  vitest@4.1.2(@opentelemetry/api@1.9.0)(@types/node@25.6.0)(vite@7.3.1(@types/node@25.6.0)):
     dependencies:
       '@vitest/expect': 4.1.2
-      '@vitest/mocker': 4.1.2(vite@7.3.1(@types/node@25.5.2))
+      '@vitest/mocker': 4.1.2(vite@7.3.1(@types/node@25.6.0))
       '@vitest/pretty-format': 4.1.2
       '@vitest/runner': 4.1.2
       '@vitest/snapshot': 4.1.2
@@ -5784,11 +5784,11 @@ snapshots:
       tinyexec: 1.0.4
       tinyglobby: 0.2.15
       tinyrainbow: 3.1.0
-      vite: 7.3.1(@types/node@25.5.2)
+      vite: 7.3.1(@types/node@25.6.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@opentelemetry/api': 1.9.0
-      '@types/node': 25.5.2
+      '@types/node': 25.6.0
     transitivePeerDependencies:
       - msw
 
