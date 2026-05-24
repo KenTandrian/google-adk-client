@@ -42,7 +42,7 @@
     "@types/node": "25.9.1",
     "ai": "6.0.191",
     "typescript": "6.0.3",
-    "vitest": "4.1.6"
+    "vitest": "4.1.7"
   },
   "peerDependencies": {
     "ai": "^6.0.0"
