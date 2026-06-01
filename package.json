@@ -24,6 +24,10 @@
     "./server": {
       "import": "./dist/server/index.js",
       "types": "./dist/server/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react/index.js",
+      "types": "./dist/react/index.d.ts"
     }
   },
   "files": [
@@ -41,18 +45,34 @@
   },
   "homepage": "https://github.com/KenTandrian/google-adk-client#readme",
   "devDependencies": {
+    "@assistant-ui/react": "0.14.13",
+    "@assistant-ui/react-google-adk": "0.0.13",
     "@biomejs/biome": "2.4.15",
     "@google/adk": "1.1.0",
     "@types/node": "25.9.1",
+    "@types/react": "19.2.16",
     "ai": "6.0.191",
+    "react": "19.2.7",
     "typescript": "6.0.3",
     "vitest": "4.1.7"
   },
   "peerDependencies": {
-    "ai": "^6.0.0"
+    "@assistant-ui/react": ">=0.14.0",
+    "@assistant-ui/react-google-adk": ">=0.0.10",
+    "ai": "^6.0.0",
+    "react": "^18.0.0 || ^19.0.0"
   },
   "peerDependenciesMeta": {
+    "@assistant-ui/react": {
+      "optional": true
+    },
+    "@assistant-ui/react-google-adk": {
+      "optional": true
+    },
     "ai": {
+      "optional": true
+    },
+    "react": {
       "optional": true
     }
   }
