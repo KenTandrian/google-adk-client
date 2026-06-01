@@ -20,6 +20,10 @@
     "./ai-sdk": {
       "import": "./dist/ai-sdk/index.js",
       "types": "./dist/ai-sdk/index.d.ts"
+    },
+    "./server": {
+      "import": "./dist/server/index.js",
+      "types": "./dist/server/index.d.ts"
     }
   },
   "files": [
