@@ -10,17 +10,26 @@ vi.mock("react", async (importOriginal) => {
   };
 });
 
+// Define top-level spy prefixed with "mock" so it can be accessed inside vi.mock factory
+const mockCompositeSpy = vi.fn();
+
 // Mock Assistant UI
 vi.mock("@assistant-ui/react", () => {
-  return {
-    CompositeAttachmentAdapter: vi.fn().mockImplementation(function (
-      this: any,
-      adapters
-    ) {
+  class MockCompositeAttachmentAdapter {
+    adapters: any;
+    constructor(adapters: any) {
       this.adapters = adapters;
-    }),
-    SimpleImageAttachmentAdapter: vi.fn().mockImplementation(() => {}),
-    SimpleTextAttachmentAdapter: vi.fn().mockImplementation(() => {}),
+      mockCompositeSpy(adapters);
+    }
+  }
+
+  class MockSimpleImageAttachmentAdapter {}
+  class MockSimpleTextAttachmentAdapter {}
+
+  return {
+    CompositeAttachmentAdapter: MockCompositeAttachmentAdapter,
+    SimpleImageAttachmentAdapter: MockSimpleImageAttachmentAdapter,
+    SimpleTextAttachmentAdapter: MockSimpleTextAttachmentAdapter,
   };
 });
 
@@ -40,7 +49,6 @@ vi.mock("@assistant-ui/react-google-adk", () => {
   };
 });
 
-import { CompositeAttachmentAdapter } from "@assistant-ui/react";
 import {
   createAdkSessionAdapter,
   createAdkStream,
@@ -49,6 +57,8 @@ import {
 
 describe("useAdkAssistant", () => {
   it("should pre-wire and return the runtime with correct configurations", () => {
+    mockCompositeSpy.mockClear();
+
     const result = useAdkAssistant({
       api: "/api/chat-endpoint",
       appName: "my-rich-agent",
@@ -68,7 +78,7 @@ describe("useAdkAssistant", () => {
       userId: "user-987",
     });
 
-    expect(CompositeAttachmentAdapter).toHaveBeenCalled();
+    expect(mockCompositeSpy).toHaveBeenCalled();
 
     expect(useAdkRuntime).toHaveBeenCalledWith(
       expect.objectContaining({
@@ -89,6 +99,7 @@ describe("useAdkAssistant", () => {
 
   it("should skip default attachments if enableDefaultAttachments is false", () => {
     vi.clearAllMocks();
+    mockCompositeSpy.mockClear();
 
     useAdkAssistant({
       api: "/api/chat-endpoint",
@@ -97,7 +108,7 @@ describe("useAdkAssistant", () => {
       enableDefaultAttachments: false,
     });
 
-    expect(CompositeAttachmentAdapter).not.toHaveBeenCalled();
+    expect(mockCompositeSpy).not.toHaveBeenCalled();
 
     expect(useAdkRuntime).toHaveBeenCalledWith(
       expect.objectContaining({
