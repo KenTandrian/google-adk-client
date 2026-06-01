@@ -97,6 +97,49 @@ function MyChatComponent() {
 }
 ```
 
+### Full-Stack & Remote Agent Developer Toolkit
+
+#### 1. Secure Proxy Route Creator (`@kentandrian/google-adk/server`)
+
+Prevent browser credential leakage by proxying requests securely through your Next.js App Router API route handler:
+
+```typescript
+// app/api/chat/[[...path]]/route.ts
+import { createAdkProxy } from "@kentandrian/google-adk/server";
+
+export const { GET, POST, PUT, DELETE } = createAdkProxy({
+  baseUrl: process.env.ADK_URL, // Remote ADK service URL kept secure on the server
+  apiPrefix: "/api/chat", // Prefix path to strip (defaults to "/api/chat")
+  headers: async (req) => ({
+    Authorization: `Bearer ${process.env.INTERNAL_ADK_SECRET}`, // Optional auth injection
+  }),
+});
+```
+
+#### 2. High-Level React Integration Hook (`@kentandrian/google-adk/react`)
+
+Quickly connect `@assistant-ui/react` to your local proxy route with less than 10 lines of boilerplate code:
+
+```tsx
+import { useAdkAssistant } from "@kentandrian/google-adk/react";
+import { AssistantRuntimeProvider } from "@assistant-ui/react";
+
+export function MyAssistantComponent() {
+  const { runtime } = useAdkAssistant({
+    api: "/api/chat", // Local proxy endpoint
+    appName: "my-agent-app",
+    userId: "user-123",
+    enableDefaultAttachments: true, // Pre-wires composite image and text attachment adapters
+  });
+
+  return (
+    <AssistantRuntimeProvider runtime={runtime}>
+      <MyCustomChatLayout />
+    </AssistantRuntimeProvider>
+  );
+}
+```
+
 ## Development
 
 To get started with development, clone the repository and install the dependencies:
