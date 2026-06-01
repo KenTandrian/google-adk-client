@@ -75,4 +75,21 @@ export class Sessions {
       }
     );
   }
+
+  /**
+   * Checks if a session exists. If it does not exist, creates it.
+   * @param sessionId The ID of the session to ensure.
+   * @param initialState Optional initial state for the session if created.
+   * @returns The retrieved or created session.
+   */
+  async ensure(
+    sessionId: string,
+    initialState?: Record<string, unknown>
+  ): Promise<Session> {
+    try {
+      return await this.get(sessionId);
+    } catch (_error) {
+      return await this.createWithId(sessionId, initialState);
+    }
+  }
 }
