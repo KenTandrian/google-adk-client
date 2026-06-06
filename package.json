@@ -50,7 +50,7 @@
     "@biomejs/biome": "2.4.16",
     "@google/adk": "1.2.0",
     "@types/node": "25.9.1",
-    "@types/react": "19.2.16",
+    "@types/react": "19.2.17",
     "ai": "6.0.197",
     "react": "19.2.7",
     "typescript": "6.0.3",
