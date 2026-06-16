@@ -54,7 +54,7 @@
     "ai": "6.0.201",
     "react": "19.2.7",
     "typescript": "6.0.3",
-    "vitest": "4.1.8"
+    "vitest": "4.1.9"
   },
   "peerDependencies": {
     "@assistant-ui/react": ">=0.14.0",
