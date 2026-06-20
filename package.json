@@ -49,7 +49,7 @@
     "@assistant-ui/react-google-adk": "0.0.15",
     "@biomejs/biome": "2.5.0",
     "@google/adk": "1.2.0",
-    "@types/node": "25.9.3",
+    "@types/node": "26.0.0",
     "@types/react": "19.2.17",
     "ai": "6.0.206",
     "react": "19.2.7",
