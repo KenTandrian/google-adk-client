@@ -73,7 +73,12 @@ export function useAdkAssistant({
   userId,
   enableDefaultAttachments = true,
   runtimeOptions = {},
-}: UseAdkAssistantOptions) {
+}: UseAdkAssistantOptions): {
+  runtime: ReturnType<typeof useAdkRuntime>;
+  sessionAdapter: ReturnType<typeof createAdkSessionAdapter>["adapter"];
+  load: ReturnType<typeof createAdkSessionAdapter>["load"];
+  stream: ReturnType<typeof createAdkStream>;
+} {
   // Create the ADK session adapter memoized
   const { adapter: sessionAdapter, load } = useMemo(() => {
     return createAdkSessionAdapter({
