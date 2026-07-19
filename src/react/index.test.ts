@@ -3,10 +3,10 @@ import { useAdkAssistant } from "./index";
 
 // Mock React
 vi.mock("react", async (importOriginal) => {
-  const actual = await importOriginal<any>();
+  const actual = await importOriginal<object>();
   return {
     ...actual,
-    useMemo: (fn: () => any) => fn(),
+    useMemo: (fn: () => unknown) => fn(),
   };
 });
 
@@ -16,8 +16,8 @@ const mockCompositeSpy = vi.fn();
 // Mock Assistant UI
 vi.mock("@assistant-ui/react", () => {
   class MockCompositeAttachmentAdapter {
-    adapters: any;
-    constructor(adapters: any) {
+    adapters: unknown;
+    constructor(adapters: unknown) {
       this.adapters = adapters;
       mockCompositeSpy(adapters);
     }
