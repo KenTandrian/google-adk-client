@@ -1,5 +1,5 @@
-onlyBuiltDependencies:
-  - '@google/genai'
-  - esbuild
-  - protobufjs
-  - sqlite3
+allowBuilds:
+  '@google/genai': true
+  esbuild: true
+  protobufjs: true
+  sqlite3: true
