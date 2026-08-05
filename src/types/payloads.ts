@@ -1,5 +1,8 @@
 import type { Content } from "./google-genai";
 
+/**
+ * Payload for running an agent execution.
+ */
 export interface AgentRunSsePayload {
   appName: string;
   userId: string;

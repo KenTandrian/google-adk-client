@@ -23,4 +23,52 @@ describe("AdkClient apps", () => {
       },
     });
   });
+
+  it("should call the correct endpoint for apps.getInfo (default appName)", async () => {
+    const mockAppInfo = {
+      name: "test-app",
+      rootAgentName: "root",
+      description: "Test App",
+      language: "python",
+    };
+    const mockResponse = createMockResponse(mockAppInfo);
+    (fetch as any).mockResolvedValue(mockResponse);
+
+    const result = await client.apps.getInfo();
+
+    expect(result).toEqual(mockAppInfo);
+    expect(fetch).toHaveBeenCalledWith(
+      "https://example.com/apps/test-app/app-info",
+      {
+        headers: {
+          accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+  });
+
+  it("should call the correct endpoint for apps.getInfo (custom appName)", async () => {
+    const mockAppInfo = {
+      name: "custom-app",
+      rootAgentName: "root",
+      description: "Custom App",
+      language: "yaml",
+    };
+    const mockResponse = createMockResponse(mockAppInfo);
+    (fetch as any).mockResolvedValue(mockResponse);
+
+    const result = await client.apps.getInfo("custom-app");
+
+    expect(result).toEqual(mockAppInfo);
+    expect(fetch).toHaveBeenCalledWith(
+      "https://example.com/apps/custom-app/app-info",
+      {
+        headers: {
+          accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+  });
 });
