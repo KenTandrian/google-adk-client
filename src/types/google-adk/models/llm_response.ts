@@ -1,5 +1,5 @@
 /**
- * Vendored types from @google/adk v0.2.1
+ * Vendored types from @google/adk v1.5.0
  *
  * These types are copied locally to keep the client library lightweight.
  * Update when @google/adk changes significantly.
@@ -8,9 +8,14 @@
  */
 
 import type {
+  CitationMetadata,
   Content,
+  FinishReason,
+  GenerateContentResponseUsageMetadata,
   GroundingMetadata,
-  UsageMetadata,
+  LiveServerGoAway,
+  LiveServerSessionResumptionUpdate,
+  Transcription,
 } from "../../google-genai";
 
 /**
@@ -27,6 +32,11 @@ export interface LlmResponse {
    * The grounding metadata of the response.
    */
   groundingMetadata?: GroundingMetadata;
+
+  /**
+   * The citation metadata of the response.
+   */
+  citationMetadata?: CitationMetadata;
 
   /**
    * Indicates whether the text content is part of a unfinished text stream.
@@ -66,7 +76,33 @@ export interface LlmResponse {
   /**
    * The usage metadata of the LlmResponse.
    */
-  usageMetadata?: UsageMetadata;
+  usageMetadata?: GenerateContentResponseUsageMetadata;
+
+  /**
+   * The finish reason of the response.
+   */
+  finishReason?: FinishReason;
+
+  /**
+   * The session resumption update of the LlmResponse
+   */
+  liveSessionResumptionUpdate?: LiveServerSessionResumptionUpdate;
+
+  /**
+   * Server-side signal that the live connection will be closed soon. The
+   * caller should reconnect using the latest session resumption handle.
+   */
+  goAway?: LiveServerGoAway;
+
+  /**
+   * Audio transcription of user input.
+   */
+  inputTranscription?: Transcription;
+
+  /**
+   * Audio transcription of model output.
+   */
+  outputTranscription?: Transcription;
 
   /**
    * The interaction ID returned by the model, if any.
