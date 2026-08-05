@@ -5,6 +5,7 @@ import { Artifacts } from "./api/artifacts";
 import { Debug } from "./api/debug";
 import { Evals } from "./api/evals";
 import { Events } from "./api/events";
+import { Memory } from "./api/memory";
 import { Sessions } from "./api/sessions";
 import type { AgentRunSsePayload } from "./types";
 
@@ -17,7 +18,7 @@ export interface AdkClientOptions {
 /**
  * The main entry point for interacting with the ADK API.
  * It provides methods to manage applications, sessions, artifacts, evaluations,
- * and events.
+ * events, and memory.
  *
  * @example
  * const adkClient = new AdkClient({
@@ -37,6 +38,7 @@ export class AdkClient {
   public readonly apps: Apps;
   public readonly debug: Debug;
   public readonly events: Events;
+  public readonly memory: Memory;
 
   constructor(options: AdkClientOptions) {
     const appName = options.appName ?? process.env.ADK_APP_NAME;
@@ -86,6 +88,13 @@ export class AdkClient {
     });
 
     this.events = new Events({
+      appName: this.appName,
+      userId: this.userId,
+      request: this.request.bind(this),
+      requestJson: this.requestJson.bind(this),
+    });
+
+    this.memory = new Memory({
       appName: this.appName,
       userId: this.userId,
       request: this.request.bind(this),
