@@ -1,6 +1,6 @@
 {
   "name": "@kentandrian/google-adk",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A TypeScript client library for the Google ADK (Agent Development Kit).",
   "packageManager": "pnpm@11.20.0",
   "main": "dist/index.js",
