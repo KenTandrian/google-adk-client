@@ -1,5 +1,5 @@
 /**
- * Vendored types from @google/adk v0.2.1
+ * Vendored types from @google/adk v1.5.0
  *
  * These types are copied locally to keep the client library lightweight.
  * Update when @google/adk changes significantly.
@@ -7,10 +7,8 @@
  * @see https://github.com/google/adk-js/blob/main/core/src/events/event_actions.ts
  */
 
+import type { AuthConfig } from "../auth/auth_tool";
 import type { ToolConfirmation } from "../tools/tool_confirmation";
-
-// TODO: Replace 'any' with a proper AuthConfig.
-type AuthConfig = any;
 
 /**
  * Represents the actions attached to an event.
