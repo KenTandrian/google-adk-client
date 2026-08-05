@@ -146,6 +146,28 @@ describe("AdkClient sessions", () => {
     );
   });
 
+  it("should call the correct endpoint for sessions.update", async () => {
+    const mockResponse = createMockResponse({
+      id: "session-123",
+      state: { key: "value" },
+    });
+    (fetch as any).mockResolvedValue(mockResponse);
+
+    await client.sessions.update("session-123", { key: "value" });
+
+    expect(fetch).toHaveBeenCalledWith(
+      "https://example.com/apps/test-app/users/user-123/sessions/session-123",
+      {
+        method: "PATCH",
+        headers: {
+          accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ stateDelta: { key: "value" } }),
+      }
+    );
+  });
+
   describe("ensure", () => {
     it("should return existing session when get succeeds", async () => {
       const mockSession = { id: "session-123", state: { existing: true } };

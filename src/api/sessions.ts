@@ -77,6 +77,26 @@ export class Sessions {
   }
 
   /**
+   * Updates session state without running the agent.
+   * @param sessionId The ID of the session to update.
+   * @param stateDelta The state updates to apply to the session.
+   * @returns The updated session.
+   */
+  async update(
+    sessionId: string,
+    stateDelta: Record<string, unknown>
+  ): Promise<Session> {
+    return this.client.requestJson(
+      `/apps/${this.client.appName}/users/${this.client.userId}/sessions/${sessionId}`,
+      {
+        method: "PATCH",
+        body: JSON.stringify({ stateDelta }),
+      }
+    );
+  }
+
+  /**
+
    * Checks if a session exists. If it does not exist, creates it.
    * @param sessionId The ID of the session to ensure.
    * @param initialState Optional initial state for the session if created.
