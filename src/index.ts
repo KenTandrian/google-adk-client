@@ -7,7 +7,11 @@ import { Evals } from "./api/evals";
 import { Events } from "./api/events";
 import { Memory } from "./api/memory";
 import { Sessions } from "./api/sessions";
-import type { AgentRunSsePayload } from "./types";
+import type {
+  AgentRunSsePayload,
+  HealthResponse,
+  VersionResponse,
+} from "./types";
 
 export interface AdkClientOptions {
   appName?: string;
@@ -168,6 +172,16 @@ export class AdkClient {
     };
   }
 
+  /**
+   * Checks health of the ADK service.
+   */
+  async health(): Promise<HealthResponse> {
+    return this.requestJson<HealthResponse>("/health");
+  }
+
+  /**
+   * Runs an agent in streaming mode and returns the response.
+   */
   async runSse(sessionId: string, messages: UIMessage[]): Promise<Response> {
     const newMessage = this.transformMessagesToAdkNewMessage(messages);
     const body: AgentRunSsePayload = {
@@ -185,6 +199,9 @@ export class AdkClient {
     });
   }
 
+  /**
+   * Runs an agent and returns a response.
+   */
   async run(sessionId: string, messages: UIMessage[]): Promise<Response> {
     const newMessage = this.transformMessagesToAdkNewMessage(messages);
     const body: AgentRunSsePayload = {
@@ -199,6 +216,13 @@ export class AdkClient {
       body: JSON.stringify(body),
       method: "POST",
     });
+  }
+
+  /**
+   * Gets version of the ADK service.
+   */
+  async version(): Promise<VersionResponse> {
+    return this.requestJson<VersionResponse>("/version");
   }
 }
 
