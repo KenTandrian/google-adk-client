@@ -61,10 +61,21 @@ export interface LlmResponse {
    * An optional key-value pair to label an LlmResponse.
    * NOTE: the entire object must be JSON serializable.
    */
-  customMetadata?: { [key: string]: any };
+  customMetadata?: { [key: string]: unknown };
 
   /**
    * The usage metadata of the LlmResponse.
    */
   usageMetadata?: UsageMetadata;
+
+  /**
+   * The interaction ID returned by the model, if any.
+   */
+  interactionId?: string;
+
+  /** The model version used to generate the response. */
+  modelVersion?: string;
+
+  /** The session ID of the Live session. */
+  liveSessionId?: string;
 }
