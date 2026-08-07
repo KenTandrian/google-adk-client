@@ -52,7 +52,7 @@
     "@google/adk": "1.5.0",
     "@types/node": "26.1.2",
     "@types/react": "19.2.18",
-    "ai": "7.0.47",
+    "ai": "7.0.55",
     "react": "19.2.8",
     "typescript": "7.0.2",
     "vitest": "4.1.10"
