@@ -12,8 +12,8 @@ importers:
         specifier: 0.15.8
         version: 0.15.8(@types/react@19.2.18)(react-dom@19.2.7(react@19.2.8))(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8))
       '@assistant-ui/react-google-adk':
-        specifier: 0.0.20
-        version: 0.0.20(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@google/adk@1.5.0(@grpc/grpc-js@1.14.4)(@mikro-orm/mariadb@6.6.8(@mikro-orm/core@6.6.16)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/mssql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7))(@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.16)(@types/node@26.1.2)(mariadb@3.4.5)(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/postgresql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/sqlite@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(tedious@19.2.1))(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13))(@types/react@19.2.18)(react@19.2.8)(zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))
+        specifier: 0.0.23
+        version: 0.0.23(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@google/adk@1.5.0(@grpc/grpc-js@1.14.4)(@mikro-orm/mariadb@6.6.8(@mikro-orm/core@6.6.16)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/mssql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7))(@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.16)(@types/node@26.1.2)(mariadb@3.4.5)(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/postgresql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/sqlite@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(tedious@19.2.1))(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13))(@types/react@19.2.18)(react@19.2.8)(zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))
       '@biomejs/biome':
         specifier: 2.5.6
         version: 2.5.6
@@ -72,25 +72,6 @@ packages:
     resolution: {integrity: sha512-YYXjvs8F3q/BdEn9tBDoDuQACotfR7c5foGw/ADsM6iAVC1JabqEjQSkwHv/Kg2vNIr1c2AVHcQb+JYsYk76Qw==}
     engines: {node: '>=22'}
 
-  '@assistant-ui/core@0.3.5':
-    resolution: {integrity: sha512-+3hFt6g+y83rbQAjbWZCvtCe4J5RIYwjcRWRly56AxIQqcXv11vFJTc4587RkOEGZTkjp8FUOA2ILEW5YoweHg==}
-    peerDependencies:
-      '@assistant-ui/store': ^0.3.0
-      '@assistant-ui/tap': ^0.9.0
-      '@types/react': '*'
-      assistant-cloud: ^0.1.31
-      react: ^18 || ^19
-      zustand: ^5.0.11
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-      assistant-cloud:
-        optional: true
-      react:
-        optional: true
-      zustand:
-        optional: true
-
   '@assistant-ui/core@0.3.7':
     resolution: {integrity: sha512-qI9b2iS/5mIjr03yA/t0w2hinyUdJM6dTpf7EPJ0SmYU+1L0bSs1aktYw9xAKG7fJ7tyHJY6Mo9dJlpoi9+hEw==}
     peerDependencies:
@@ -110,8 +91,8 @@ packages:
       zustand:
         optional: true
 
-  '@assistant-ui/react-google-adk@0.0.20':
-    resolution: {integrity: sha512-V1KJctvebZ+mlZlGRkTploulTjxSk6XpJLdU0TQhTaJPvLsH/9bdcXBNJwvr6goEezjUKiZ352099BjpmcP0Tg==}
+  '@assistant-ui/react-google-adk@0.0.23':
+    resolution: {integrity: sha512-4DsNsk9jd0TVT+W+55x7rDVDAJMmOWNF/tklPoMTDKxq5KaOwcTU2iZVDsrjg85PDEDPnG6noO6JZ3rPtPj2Tw==}
     peerDependencies:
       '@google/adk': '>=0.5.0'
       '@types/react': '*'
@@ -133,16 +114,6 @@ packages:
       '@types/react':
         optional: true
       '@types/react-dom':
-        optional: true
-
-  '@assistant-ui/store@0.3.3':
-    resolution: {integrity: sha512-kNkxE6vNkaBTGwJc3NcAYB+MoDSk08ab8VLJ3wFdr4xR3Y8YApWMojMYvoy1E/VCNmvli8m3Zh+qpTqoFWRuSA==}
-    peerDependencies:
-      '@assistant-ui/tap': ^0.9.0
-      '@types/react': '*'
-      react: ^18 || ^19
-    peerDependenciesMeta:
-      '@types/react':
         optional: true
 
   '@assistant-ui/store@0.3.6':
@@ -1968,17 +1939,6 @@ packages:
 
   assistant-cloud@0.1.38:
     resolution: {integrity: sha512-l9Sgj50RF0SruaVwieCnzyqbWKa/gwnapJEl71cP7eOJ0dmptNxbagkD/2ulyZDRnOwqFDRsVKEK5fsnDMlsyQ==}
-
-  assistant-stream@0.3.33:
-    resolution: {integrity: sha512-ZUP5hGMtucRpg1TQWCMX3Tp7iOvhG4KWrKTJYtNUCbtDvPuMod4JbBp2JJp8ThrNALXBi3OlE4ZU1a/6W11Cog==}
-    peerDependencies:
-      ioredis: ^5.10.1
-      redis: ^5.12.1
-    peerDependenciesMeta:
-      ioredis:
-        optional: true
-      redis:
-        optional: true
 
   assistant-stream@0.3.34:
     resolution: {integrity: sha512-tOPbyyOYZ5jCiGUcnvMpSJY6bZWrEaRfEAqfX+sAFiK/icQbpDJ+PZ6IxP0Sy4B+dfQRmiWVaeNjxp21/tju3g==}
@@ -4001,21 +3961,6 @@ snapshots:
     dependencies:
       json-schema: 0.4.0
 
-  '@assistant-ui/core@0.3.5(@assistant-ui/store@0.3.3(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(react@19.2.8))(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(assistant-cloud@0.1.38)(react@19.2.8)(zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))':
-    dependencies:
-      '@assistant-ui/store': 0.3.3(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(react@19.2.8)
-      '@assistant-ui/tap': 0.9.10(@types/react@19.2.18)(react@19.2.8)
-      assistant-stream: 0.3.33
-      nanoid: 6.0.1
-    optionalDependencies:
-      '@types/react': 19.2.18
-      assistant-cloud: 0.1.38
-      react: 19.2.8
-      zustand: 5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8))
-    transitivePeerDependencies:
-      - ioredis
-      - redis
-
   '@assistant-ui/core@0.3.7(@assistant-ui/store@0.3.6(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(react@19.2.8))(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(assistant-cloud@0.1.38)(react@19.2.8)(zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))':
     dependencies:
       '@assistant-ui/store': 0.3.6(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(react@19.2.8)
@@ -4031,12 +3976,12 @@ snapshots:
       - ioredis
       - redis
 
-  '@assistant-ui/react-google-adk@0.0.20(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@google/adk@1.5.0(@grpc/grpc-js@1.14.4)(@mikro-orm/mariadb@6.6.8(@mikro-orm/core@6.6.16)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/mssql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7))(@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.16)(@types/node@26.1.2)(mariadb@3.4.5)(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/postgresql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/sqlite@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(tedious@19.2.1))(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13))(@types/react@19.2.18)(react@19.2.8)(zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))':
+  '@assistant-ui/react-google-adk@0.0.23(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@google/adk@1.5.0(@grpc/grpc-js@1.14.4)(@mikro-orm/mariadb@6.6.8(@mikro-orm/core@6.6.16)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/mssql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7))(@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.16)(@types/node@26.1.2)(mariadb@3.4.5)(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/postgresql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/sqlite@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(tedious@19.2.1))(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13))(@types/react@19.2.18)(react@19.2.8)(zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))':
     dependencies:
-      '@assistant-ui/core': 0.3.5(@assistant-ui/store@0.3.3(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(react@19.2.8))(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(assistant-cloud@0.1.38)(react@19.2.8)(zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))
-      '@assistant-ui/store': 0.3.3(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(react@19.2.8)
+      '@assistant-ui/core': 0.3.7(@assistant-ui/store@0.3.6(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(react@19.2.8))(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(assistant-cloud@0.1.38)(react@19.2.8)(zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))
+      '@assistant-ui/store': 0.3.6(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(react@19.2.8)
       assistant-cloud: 0.1.38
-      assistant-stream: 0.3.33
+      assistant-stream: 0.3.34
       react: 19.2.8
       uuid: 14.0.1
     optionalDependencies:
@@ -4078,13 +4023,6 @@ snapshots:
       - ioredis
       - redis
       - use-sync-external-store
-
-  '@assistant-ui/store@0.3.3(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(react@19.2.8)':
-    dependencies:
-      '@assistant-ui/tap': 0.9.10(@types/react@19.2.18)(react@19.2.8)
-      react: 19.2.8
-    optionalDependencies:
-      '@types/react': 19.2.18
 
   '@assistant-ui/store@0.3.6(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(react@19.2.8)':
     dependencies:
@@ -5928,16 +5866,10 @@ snapshots:
 
   assistant-cloud@0.1.38:
     dependencies:
-      assistant-stream: 0.3.33
+      assistant-stream: 0.3.34
     transitivePeerDependencies:
       - ioredis
       - redis
-
-  assistant-stream@0.3.33:
-    dependencies:
-      '@standard-schema/spec': 1.1.0
-      nanoid: 6.0.1
-      secure-json-parse: 4.1.0
 
   assistant-stream@0.3.34:
     dependencies:
