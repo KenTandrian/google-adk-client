@@ -13,13 +13,13 @@ importers:
         version: 0.15.8(@types/react@19.2.18)(react-dom@19.2.7(react@19.2.8))(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8))
       '@assistant-ui/react-google-adk':
         specifier: 0.0.23
-        version: 0.0.23(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@google/adk@1.5.0(@grpc/grpc-js@1.14.4)(@mikro-orm/mariadb@6.6.8(@mikro-orm/core@6.6.16)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/mssql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7))(@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.16)(@types/node@26.1.2)(mariadb@3.4.5)(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/postgresql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/sqlite@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(tedious@19.2.1))(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13))(@types/react@19.2.18)(react@19.2.8)(zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))
+        version: 0.0.23(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@google/adk@1.6.0(@grpc/grpc-js@1.14.4)(@mikro-orm/mariadb@6.6.8(@mikro-orm/core@6.6.16)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/mssql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7))(@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.16)(@types/node@26.1.2)(mariadb@3.4.5)(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/postgresql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/sqlite@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(tedious@19.2.1))(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13))(@types/react@19.2.18)(react@19.2.8)(zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))
       '@biomejs/biome':
         specifier: 2.5.6
         version: 2.5.6
       '@google/adk':
-        specifier: 1.5.0
-        version: 1.5.0(@grpc/grpc-js@1.14.4)(@mikro-orm/mariadb@6.6.8(@mikro-orm/core@6.6.16)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/mssql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7))(@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.16)(@types/node@26.1.2)(mariadb@3.4.5)(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/postgresql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/sqlite@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(tedious@19.2.1))(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13)
+        specifier: 1.6.0
+        version: 1.6.0(@grpc/grpc-js@1.14.4)(@mikro-orm/mariadb@6.6.8(@mikro-orm/core@6.6.16)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/mssql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7))(@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.16)(@types/node@26.1.2)(mariadb@3.4.5)(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/postgresql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/sqlite@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(tedious@19.2.1))(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13)
       '@types/node':
         specifier: 26.1.2
         version: 26.1.2
@@ -494,8 +494,8 @@ packages:
     resolution: {integrity: sha512-XMJIk7GIeavFLP5A3YEUlowKa5Y5PZRrnnuTJcqR0k+lFKkv7+IWpdRp+Xbqb8xNDrvQaE2hP2RYPUylyD5EdA==}
     engines: {node: '>=18.0.0'}
 
-  '@google/adk@1.5.0':
-    resolution: {integrity: sha512-DwgdpKeDJ7V+VQK9VZNpvYVXLLJ7xURfvA3nq5zWkwlioFUEbNwh0STDnLmJy0swmqKXgEeymjKNMrlc3eVY9g==}
+  '@google/adk@1.6.0':
+    resolution: {integrity: sha512-lKYw8TlKHZGeMpJhk2RJSEJK6aK1FAP8a5ltnQj/wTm1QLQFWc2bYHIqi8C5OxpRST3ZsQEbPTyvQvvNhOHukQ==}
     peerDependencies:
       '@mikro-orm/mariadb': ^6.6.6
       '@mikro-orm/mssql': ^6.6.6
@@ -512,8 +512,8 @@ packages:
       '@modelcontextprotocol/sdk':
         optional: true
 
-  '@google/genai@2.15.0':
-    resolution: {integrity: sha512-Q41TvqwBQ9NcmWdh6qxY5qrpg+0FaVHD7febQoH007pykxzco4ohScBUP4BBBy+Q8j5D8euIBSRIBDfWuNVCKA==}
+  '@google/genai@2.16.0':
+    resolution: {integrity: sha512-K+1C1sqR0u7NJ5xpKJCQBws0QXpfuklo3WTNuUIMvtbQfNW2O5OohX0BYT2V+PXzsUzQEwGCXPWQxttLyGQ6xw==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       '@modelcontextprotocol/sdk': ^1.25.2
@@ -659,6 +659,10 @@ packages:
 
   '@opentelemetry/api@1.9.0':
     resolution: {integrity: sha512-3giAOQvZiH5F9bMlMiv8+GSPMeqg0dbaeo58/0SlA9sxSqZhnUtxzX9/2FzyhS9sWQf5S0GJE0AKBrFqjpeYcg==}
+    engines: {node: '>=8.0.0'}
+
+  '@opentelemetry/api@1.9.1':
+    resolution: {integrity: sha512-gLyJlPHPZYdAk1JENA9LeHejZe1Ti77/pTeFm/nMXmQH/HFZlcS/O2XJB+L8fkbrNSqhdtlvjBVjxwUYanNH5Q==}
     engines: {node: '>=8.0.0'}
 
   '@opentelemetry/context-async-hooks@2.10.0':
@@ -2335,8 +2339,8 @@ packages:
     resolution: {integrity: sha512-KfYbmpRm0VbLjEvVa9yGwCi9GI34xvi7A/HXYWQO65CSD2u3MczUJSuwXKFIxlGsgBQizV9q5J9NHj4VG0n+pA==}
     engines: {node: '>=12.0.0'}
 
-  express-rate-limit@8.6.1:
-    resolution: {integrity: sha512-0D493aP61w0TJ2A0wy27riRsO7FMQ7FK+KUHOKCSfPvYo0R55aiC6emCVgFUeShH0fq0ICPVzNcgoS+BsbXQCA==}
+  express-rate-limit@8.6.2:
+    resolution: {integrity: sha512-YH4ru+eOJxQABscKFfRCy9R7x9QFGdezclVMwwgFFndzS2Xnm0uo6B0ABZsLhcpeptGv2qvuJVWlQr9gQZoC3A==}
     engines: {node: '>= 16'}
     peerDependencies:
       express: '>= 4.11'
@@ -2525,6 +2529,10 @@ packages:
   google-logging-utils@1.1.3:
     resolution: {integrity: sha512-eAmLkjDjAFCVXg7A1unxHsLf961m6y17QFqXqAXGj/gVkKFrEICfStRfwUlGNfeCEjNRa32JEWOUTlYXPyyKvA==}
     engines: {node: '>=14'}
+
+  google-logging-utils@1.2.0:
+    resolution: {integrity: sha512-WE9av4wKDZgRjBwgVUabocx8T6/7o3Ca1Fat46FXDhXVAFibzNadedcOXrdgd1Kzmk8tsk/9ZH89Wyf/SqeZ3A==}
+    engines: {node: '>=18'}
 
   googleapis-common@7.2.0:
     resolution: {integrity: sha512-/fhDZEJZvOV3X5jmD+fKxMqma5q2Q9nZNSF3kn1F18tpxmA86BcTxAGBQdM0N89Z3bEaIs+HVznSmFJEAmMTjA==}
@@ -3976,7 +3984,7 @@ snapshots:
       - ioredis
       - redis
 
-  '@assistant-ui/react-google-adk@0.0.23(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@google/adk@1.5.0(@grpc/grpc-js@1.14.4)(@mikro-orm/mariadb@6.6.8(@mikro-orm/core@6.6.16)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/mssql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7))(@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.16)(@types/node@26.1.2)(mariadb@3.4.5)(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/postgresql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/sqlite@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(tedious@19.2.1))(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13))(@types/react@19.2.18)(react@19.2.8)(zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))':
+  '@assistant-ui/react-google-adk@0.0.23(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@google/adk@1.6.0(@grpc/grpc-js@1.14.4)(@mikro-orm/mariadb@6.6.8(@mikro-orm/core@6.6.16)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/mssql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7))(@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.16)(@types/node@26.1.2)(mariadb@3.4.5)(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/postgresql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/sqlite@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(tedious@19.2.1))(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13))(@types/react@19.2.18)(react@19.2.8)(zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))':
     dependencies:
       '@assistant-ui/core': 0.3.7(@assistant-ui/store@0.3.6(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(react@19.2.8))(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(assistant-cloud@0.1.38)(react@19.2.8)(zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))
       '@assistant-ui/store': 0.3.6(@assistant-ui/tap@0.9.10(@types/react@19.2.18)(react@19.2.8))(@types/react@19.2.18)(react@19.2.8)
@@ -3985,7 +3993,7 @@ snapshots:
       react: 19.2.8
       uuid: 14.0.1
     optionalDependencies:
-      '@google/adk': 1.5.0(@grpc/grpc-js@1.14.4)(@mikro-orm/mariadb@6.6.8(@mikro-orm/core@6.6.16)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/mssql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7))(@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.16)(@types/node@26.1.2)(mariadb@3.4.5)(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/postgresql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/sqlite@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(tedious@19.2.1))(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13)
+      '@google/adk': 1.6.0(@grpc/grpc-js@1.14.4)(@mikro-orm/mariadb@6.6.8(@mikro-orm/core@6.6.16)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/mssql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7))(@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.16)(@types/node@26.1.2)(mariadb@3.4.5)(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/postgresql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/sqlite@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(tedious@19.2.1))(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13)
       '@types/react': 19.2.18
     transitivePeerDependencies:
       - '@assistant-ui/tap'
@@ -4394,14 +4402,14 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@google/adk@1.5.0(@grpc/grpc-js@1.14.4)(@mikro-orm/mariadb@6.6.8(@mikro-orm/core@6.6.16)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/mssql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7))(@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.16)(@types/node@26.1.2)(mariadb@3.4.5)(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/postgresql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/sqlite@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(tedious@19.2.1))(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13)':
+  '@google/adk@1.6.0(@grpc/grpc-js@1.14.4)(@mikro-orm/mariadb@6.6.8(@mikro-orm/core@6.6.16)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/mssql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7))(@mikro-orm/mysql@6.6.8(@mikro-orm/core@6.6.16)(@types/node@26.1.2)(mariadb@3.4.5)(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/postgresql@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(sqlite3@5.1.7)(tedious@19.2.1))(@mikro-orm/sqlite@6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(tedious@19.2.1))(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13)':
     dependencies:
       '@a2a-js/sdk': 0.3.14(@grpc/grpc-js@1.14.4)(express@4.22.2)
       '@google-cloud/opentelemetry-cloud-monitoring-exporter': 0.21.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.10.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13)
       '@google-cloud/opentelemetry-cloud-trace-exporter': 3.0.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.0))(@opentelemetry/resources@2.10.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.10.0(@opentelemetry/api@1.9.0))(encoding@0.1.13)
       '@google-cloud/storage': 7.21.0(encoding@0.1.13)
       '@google-cloud/vertexai': 1.12.0(@modelcontextprotocol/sdk@1.30.0(zod@4.4.3))(encoding@0.1.13)
-      '@google/genai': 2.15.0(@modelcontextprotocol/sdk@1.30.0(zod@4.4.3))
+      '@google/genai': 2.16.0(@modelcontextprotocol/sdk@1.30.0(zod@4.4.3))
       '@mikro-orm/core': 6.6.16
       '@mikro-orm/mariadb': 6.6.8(@mikro-orm/core@6.6.16)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)(tedious@19.2.1)
       '@mikro-orm/mssql': 6.6.8(@mikro-orm/core@6.6.16)(mariadb@3.4.5)(mysql2@3.18.2(@types/node@26.1.2))(pg@8.19.0)(sqlite3@5.1.7)
@@ -4453,7 +4461,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@google/genai@2.15.0(@modelcontextprotocol/sdk@1.30.0(zod@4.4.3))':
+  '@google/genai@2.16.0(@modelcontextprotocol/sdk@1.30.0(zod@4.4.3))':
     dependencies:
       google-auth-library: 10.9.1
       p-retry: 4.6.2
@@ -4628,7 +4636,7 @@ snapshots:
       eventsource: 3.0.7
       eventsource-parser: 3.1.0
       express: 5.2.1
-      express-rate-limit: 8.6.1(express@5.2.1)
+      express-rate-limit: 8.6.2(express@5.2.1)
       hono: 4.13.0
       jose: 6.2.8
       json-schema-typed: 8.0.2
@@ -4670,9 +4678,11 @@ snapshots:
 
   '@opentelemetry/api-logs@0.205.0':
     dependencies:
-      '@opentelemetry/api': 1.9.0
+      '@opentelemetry/api': 1.9.1
 
   '@opentelemetry/api@1.9.0': {}
+
+  '@opentelemetry/api@1.9.1': {}
 
   '@opentelemetry/context-async-hooks@2.10.0(@opentelemetry/api@1.9.0)':
     dependencies:
@@ -6262,7 +6272,7 @@ snapshots:
 
   expect-type@1.4.0: {}
 
-  express-rate-limit@8.6.1(express@5.2.1):
+  express-rate-limit@8.6.2(express@5.2.1):
     dependencies:
       debug: 4.4.3
       express: 5.2.1
@@ -6495,7 +6505,7 @@ snapshots:
   gcp-metadata@8.1.2:
     dependencies:
       gaxios: 7.3.0
-      google-logging-utils: 1.1.3
+      google-logging-utils: 1.2.0
       json-bigint: 1.0.0
     transitivePeerDependencies:
       - supports-color
@@ -6581,6 +6591,8 @@ snapshots:
   google-logging-utils@0.0.2: {}
 
   google-logging-utils@1.1.3: {}
+
+  google-logging-utils@1.2.0: {}
 
   googleapis-common@7.2.0(encoding@0.1.13):
     dependencies:
