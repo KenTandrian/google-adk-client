@@ -10,10 +10,10 @@ importers:
     devDependencies:
       '@assistant-ui/react':
         specifier: 0.15.31
-        version: 0.15.31(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.150(zod@4.6.7))(react-dom@19.2.7(react@19.3.1))(react@19.3.1)(use-sync-external-store@1.6.0(react@19.3.1))
+        version: 0.15.31(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.157(zod@4.6.7))(react-dom@19.2.7(react@19.3.1))(react@19.3.1)(use-sync-external-store@1.6.0(react@19.3.1))
       '@assistant-ui/react-google-adk':
         specifier: 0.0.40
-        version: 0.0.40(cad93f86fe904c6fbeb344b1fd5bbd30)
+        version: 0.0.40(2de442156bba7197e9ccfe48c742150c)
       '@biomejs/biome':
         specifier: 2.6.2
         version: 2.6.2
@@ -27,8 +27,8 @@ importers:
         specifier: 19.3.0
         version: 19.3.0
       ai:
-        specifier: 7.0.150
-        version: 7.0.150(zod@4.6.7)
+        specifier: 7.0.157
+        version: 7.0.157(zod@4.6.7)
       react:
         specifier: 19.3.1
         version: 19.3.1
@@ -56,20 +56,20 @@ packages:
       express:
         optional: true
 
-  '@ai-sdk/gateway@4.0.123':
-    resolution: {integrity: sha512-IC6w1vADmRyOfB7Kl9A7348p5pazYodb2humlQAahSJSBW9MGCoafbM8h8+rgukYBSV8gjcZoAxPxPX5RQK8mw==}
+  '@ai-sdk/gateway@4.0.130':
+    resolution: {integrity: sha512-TVcjwUeAUgp9HqzijFxy3skHhz4FKwjhO8TQi9SQMGEpc6k5INWntA3MYelgHWMUaK3ilQr7NX2ir2GBG/EIqg==}
     engines: {node: '>=22'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
 
-  '@ai-sdk/provider-utils@5.0.67':
-    resolution: {integrity: sha512-EUzV6GXutGcesWKOY8tRKgijfuv1LUBpqAquMh5k0n74NCjDbca5d5ZG12qhVtM2X5UwM4B2ZMP2XpnAwZlA8Q==}
+  '@ai-sdk/provider-utils@5.0.71':
+    resolution: {integrity: sha512-up6vmxeWnAGgRdNM2q8XvC43rl9N7GRX3/MltKmy3qlNFWLZMgO9SoriOi7obuv9lOYrksOmpj4TG9+TdIGI8w==}
     engines: {node: '>=22'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
 
-  '@ai-sdk/provider@4.0.33':
-    resolution: {integrity: sha512-C6ylMuAXjgqKJllp6ODIJwUltK/tm3ZmIj4V2fqENP3Y8gif2DyeJSsTcDwFrXppgEKcrBisi/BWx2tYeoeCAw==}
+  '@ai-sdk/provider@4.0.34':
+    resolution: {integrity: sha512-Ip7ZQBq/FiGpM1mmOVseTtX9PBjnzo0bLC41WTgBSBBRUBz6LhNFGbYaNUzI6hPm6ll1oNSPOAZc/q/z+3QZEQ==}
     engines: {node: '>=22'}
 
   '@assistant-ui/core@0.3.31':
@@ -1745,8 +1745,8 @@ packages:
     resolution: {integrity: sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==}
     engines: {node: '>= 14'}
 
-  ai@7.0.150:
-    resolution: {integrity: sha512-ZTgHXBTJf2ad0elG2HWhbNTUGPaYy8e5pzK4A8LP/dDa48bvIRi8Iv1/bQhklFmFssosajAjCsAZrieBUa+hYA==}
+  ai@7.0.157:
+    resolution: {integrity: sha512-yvEkoRtVgmJ9cxdy6UWg67haYzJT0r/khe74L0BnFtZhyQUSmiovuvzHiYWqSroMYT8pedsZrP4vB3+6nCeHYg==}
     engines: {node: '>=22'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -3025,32 +3025,32 @@ snapshots:
       '@grpc/grpc-js': 1.14.4
       express: 5.2.1
 
-  '@ai-sdk/gateway@4.0.123(zod@4.6.7)':
+  '@ai-sdk/gateway@4.0.130(zod@4.6.7)':
     dependencies:
-      '@ai-sdk/provider': 4.0.33
-      '@ai-sdk/provider-utils': 5.0.67(zod@4.6.7)
+      '@ai-sdk/provider': 4.0.34
+      '@ai-sdk/provider-utils': 5.0.71(zod@4.6.7)
       '@vercel/oidc': 3.2.0
       zod: 4.6.7
 
-  '@ai-sdk/provider-utils@5.0.67(zod@4.6.7)':
+  '@ai-sdk/provider-utils@5.0.71(zod@4.6.7)':
     dependencies:
-      '@ai-sdk/provider': 4.0.33
+      '@ai-sdk/provider': 4.0.34
       '@standard-schema/spec': 1.1.0
       '@workflow/serde': 4.1.0
       eventsource-parser: 3.1.1
       undici: 7.30.0
       zod: 4.6.7
 
-  '@ai-sdk/provider@4.0.33':
+  '@ai-sdk/provider@4.0.34':
     dependencies:
       json-schema: 0.4.0
 
-  '@assistant-ui/core@0.3.31(@assistant-ui/store@0.3.22(@assistant-ui/tap@0.9.24(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(react@19.3.1))(@assistant-ui/tap@0.9.24(@types/react@19.3.0)(react@19.3.1))(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.150(zod@4.6.7))(react@19.3.1)':
+  '@assistant-ui/core@0.3.31(@assistant-ui/store@0.3.22(@assistant-ui/tap@0.9.24(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(react@19.3.1))(@assistant-ui/tap@0.9.24(@types/react@19.3.0)(react@19.3.1))(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.157(zod@4.6.7))(react@19.3.1)':
     dependencies:
       '@assistant-ui/store': 0.3.22(@assistant-ui/tap@0.9.24(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(react@19.3.1)
       '@assistant-ui/tap': 0.9.24(@types/react@19.3.0)(react@19.3.1)
-      assistant-cloud: 0.2.8(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(ai@7.0.150(zod@4.6.7))
-      assistant-stream: 0.3.54(ai@7.0.150(zod@4.6.7))
+      assistant-cloud: 0.2.8(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(ai@7.0.157(zod@4.6.7))
+      assistant-stream: 0.3.54(ai@7.0.157(zod@4.6.7))
       nanoid: 6.0.2
     optionalDependencies:
       '@types/react': 19.3.0
@@ -3063,12 +3063,12 @@ snapshots:
       - ioredis
       - redis
 
-  '@assistant-ui/react-google-adk@0.0.40(cad93f86fe904c6fbeb344b1fd5bbd30)':
+  '@assistant-ui/react-google-adk@0.0.40(2de442156bba7197e9ccfe48c742150c)':
     dependencies:
-      '@assistant-ui/core': 0.3.31(@assistant-ui/store@0.3.22(@assistant-ui/tap@0.9.24(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(react@19.3.1))(@assistant-ui/tap@0.9.24(@types/react@19.3.0)(react@19.3.1))(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.150(zod@4.6.7))(react@19.3.1)
+      '@assistant-ui/core': 0.3.31(@assistant-ui/store@0.3.22(@assistant-ui/tap@0.9.24(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(react@19.3.1))(@assistant-ui/tap@0.9.24(@types/react@19.3.0)(react@19.3.1))(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.157(zod@4.6.7))(react@19.3.1)
       '@assistant-ui/store': 0.3.22(@assistant-ui/tap@0.9.24(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(react@19.3.1)
-      assistant-cloud: 0.2.7(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(ai@7.0.150(zod@4.6.7))
-      assistant-stream: 0.3.54(ai@7.0.150(zod@4.6.7))
+      assistant-cloud: 0.2.7(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(ai@7.0.157(zod@4.6.7))
+      assistant-stream: 0.3.54(ai@7.0.157(zod@4.6.7))
       react: 19.3.1
     optionalDependencies:
       '@google/adk': 2.3.0(@google-cloud/opentelemetry-cloud-monitoring-exporter@0.21.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@opentelemetry/resources@2.11.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-metrics@2.11.0(@opentelemetry/api@1.9.1))(encoding@0.1.13))(@google-cloud/opentelemetry-cloud-trace-exporter@3.0.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@opentelemetry/resources@2.11.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(encoding@0.1.13))(@google-cloud/storage@7.21.0(encoding@0.1.13))(@grpc/grpc-js@1.14.4)(@modelcontextprotocol/sdk@1.30.0(zod@4.6.7))(dataloader@2.2.3)(encoding@0.1.13)(express@5.2.1)
@@ -3082,13 +3082,13 @@ snapshots:
       - ioredis
       - redis
 
-  '@assistant-ui/react@0.15.31(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.150(zod@4.6.7))(react-dom@19.2.7(react@19.3.1))(react@19.3.1)(use-sync-external-store@1.6.0(react@19.3.1))':
+  '@assistant-ui/react@0.15.31(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.157(zod@4.6.7))(react-dom@19.2.7(react@19.3.1))(react@19.3.1)(use-sync-external-store@1.6.0(react@19.3.1))':
     dependencies:
-      '@assistant-ui/core': 0.3.31(@assistant-ui/store@0.3.22(@assistant-ui/tap@0.9.24(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(react@19.3.1))(@assistant-ui/tap@0.9.24(@types/react@19.3.0)(react@19.3.1))(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.150(zod@4.6.7))(react@19.3.1)
+      '@assistant-ui/core': 0.3.31(@assistant-ui/store@0.3.22(@assistant-ui/tap@0.9.24(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(react@19.3.1))(@assistant-ui/tap@0.9.24(@types/react@19.3.0)(react@19.3.1))(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.157(zod@4.6.7))(react@19.3.1)
       '@assistant-ui/store': 0.3.22(@assistant-ui/tap@0.9.24(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(react@19.3.1)
       '@assistant-ui/tap': 0.9.24(@types/react@19.3.0)(react@19.3.1)
-      assistant-cloud: 0.2.8(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(ai@7.0.150(zod@4.6.7))
-      assistant-stream: 0.3.54(ai@7.0.150(zod@4.6.7))
+      assistant-cloud: 0.2.8(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(ai@7.0.157(zod@4.6.7))
+      assistant-stream: 0.3.54(ai@7.0.157(zod@4.6.7))
       radix-ui: 1.8.1(@types/react@19.3.0)(react-dom@19.2.7(react@19.3.1))(react@19.3.1)
       react: 19.3.1
       react-dom: 19.2.7(react@19.3.1)
@@ -4589,11 +4589,11 @@ snapshots:
 
   agent-base@7.1.4: {}
 
-  ai@7.0.150(zod@4.6.7):
+  ai@7.0.157(zod@4.6.7):
     dependencies:
-      '@ai-sdk/gateway': 4.0.123(zod@4.6.7)
-      '@ai-sdk/provider': 4.0.33
-      '@ai-sdk/provider-utils': 5.0.67(zod@4.6.7)
+      '@ai-sdk/gateway': 4.0.130(zod@4.6.7)
+      '@ai-sdk/provider': 4.0.34
+      '@ai-sdk/provider-utils': 5.0.71(zod@4.6.7)
       zod: 4.6.7
 
   ajv-formats@3.0.1:
@@ -4636,47 +4636,47 @@ snapshots:
 
   assertion-error@2.0.1: {}
 
-  assistant-cloud@0.2.7(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(ai@7.0.150(zod@4.6.7)):
+  assistant-cloud@0.2.7(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(ai@7.0.157(zod@4.6.7)):
     dependencies:
-      assistant-stream: 0.3.52(ai@7.0.150(zod@4.6.7))
+      assistant-stream: 0.3.52(ai@7.0.157(zod@4.6.7))
     optionalDependencies:
       '@opentelemetry/api': 1.9.1
       '@opentelemetry/exporter-trace-otlp-http': 0.222.0(@opentelemetry/api@1.9.1)
       '@opentelemetry/sdk-trace-base': 2.11.0(@opentelemetry/api@1.9.1)
-      ai: 7.0.150(zod@4.6.7)
+      ai: 7.0.157(zod@4.6.7)
     transitivePeerDependencies:
       - ioredis
       - redis
 
-  assistant-cloud@0.2.8(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(ai@7.0.150(zod@4.6.7)):
+  assistant-cloud@0.2.8(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.222.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.11.0(@opentelemetry/api@1.9.1))(ai@7.0.157(zod@4.6.7)):
     dependencies:
-      assistant-stream: 0.3.54(ai@7.0.150(zod@4.6.7))
+      assistant-stream: 0.3.54(ai@7.0.157(zod@4.6.7))
     optionalDependencies:
       '@opentelemetry/api': 1.9.1
       '@opentelemetry/exporter-trace-otlp-http': 0.222.0(@opentelemetry/api@1.9.1)
       '@opentelemetry/sdk-trace-base': 2.11.0(@opentelemetry/api@1.9.1)
-      ai: 7.0.150(zod@4.6.7)
+      ai: 7.0.157(zod@4.6.7)
     transitivePeerDependencies:
       - ioredis
       - redis
 
-  assistant-stream@0.3.52(ai@7.0.150(zod@4.6.7)):
+  assistant-stream@0.3.52(ai@7.0.157(zod@4.6.7)):
     dependencies:
       '@standard-schema/spec': 1.1.0
       '@types/json-schema': 7.0.15
       nanoid: 6.0.2
       secure-json-parse: 4.1.0
     optionalDependencies:
-      ai: 7.0.150(zod@4.6.7)
+      ai: 7.0.157(zod@4.6.7)
 
-  assistant-stream@0.3.54(ai@7.0.150(zod@4.6.7)):
+  assistant-stream@0.3.54(ai@7.0.157(zod@4.6.7)):
     dependencies:
       '@standard-schema/spec': 1.1.0
       '@types/json-schema': 7.0.15
       nanoid: 6.0.2
       secure-json-parse: 4.1.1
     optionalDependencies:
-      ai: 7.0.150(zod@4.6.7)
+      ai: 7.0.157(zod@4.6.7)
 
   async-retry@1.3.3:
     dependencies:
