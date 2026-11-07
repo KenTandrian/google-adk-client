@@ -26,29 +26,52 @@ export class AdkChatTransport extends HttpChatTransport<UIMessage> {
     stream: ReadableStream<Uint8Array>
   ): ReadableStream<UIMessageChunk> {
     const messageId = generateUUID();
+    const decoder = new TextDecoder();
+    let buffer = "";
+    let started = false;
 
-    const transformStream = new TransformStream({
+    const handleLine = (
+      line: string,
+      controller: TransformStreamDefaultController<UIMessageChunk>
+    ) => {
+      if (!line.startsWith("data: ")) {
+        return;
+      }
+      try {
+        const json = JSON.parse(line.substring(6));
+        if (json?.partial && json?.content?.parts?.[0].text) {
+          if (!started) {
+            controller.enqueue({ type: "text-start", id: messageId });
+            started = true;
+          }
+          controller.enqueue({
+            type: "text-delta",
+            id: messageId,
+            delta: json.content.parts[0].text,
+          });
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    const transformStream = new TransformStream<Uint8Array, UIMessageChunk>({
       transform(chunk, controller) {
-        const decoder = new TextDecoder();
-        const text = decoder.decode(chunk);
-        const lines = text.split("\n");
+        buffer += decoder.decode(chunk, { stream: true });
+        const lines = buffer.split("\n");
+        buffer = lines.pop() ?? "";
 
         for (const line of lines) {
-          if (line.startsWith("data: ")) {
-            try {
-              const json = JSON.parse(line.substring(6));
-              if (json?.partial && json?.content?.parts?.[0].text) {
-                const chunk: UIMessageChunk = {
-                  type: "text-delta",
-                  id: messageId,
-                  delta: json.content.parts[0].text,
-                };
-                controller.enqueue(chunk);
-              }
-            } catch (error) {
-              console.error(error);
-            }
-          }
+          handleLine(line, controller);
+        }
+      },
+      flush(controller) {
+        buffer += decoder.decode();
+        if (buffer) {
+          handleLine(buffer, controller);
+        }
+        if (started) {
+          controller.enqueue({ type: "text-end", id: messageId });
         }
       },
     });
