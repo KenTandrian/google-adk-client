@@ -47,4 +47,62 @@ describe("uiMessagesToAdkContent", () => {
       },
     ]);
   });
+
+  it("converts remote file URLs to fileData", () => {
+    const content = uiMessagesToAdkContent([
+      userMessage([
+        {
+          type: "file",
+          mediaType: "application/pdf",
+          url: "gs://bucket/doc.pdf",
+        },
+      ]),
+    ]);
+
+    expect(content.parts).toEqual([
+      {
+        fileData: {
+          displayName: "file",
+          fileUri: "gs://bucket/doc.pdf",
+          mimeType: "application/pdf",
+        },
+      },
+    ]);
+  });
+
+  it("maps the assistant role to model", () => {
+    const content = uiMessagesToAdkContent([
+      { id: "m1", role: "assistant", parts: [{ type: "text", text: "hi" }] },
+    ]);
+
+    expect(content.role).toBe("model");
+  });
+
+  it("maps non-assistant roles to user", () => {
+    const content = uiMessagesToAdkContent([
+      { id: "m1", role: "system", parts: [{ type: "text", text: "hi" }] },
+    ]);
+
+    expect(content.role).toBe("user");
+  });
+
+  it("skips parts with no ADK equivalent instead of sending empty parts", () => {
+    const content = uiMessagesToAdkContent([
+      userMessage([{ type: "step-start" }, { type: "text", text: "hello" }]),
+    ]);
+
+    expect(content.parts).toEqual([{ text: "hello" }]);
+  });
+
+  it("throws when no parts can be converted", () => {
+    expect(() =>
+      uiMessagesToAdkContent([userMessage([{ type: "step-start" }])])
+    ).toThrow("The last message has no parts that can be sent to ADK");
+  });
+
+  it("throws on an empty message list", () => {
+    expect(() => uiMessagesToAdkContent([])).toThrow(
+      "At least one message is required"
+    );
+  });
 });
