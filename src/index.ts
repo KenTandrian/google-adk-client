@@ -6,9 +6,9 @@ import { Events } from "./api/events";
 import { Memory } from "./api/memory";
 import { Sessions } from "./api/sessions";
 import type {
-  AgentRunSsePayload,
   HealthResponse,
   RunAgentParams,
+  RunAgentRequest,
   VersionResponse,
 } from "./types";
 
@@ -155,7 +155,7 @@ export class AdkClient {
    * @param params.newMessage A new message to append to the session.
    */
   async runSse({ sessionId, newMessage }: RunAgentParams): Promise<Response> {
-    const body: AgentRunSsePayload = {
+    const body: RunAgentRequest = {
       appName: this.appName,
       userId: this.userId,
       sessionId: sessionId,
@@ -177,7 +177,7 @@ export class AdkClient {
    * @param params.newMessage A new message to append to the session.
    */
   async run({ sessionId, newMessage }: RunAgentParams): Promise<Response> {
-    const body: AgentRunSsePayload = {
+    const body: RunAgentRequest = {
       appName: this.appName,
       userId: this.userId,
       sessionId: sessionId,
