@@ -2,6 +2,8 @@
 
 A TypeScript client library for the Google ADK (Agent Development Kit).
 
+> Disclaimer: This is an independent community project and is not officially affiliated with Google.
+
 ## Features
 
 - **Simple and robust:** A high-level, easy-to-use client library that abstracts away the complexities of the Google ADK agent API.
@@ -12,7 +14,7 @@ A TypeScript client library for the Google ADK (Agent Development Kit).
 ## Installation
 
 ```bash
-npm install @kentandrian/google-adk
+npm install google-adk-client
 ```
 
 ## Usage
@@ -22,7 +24,7 @@ npm install @kentandrian/google-adk
 The core of the library is the `AdkClient` class. It provides methods for all the Google ADK agent API endpoints, organized into logical groups.
 
 ```typescript
-import { AdkClient } from "@kentandrian/google-adk";
+import { AdkClient } from "google-adk-client";
 
 // The client can be configured with environment variables:
 // process.env.ADK_BASE_URL = "https://my-adk-agent.example.com";
@@ -47,9 +49,10 @@ This connector is a function that simplifies handling streaming responses in Nex
 
 ```typescript
 // src/app/api/chat/route.ts
-import { AdkClient } from "@kentandrian/google-adk";
-import { createAdkAiSdkStream } from "@kentandrian/google-adk/ai-sdk";
-import { auth } from "lib/auth";
+import { AdkClient } from "google-adk-client";
+import { createAdkAiSdkStream } from "google-adk-client/ai-sdk";
+
+import { auth } from "@/lib/auth";
 
 export async function POST(req: Request) {
   const { messages } = await req.json();
@@ -77,8 +80,8 @@ This connector is a class that extends the `HttpChatTransport` from the `ai` pac
 ```typescript
 // Example usage in a React component
 import { useChat } from "@ai-sdk/react";
-import { AdkClient } from "@kentandrian/google-adk";
-import { AdkChatTransport } from "@kentandrian/google-adk/ai-sdk";
+import { AdkClient } from "google-adk-client";
+import { AdkChatTransport } from "google-adk-client/ai-sdk";
 
 const client = new AdkClient({
   baseUrl: "https://my-adk-agent.example.com",
@@ -99,13 +102,13 @@ function MyChatComponent() {
 
 ### Full-Stack & Remote Agent Developer Toolkit
 
-#### 1. Secure Proxy Route Creator (`@kentandrian/google-adk/server`)
+#### 1. Secure Proxy Route Creator (`google-adk-client/server`)
 
 Prevent browser credential leakage by proxying requests securely through your Next.js App Router API route handler:
 
 ```typescript
 // app/api/chat/[[...path]]/route.ts
-import { createAdkProxy } from "@kentandrian/google-adk/server";
+import { createAdkProxy } from "google-adk-client/server";
 
 export const { GET, POST, PUT, DELETE } = createAdkProxy({
   baseUrl: process.env.ADK_URL, // Remote ADK service URL kept secure on the server
@@ -116,13 +119,13 @@ export const { GET, POST, PUT, DELETE } = createAdkProxy({
 });
 ```
 
-#### 2. High-Level React Integration Hook (`@kentandrian/google-adk/react`)
+#### 2. High-Level React Integration Hook (`google-adk-client/react`)
 
 Quickly connect `@assistant-ui/react` to your local proxy route with less than 10 lines of boilerplate code:
 
 ```tsx
-import { useAdkAssistant } from "@kentandrian/google-adk/react";
 import { AssistantRuntimeProvider } from "@assistant-ui/react";
+import { useAdkAssistant } from "google-adk-client/react";
 
 export function MyAssistantComponent() {
   const { runtime } = useAdkAssistant({

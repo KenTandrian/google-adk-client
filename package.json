@@ -1,7 +1,8 @@
 {
-  "name": "@kentandrian/google-adk",
+  "name": "google-adk-client",
   "version": "0.1.8",
-  "description": "A TypeScript client library for the Google ADK (Agent Development Kit).",
+  "description": "A TypeScript client library for Google ADK (Agent Development Kit).",
+  "author": "Kenrick Tandrian",
   "packageManager": "pnpm@11.28.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -38,8 +39,16 @@
     "type": "git",
     "url": "git+https://github.com/KenTandrian/google-adk-client.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "google-adk",
+    "adk",
+    "agent-development-kit",
+    "ai",
+    "agents",
+    "gemini",
+    "ai-sdk",
+    "nextjs"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KenTandrian/google-adk-client/issues"

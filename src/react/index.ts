@@ -48,8 +48,8 @@ export interface UseAdkAssistantOptions {
  *
  * @example
  * ```tsx
- * import { useAdkAssistant } from "@kentandrian/google-adk/react";
  * import { AssistantRuntimeProvider } from "@assistant-ui/react";
+ * import { useAdkAssistant } from "google-adk-client/react";
  *
  * export function Assistant() {
  *   const { runtime } = useAdkAssistant({
