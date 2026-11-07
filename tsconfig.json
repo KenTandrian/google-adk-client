@@ -3,7 +3,7 @@
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "commonjs",
+    "module": "preserve",
     "outDir": "./dist",
     "rootDir": "./src",
     "skipLibCheck": true,

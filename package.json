@@ -2,35 +2,42 @@
   "name": "google-adk-client",
   "version": "0.2.0",
   "description": "A TypeScript client library for Google ADK (Agent Development Kit).",
-  "author": "Kenrick Tandrian",
+  "author": "Kenrick Tandrian <kenricktan11@gmail.com>",
   "packageManager": "pnpm@11.28.7",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "sideEffects": false,
   "scripts": {
-    "build": "tsc",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "format": "biome format . --write",
     "lint": "biome check ./src",
     "lint:fix": "biome check --write ./src",
     "prepublishOnly": "pnpm run build",
-    "test": "vitest"
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
   },
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "default": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
     "./ai-sdk": {
-      "import": "./dist/ai-sdk/index.js",
+      "default": "./dist/ai-sdk/index.js",
       "types": "./dist/ai-sdk/index.d.ts"
     },
     "./server": {
-      "import": "./dist/server/index.js",
+      "default": "./dist/server/index.js",
       "types": "./dist/server/index.d.ts"
     },
     "./react": {
-      "import": "./dist/react/index.js",
+      "default": "./dist/react/index.js",
       "types": "./dist/react/index.d.ts"
     }
+  },
+  "engines": {
+    "node": ">=22.12.0"
   },
   "files": [
     "dist"
@@ -63,6 +70,7 @@
     "@types/react": "19.3.0",
     "ai": "7.0.163",
     "react": "19.3.1",
+    "tsdown": "0.23.5",
     "typescript": "7.0.2",
     "vitest": "5.1.0"
   },
