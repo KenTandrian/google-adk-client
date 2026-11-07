@@ -1,6 +1,6 @@
 {
   "name": "google-adk-client",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A TypeScript client library for Google ADK (Agent Development Kit).",
   "author": "Kenrick Tandrian <kenricktan11@gmail.com>",
   "packageManager": "pnpm@11.28.7",
