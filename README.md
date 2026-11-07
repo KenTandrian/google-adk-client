@@ -17,6 +17,27 @@ A TypeScript client library for the Google ADK (Agent Development Kit).
 npm install google-adk-client
 ```
 
+## Migrating from `@kentandrian/google-adk`
+
+This package was previously published as `@kentandrian/google-adk` (last version: `0.1.8`). Version `0.2.0` includes these breaking changes:
+
+1. **New package name.** Replace `@kentandrian/google-adk` with `google-adk-client` in your dependencies and imports. The subpaths (`/ai-sdk`, `/server`, `/react`) are unchanged.
+2. **`run()` and `runSse()` take an object with ADK `Content`.** The root package no longer depends on AI SDK types. Convert AI SDK messages with `uiMessagesToAdkContent()`:
+
+   ```diff
+   - const response = await client.runSse("session-123", messages);
+   + import { uiMessagesToAdkContent } from "google-adk-client/ai-sdk";
+   +
+   + const response = await client.runSse({
+   +   sessionId: "session-123",
+   +   newMessage: uiMessagesToAdkContent(messages),
+   + });
+   ```
+
+   Without the AI SDK, pass ADK `Content` directly: `newMessage: { role: "user", parts: [{ text: "Hello" }] }`.
+
+3. **`AgentRunSsePayload` is renamed to `RunAgentRequest`**, matching the ADK API server.
+
 ## Usage
 
 ### `AdkClient`
@@ -98,7 +119,7 @@ const client = new AdkClient({
 const transport = new AdkChatTransport(client);
 
 function MyChatComponent() {
-  const { messages, input, handleInputChange, handleSubmit } = useChat({
+  const { messages, sendMessage } = useChat({
     transport,
   });
 
@@ -124,6 +145,9 @@ export const { GET, POST, PUT, DELETE } = createAdkProxy({
   }),
 });
 ```
+
+> [!WARNING]
+> The proxy forwards request paths and bodies as-is, including the `userId` chosen by the browser. Authenticate requests and validate the `userId` before forwarding them, or users may access other users' sessions.
 
 #### 2. High-Level React Integration Hook (`google-adk-client/react`)
 
