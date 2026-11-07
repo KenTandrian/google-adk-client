@@ -16,19 +16,25 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
+
       - name: Install pnpm
         uses: pnpm/action-setup@v6
+
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: "24.x"
           registry-url: "https://registry.npmjs.org"
           cache: "pnpm"
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
       - name: Build the project
         run: pnpm build
+
       - name: Run tests
         run: pnpm test
-      - name: Publish to npm
-        run: npm publish --access public --provenance
+
+      - name: Stage npm release
+        run: npm stage publish --access public --provenance
