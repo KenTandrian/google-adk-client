@@ -1,5 +1,3 @@
-import type { UIMessage } from "ai";
-
 import { Apps } from "./api/apps";
 import { Artifacts } from "./api/artifacts";
 import { Debug } from "./api/debug";
@@ -10,6 +8,7 @@ import { Sessions } from "./api/sessions";
 import type {
   AgentRunSsePayload,
   HealthResponse,
+  RunAgentParams,
   VersionResponse,
 } from "./types";
 
@@ -142,36 +141,6 @@ export class AdkClient {
     return response.json();
   }
 
-  private transformMessagesToAdkNewMessage(
-    messages: UIMessage[]
-  ): AgentRunSsePayload["newMessage"] {
-    const lastMessage = messages[messages.length - 1];
-
-    const parts = lastMessage.parts.map((part) => {
-      switch (part.type) {
-        case "text":
-          return { text: part.text };
-        case "file": {
-          const [_, base64Data] = part.url.split(",");
-          return {
-            inlineData: {
-              data: base64Data,
-              displayName: part.filename ?? "file",
-              mimeType: part.mediaType,
-            },
-          };
-        }
-        default:
-          return {};
-      }
-    });
-
-    return {
-      parts,
-      role: lastMessage.role,
-    };
-  }
-
   /**
    * Checks health of the ADK service.
    */
@@ -181,9 +150,11 @@ export class AdkClient {
 
   /**
    * Runs an agent in streaming mode and returns the response.
+   *
+   * @param params.sessionId The ID of the session to run the agent in.
+   * @param params.newMessage A new message to append to the session.
    */
-  async runSse(sessionId: string, messages: UIMessage[]): Promise<Response> {
-    const newMessage = this.transformMessagesToAdkNewMessage(messages);
+  async runSse({ sessionId, newMessage }: RunAgentParams): Promise<Response> {
     const body: AgentRunSsePayload = {
       appName: this.appName,
       userId: this.userId,
@@ -201,9 +172,11 @@ export class AdkClient {
 
   /**
    * Runs an agent and returns a response.
+   *
+   * @param params.sessionId The ID of the session to run the agent in.
+   * @param params.newMessage A new message to append to the session.
    */
-  async run(sessionId: string, messages: UIMessage[]): Promise<Response> {
-    const newMessage = this.transformMessagesToAdkNewMessage(messages);
+  async run({ sessionId, newMessage }: RunAgentParams): Promise<Response> {
     const body: AgentRunSsePayload = {
       appName: this.appName,
       userId: this.userId,

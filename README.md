@@ -50,7 +50,10 @@ This connector is a function that simplifies handling streaming responses in Nex
 ```typescript
 // src/app/api/chat/route.ts
 import { AdkClient } from "google-adk-client";
-import { createAdkAiSdkStream } from "google-adk-client/ai-sdk";
+import {
+  createAdkAiSdkStream,
+  uiMessagesToAdkContent,
+} from "google-adk-client/ai-sdk";
 
 import { auth } from "@/lib/auth";
 
@@ -68,7 +71,10 @@ export async function POST(req: Request) {
     userId: session.user.id,
   });
 
-  const adkResponse = await client.runSse("session-123", messages);
+  const adkResponse = await client.runSse({
+    sessionId: "session-123",
+    newMessage: uiMessagesToAdkContent(messages),
+  });
   return createAdkAiSdkStream(adkResponse);
 }
 ```

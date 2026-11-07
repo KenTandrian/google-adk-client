@@ -7,6 +7,7 @@ import {
 
 import type { AdkClient } from "..";
 import { generateUUID } from "../utils";
+import { uiMessagesToAdkContent } from "./messages";
 
 /**
  * A transport class for handling chat messages in the ADK client.
@@ -70,7 +71,10 @@ export class AdkChatTransport extends HttpChatTransport<UIMessage> {
       throw new Error("Session ID or Chat ID is required");
     }
 
-    const response = await this.adk.runSse(resolvedSessionId, messages);
+    const response = await this.adk.runSse({
+      sessionId: resolvedSessionId,
+      newMessage: uiMessagesToAdkContent(messages),
+    });
 
     if (!response.body) {
       throw new Error("No response body from ADK agent");
