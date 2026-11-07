@@ -3,7 +3,7 @@
   "version": "0.1.8",
   "description": "A TypeScript client library for Google ADK (Agent Development Kit).",
   "author": "Kenrick Tandrian",
-  "packageManager": "pnpm@11.28.3",
+  "packageManager": "pnpm@11.28.7",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
