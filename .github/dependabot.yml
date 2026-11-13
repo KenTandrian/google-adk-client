@@ -11,3 +11,12 @@ updates:
       interval: "weekly"
     cooldown:
       default-days: 1
+    groups:
+      assistant-ui:
+        patterns:
+          - "@assistant-ui/*"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
