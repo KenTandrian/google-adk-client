@@ -70,7 +70,7 @@
     "@types/react": "19.3.0",
     "ai": "7.0.163",
     "react": "19.3.1",
-    "tsdown": "0.23.5",
+    "tsdown": "0.23.7",
     "typescript": "7.0.2",
     "vitest": "5.1.0"
   },
