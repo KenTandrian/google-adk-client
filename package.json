@@ -63,7 +63,7 @@
   "homepage": "https://github.com/KenTandrian/google-adk-client#readme",
   "devDependencies": {
     "@assistant-ui/react": "0.15.36",
-    "@assistant-ui/react-google-adk": "0.0.41",
+    "@assistant-ui/react-google-adk": "0.0.42",
     "@biomejs/biome": "2.6.7",
     "@google/adk": "2.4.0",
     "@types/node": "26.6.6",
