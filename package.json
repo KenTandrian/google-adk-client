@@ -64,7 +64,7 @@
   "devDependencies": {
     "@assistant-ui/react": "0.15.36",
     "@assistant-ui/react-google-adk": "0.0.41",
-    "@biomejs/biome": "2.6.5",
+    "@biomejs/biome": "2.6.7",
     "@google/adk": "2.4.0",
     "@types/node": "26.6.6",
     "@types/react": "19.3.0",
