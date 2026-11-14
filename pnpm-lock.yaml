@@ -13,13 +13,13 @@ importers:
         version: 0.15.36(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.223.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.12.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.171(zod@4.6.7))(react-dom@19.2.7(react@19.3.1))(react@19.3.1)(use-sync-external-store@1.6.0(react@19.3.1))
       '@assistant-ui/react-google-adk':
         specifier: 0.0.42
-        version: 0.0.42(@assistant-ui/tap@0.9.25(@types/react@19.3.0)(react@19.3.1))(@google/adk@2.4.0(@google-cloud/opentelemetry-cloud-trace-exporter@3.0.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/resources@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.12.0(@opentelemetry/api@1.9.1))(encoding@0.1.13))(@google-cloud/storage@7.21.0(encoding@0.1.13))(@grpc/grpc-js@1.14.4)(@modelcontextprotocol/sdk@1.30.0(zod@4.6.7))(dataloader@2.2.3)(encoding@0.1.13)(express@5.2.1))(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.223.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.12.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.171(zod@4.6.7))(react@19.3.1)
+        version: 0.0.42(@assistant-ui/tap@0.9.25(@types/react@19.3.0)(react@19.3.1))(@google/adk@2.5.0(@google-cloud/aiplatform@6.11.0)(@google-cloud/storage@7.21.0(encoding@0.1.13))(@grpc/grpc-js@1.14.4)(@modelcontextprotocol/sdk@1.30.0(zod@4.6.7))(dataloader@2.2.3)(encoding@0.1.13)(express@5.2.1))(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.223.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.12.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.171(zod@4.6.7))(react@19.3.1)
       '@biomejs/biome':
         specifier: 2.6.7
         version: 2.6.7
       '@google/adk':
-        specifier: 2.4.0
-        version: 2.4.0(@google-cloud/opentelemetry-cloud-trace-exporter@3.0.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/resources@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.12.0(@opentelemetry/api@1.9.1))(encoding@0.1.13))(@google-cloud/storage@7.21.0(encoding@0.1.13))(@grpc/grpc-js@1.14.4)(@modelcontextprotocol/sdk@1.30.0(zod@4.6.7))(dataloader@2.2.3)(encoding@0.1.13)(express@5.2.1)
+        specifier: 2.5.0
+        version: 2.5.0(@google-cloud/aiplatform@6.11.0)(@google-cloud/storage@7.21.0(encoding@0.1.13))(@grpc/grpc-js@1.14.4)(@modelcontextprotocol/sdk@1.30.0(zod@4.6.7))(dataloader@2.2.3)(encoding@0.1.13)(express@5.2.1)
       '@types/node':
         specifier: 26.6.6
         version: 26.6.6
@@ -407,24 +407,6 @@ packages:
     resolution: {integrity: sha512-B+uWA8M3rTNc9iEGY97jA5ucjXb8T7/aN5QTyxZr02xUBEM8Et2i57pNNEQxCgNTE9/hxdJRGBkb7/qaLpgX3w==}
     engines: {node: '>=18'}
 
-  '@google-cloud/opentelemetry-cloud-trace-exporter@3.0.0':
-    resolution: {integrity: sha512-mUfLJBFo+ESbO0dAGboErx2VyZ7rbrHcQvTP99yH/J72dGaPbH2IzS+04TFbTbEd1VW5R9uK3xq2CqawQaG+1Q==}
-    engines: {node: '>=18'}
-    deprecated: Google Cloud Platform now supports native OpenTelemetry Protocol (OTLP) endpoints via the Telemetry API. Please follow https://github.com/GoogleCloudPlatform/opentelemetry-operations-js/blob/main/MIGRATION.md
-    peerDependencies:
-      '@opentelemetry/api': ^1.0.0
-      '@opentelemetry/core': ^2.0.0
-      '@opentelemetry/resources': ^2.0.0
-      '@opentelemetry/sdk-trace-base': ^2.0.0
-
-  '@google-cloud/opentelemetry-resource-util@3.0.0':
-    resolution: {integrity: sha512-CGR/lNzIfTKlZoZFfS6CkVzx+nsC9gzy6S8VcyaLegfEJbiPjxbMLP7csyhJTvZe/iRRcQJxSk0q8gfrGqD3/Q==}
-    engines: {node: '>=18'}
-    deprecated: Google Cloud Platform now supports native OpenTelemetry Protocol (OTLP) endpoints via the Telemetry API. Please follow https://github.com/GoogleCloudPlatform/opentelemetry-operations-js/blob/main/MIGRATION.md
-    peerDependencies:
-      '@opentelemetry/core': ^2.0.0
-      '@opentelemetry/resources': ^2.0.0
-
   '@google-cloud/paginator@5.0.2':
     resolution: {integrity: sha512-DJS3s0OVH4zFDB1PzjxAsHqJT6sKVbRwwML0ZBP9PbU7Yebtu/7SWMRzvO2J3nUi9pRNITCfu4LJeooM2w4pjg==}
     engines: {node: '>=14.0.0'}
@@ -445,11 +427,10 @@ packages:
     resolution: {integrity: sha512-XMJIk7GIeavFLP5A3YEUlowKa5Y5PZRrnnuTJcqR0k+lFKkv7+IWpdRp+Xbqb8xNDrvQaE2hP2RYPUylyD5EdA==}
     engines: {node: '>=18.0.0'}
 
-  '@google/adk@2.4.0':
-    resolution: {integrity: sha512-ywM6La97O4BAkIDXEWesMmMA/iIalh/a3JWq6wtDaW13tHaQv7pVL5egi2soUUaNgiTYbpP7TFgD2BGxqnq9eg==}
+  '@google/adk@2.5.0':
+    resolution: {integrity: sha512-BvU1bYnFy1vo18kXhN/IMetkWcBz450EZvz8GhtqkkFHU07gKLo+Yql2fGFG2Z8+az0bupzddeNywvt0aR3O2w==}
     peerDependencies:
-      '@google-cloud/opentelemetry-cloud-monitoring-exporter': ^0.22.0
-      '@google-cloud/opentelemetry-cloud-trace-exporter': ^3.0.0
+      '@google-cloud/aiplatform': ^6.10.0
       '@google-cloud/secret-manager': ^7.2.0
       '@google-cloud/storage': ^7.17.1
       '@mikro-orm/mariadb': ^7.2.5
@@ -460,9 +441,7 @@ packages:
       '@modelcontextprotocol/sdk': ^1.26.0
       express: ^4.22.1 || ^5.1.0
     peerDependenciesMeta:
-      '@google-cloud/opentelemetry-cloud-monitoring-exporter':
-        optional: true
-      '@google-cloud/opentelemetry-cloud-trace-exporter':
+      '@google-cloud/aiplatform':
         optional: true
       '@google-cloud/secret-manager':
         optional: true
@@ -3406,7 +3385,7 @@ snapshots:
       - ioredis
       - redis
 
-  '@assistant-ui/react-google-adk@0.0.42(@assistant-ui/tap@0.9.25(@types/react@19.3.0)(react@19.3.1))(@google/adk@2.4.0(@google-cloud/opentelemetry-cloud-trace-exporter@3.0.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/resources@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.12.0(@opentelemetry/api@1.9.1))(encoding@0.1.13))(@google-cloud/storage@7.21.0(encoding@0.1.13))(@grpc/grpc-js@1.14.4)(@modelcontextprotocol/sdk@1.30.0(zod@4.6.7))(dataloader@2.2.3)(encoding@0.1.13)(express@5.2.1))(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.223.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.12.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.171(zod@4.6.7))(react@19.3.1)':
+  '@assistant-ui/react-google-adk@0.0.42(@assistant-ui/tap@0.9.25(@types/react@19.3.0)(react@19.3.1))(@google/adk@2.5.0(@google-cloud/aiplatform@6.11.0)(@google-cloud/storage@7.21.0(encoding@0.1.13))(@grpc/grpc-js@1.14.4)(@modelcontextprotocol/sdk@1.30.0(zod@4.6.7))(dataloader@2.2.3)(encoding@0.1.13)(express@5.2.1))(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.223.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.12.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.171(zod@4.6.7))(react@19.3.1)':
     dependencies:
       '@assistant-ui/core': 0.3.35(@assistant-ui/store@0.3.23(@assistant-ui/tap@0.9.25(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(react@19.3.1))(@assistant-ui/tap@0.9.25(@types/react@19.3.0)(react@19.3.1))(@opentelemetry/api@1.9.1)(@opentelemetry/exporter-trace-otlp-http@0.223.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.12.0(@opentelemetry/api@1.9.1))(@types/react@19.3.0)(ai@7.0.171(zod@4.6.7))(react@19.3.1)
       '@assistant-ui/store': 0.3.23(@assistant-ui/tap@0.9.25(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(react@19.3.1)
@@ -3414,7 +3393,7 @@ snapshots:
       assistant-stream: 0.3.57(ai@7.0.171(zod@4.6.7))
       react: 19.3.1
     optionalDependencies:
-      '@google/adk': 2.4.0(@google-cloud/opentelemetry-cloud-trace-exporter@3.0.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/resources@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.12.0(@opentelemetry/api@1.9.1))(encoding@0.1.13))(@google-cloud/storage@7.21.0(encoding@0.1.13))(@grpc/grpc-js@1.14.4)(@modelcontextprotocol/sdk@1.30.0(zod@4.6.7))(dataloader@2.2.3)(encoding@0.1.13)(express@5.2.1)
+      '@google/adk': 2.5.0(@google-cloud/aiplatform@6.11.0)(@google-cloud/storage@7.21.0(encoding@0.1.13))(@grpc/grpc-js@1.14.4)(@modelcontextprotocol/sdk@1.30.0(zod@4.6.7))(dataloader@2.2.3)(encoding@0.1.13)(express@5.2.1)
       '@types/react': 19.3.0
     transitivePeerDependencies:
       - '@assistant-ui/tap'
@@ -3637,31 +3616,6 @@ snapshots:
       google-gax: 5.0.8
     transitivePeerDependencies:
       - supports-color
-
-  '@google-cloud/opentelemetry-cloud-trace-exporter@3.0.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/resources@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.12.0(@opentelemetry/api@1.9.1))(encoding@0.1.13)':
-    dependencies:
-      '@google-cloud/opentelemetry-resource-util': 3.0.0(@opentelemetry/core@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/resources@2.12.0(@opentelemetry/api@1.9.1))(encoding@0.1.13)
-      '@grpc/grpc-js': 1.14.4
-      '@grpc/proto-loader': 0.8.1
-      '@opentelemetry/api': 1.9.1
-      '@opentelemetry/core': 2.12.0(@opentelemetry/api@1.9.1)
-      '@opentelemetry/resources': 2.12.0(@opentelemetry/api@1.9.1)
-      '@opentelemetry/sdk-trace-base': 2.12.0(@opentelemetry/api@1.9.1)
-      google-auth-library: 9.15.1(encoding@0.1.13)
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-    optional: true
-
-  '@google-cloud/opentelemetry-resource-util@3.0.0(@opentelemetry/core@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/resources@2.12.0(@opentelemetry/api@1.9.1))(encoding@0.1.13)':
-    dependencies:
-      '@opentelemetry/core': 2.12.0(@opentelemetry/api@1.9.1)
-      '@opentelemetry/resources': 2.12.0(@opentelemetry/api@1.9.1)
-      '@opentelemetry/semantic-conventions': 1.43.0
-      gcp-metadata: 6.1.1(encoding@0.1.13)
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
     optional: true
 
   '@google-cloud/paginator@5.0.2':
@@ -3708,10 +3662,9 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@google/adk@2.4.0(@google-cloud/opentelemetry-cloud-trace-exporter@3.0.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/resources@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.12.0(@opentelemetry/api@1.9.1))(encoding@0.1.13))(@google-cloud/storage@7.21.0(encoding@0.1.13))(@grpc/grpc-js@1.14.4)(@modelcontextprotocol/sdk@1.30.0(zod@4.6.7))(dataloader@2.2.3)(encoding@0.1.13)(express@5.2.1)':
+  '@google/adk@2.5.0(@google-cloud/aiplatform@6.11.0)(@google-cloud/storage@7.21.0(encoding@0.1.13))(@grpc/grpc-js@1.14.4)(@modelcontextprotocol/sdk@1.30.0(zod@4.6.7))(dataloader@2.2.3)(encoding@0.1.13)(express@5.2.1)':
     dependencies:
       '@a2a-js/sdk': 0.3.14(@grpc/grpc-js@1.14.4)(express@5.2.1)
-      '@google-cloud/aiplatform': 6.11.0
       '@google-cloud/vertexai': 1.12.0(@modelcontextprotocol/sdk@1.30.0(zod@4.6.7))(encoding@0.1.13)
       '@google/genai': 2.30.0(@modelcontextprotocol/sdk@1.30.0(zod@4.6.7))
       '@mikro-orm/core': 7.2.5(dataloader@2.2.3)
@@ -3736,7 +3689,7 @@ snapshots:
       zod: 4.6.7
       zod-to-json-schema: 3.25.2(zod@4.6.7)
     optionalDependencies:
-      '@google-cloud/opentelemetry-cloud-trace-exporter': 3.0.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/resources@2.12.0(@opentelemetry/api@1.9.1))(@opentelemetry/sdk-trace-base@2.12.0(@opentelemetry/api@1.9.1))(encoding@0.1.13)
+      '@google-cloud/aiplatform': 6.11.0
       '@google-cloud/storage': 7.21.0(encoding@0.1.13)
       '@modelcontextprotocol/sdk': 1.30.0(zod@4.6.7)
       dockerode: 5.0.1
@@ -3780,6 +3733,7 @@ snapshots:
     dependencies:
       '@grpc/proto-loader': 0.8.1
       '@js-sdsl/ordered-map': 4.4.2
+    optional: true
 
   '@grpc/proto-loader@0.7.15':
     dependencies:
@@ -3795,6 +3749,7 @@ snapshots:
       long: 5.3.2
       protobufjs: 7.6.6
       yargs: 17.7.3
+    optional: true
 
   '@hono/node-server@2.1.0(hono@4.13.0)':
     dependencies:
@@ -3809,6 +3764,7 @@ snapshots:
       strip-ansi-cjs: strip-ansi@6.0.1
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
+    optional: true
 
   '@jridgewell/resolve-uri@3.1.2': {}
 
@@ -3819,7 +3775,8 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@js-sdsl/ordered-map@4.4.2': {}
+  '@js-sdsl/ordered-map@4.4.2':
+    optional: true
 
   '@jsep-plugin/assignment@1.3.0(jsep@1.4.0)':
     dependencies:
@@ -5065,15 +5022,19 @@ snapshots:
       require-from-string: 2.0.2
     optional: true
 
-  ansi-regex@5.0.1: {}
+  ansi-regex@5.0.1:
+    optional: true
 
-  ansi-regex@6.5.0: {}
+  ansi-regex@6.5.0:
+    optional: true
 
   ansi-styles@4.3.0:
     dependencies:
       color-convert: 2.0.1
+    optional: true
 
-  ansi-styles@6.2.3: {}
+  ansi-styles@6.2.3:
+    optional: true
 
   anynum@1.0.1:
     optional: true
@@ -5125,7 +5086,8 @@ snapshots:
   asynckit@0.4.0:
     optional: true
 
-  balanced-match@1.0.2: {}
+  balanced-match@1.0.2:
+    optional: true
 
   base64-js@1.5.1: {}
 
@@ -5161,6 +5123,7 @@ snapshots:
   brace-expansion@2.1.7:
     dependencies:
       balanced-match: 1.0.2
+    optional: true
 
   buffer-equal-constant-time@1.0.1: {}
 
@@ -5200,16 +5163,19 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
+    optional: true
 
   color-convert@2.0.1:
     dependencies:
       color-name: 1.1.4
+    optional: true
 
   color-convert@3.1.3:
     dependencies:
       color-name: 2.1.1
 
-  color-name@1.1.4: {}
+  color-name@1.1.4:
+    optional: true
 
   color-name@2.1.1: {}
 
@@ -5259,6 +5225,7 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
+    optional: true
 
   csstype@3.2.3: {}
 
@@ -5318,8 +5285,10 @@ snapshots:
       inherits: 2.0.4
       readable-stream: 3.6.2
       stream-shift: 1.0.3
+    optional: true
 
-  eastasianwidth@0.2.0: {}
+  eastasianwidth@0.2.0:
+    optional: true
 
   ecdsa-sig-formatter@1.0.11:
     dependencies:
@@ -5328,9 +5297,11 @@ snapshots:
   ee-first@1.1.1:
     optional: true
 
-  emoji-regex@8.0.0: {}
+  emoji-regex@8.0.0:
+    optional: true
 
-  emoji-regex@9.2.2: {}
+  emoji-regex@9.2.2:
+    optional: true
 
   empathic@2.1.0: {}
 
@@ -5347,6 +5318,7 @@ snapshots:
   end-of-stream@1.4.5:
     dependencies:
       once: 1.4.0
+    optional: true
 
   es-define-property@1.0.1:
     optional: true
@@ -5398,7 +5370,8 @@ snapshots:
       '@esbuild/win32-ia32': 0.27.7
       '@esbuild/win32-x64': 0.27.7
 
-  escalade@3.2.0: {}
+  escalade@3.2.0:
+    optional: true
 
   escape-html@1.0.3:
     optional: true
@@ -5518,6 +5491,7 @@ snapshots:
     dependencies:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
+    optional: true
 
   form-data@2.5.6:
     dependencies:
@@ -5584,7 +5558,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  get-caller-file@2.0.5: {}
+  get-caller-file@2.0.5:
+    optional: true
 
   get-intrinsic@1.3.0:
     dependencies:
@@ -5620,6 +5595,7 @@ snapshots:
       minipass: 7.1.3
       package-json-from-dist: 1.0.1
       path-scurry: 1.11.1
+    optional: true
 
   google-auth-library@10.5.0:
     dependencies:
@@ -5632,6 +5608,7 @@ snapshots:
       jws: 4.0.1
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   google-auth-library@10.9.1:
     dependencies:
@@ -5671,6 +5648,7 @@ snapshots:
       rimraf: 5.0.10
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   google-logging-utils@0.0.2: {}
 
@@ -5695,6 +5673,7 @@ snapshots:
       jws: 4.0.1
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   has-symbols@1.1.0:
     optional: true
@@ -5741,6 +5720,7 @@ snapshots:
       debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   https-proxy-agent@5.0.1:
     dependencies:
@@ -5780,7 +5760,8 @@ snapshots:
   ipaddr.js@1.9.1:
     optional: true
 
-  is-fullwidth-code-point@3.0.0: {}
+  is-fullwidth-code-point@3.0.0:
+    optional: true
 
   is-promise@4.0.0:
     optional: true
@@ -5790,13 +5771,15 @@ snapshots:
   is-unsafe@2.0.0:
     optional: true
 
-  isexe@2.0.0: {}
+  isexe@2.0.0:
+    optional: true
 
   jackspeak@3.4.3:
     dependencies:
       '@isaacs/cliui': 8.0.2
     optionalDependencies:
       '@pkgjs/parseargs': 0.11.0
+    optional: true
 
   jose@6.2.8:
     optional: true
@@ -5840,7 +5823,8 @@ snapshots:
 
   lodash-es@4.18.1: {}
 
-  lodash.camelcase@4.3.0: {}
+  lodash.camelcase@4.3.0:
+    optional: true
 
   logform@2.7.0:
     dependencies:
@@ -5853,7 +5837,8 @@ snapshots:
 
   long@5.3.2: {}
 
-  lru-cache@10.4.3: {}
+  lru-cache@10.4.3:
+    optional: true
 
   magic-string@1.4.3:
     dependencies:
@@ -5890,8 +5875,10 @@ snapshots:
   minimatch@9.0.9:
     dependencies:
       brace-expansion: 2.1.7
+    optional: true
 
-  minipass@7.1.3: {}
+  minipass@7.1.3:
+    optional: true
 
   mkdirp-classic@0.5.3:
     optional: true
@@ -5925,7 +5912,8 @@ snapshots:
   object-assign@4.1.1:
     optional: true
 
-  object-hash@3.0.0: {}
+  object-hash@3.0.0:
+    optional: true
 
   object-inspect@1.13.4:
     optional: true
@@ -5940,6 +5928,7 @@ snapshots:
   once@1.4.0:
     dependencies:
       wrappy: 1.0.2
+    optional: true
 
   one-time@1.0.0:
     dependencies:
@@ -5955,7 +5944,8 @@ snapshots:
       '@types/retry': 0.12.0
       retry: 0.13.1
 
-  package-json-from-dist@1.0.1: {}
+  package-json-from-dist@1.0.1:
+    optional: true
 
   parseurl@1.3.3:
     optional: true
@@ -5963,12 +5953,14 @@ snapshots:
   path-expression-matcher@1.6.2:
     optional: true
 
-  path-key@3.1.1: {}
+  path-key@3.1.1:
+    optional: true
 
   path-scurry@1.11.1:
     dependencies:
       lru-cache: 10.4.3
       minipass: 7.1.3
+    optional: true
 
   path-to-regexp@8.4.2:
     optional: true
@@ -5989,6 +5981,7 @@ snapshots:
   proto3-json-serializer@3.0.4:
     dependencies:
       protobufjs: 7.6.6
+    optional: true
 
   protobufjs@7.6.6:
     dependencies:
@@ -6146,7 +6139,8 @@ snapshots:
       string_decoder: 1.3.0
       util-deprecate: 1.0.2
 
-  require-directory@2.1.1: {}
+  require-directory@2.1.1:
+    optional: true
 
   require-from-string@2.0.2:
     optional: true
@@ -6169,12 +6163,14 @@ snapshots:
       teeny-request: 10.1.4
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   retry@0.13.1: {}
 
   rimraf@5.0.10:
     dependencies:
       glob: 10.5.0
+    optional: true
 
   rolldown-plugin-dts@0.30.2(rolldown@1.3.2)(typescript@7.0.2):
     dependencies:
@@ -6300,8 +6296,10 @@ snapshots:
   shebang-command@2.0.0:
     dependencies:
       shebang-regex: 3.0.0
+    optional: true
 
-  shebang-regex@3.0.0: {}
+  shebang-regex@3.0.0:
+    optional: true
 
   side-channel-list@1.0.1:
     dependencies:
@@ -6335,7 +6333,8 @@ snapshots:
       side-channel-weakmap: 1.0.2
     optional: true
 
-  signal-exit@4.1.0: {}
+  signal-exit@4.1.0:
+    optional: true
 
   source-map-js@1.2.1: {}
 
@@ -6361,20 +6360,24 @@ snapshots:
   stream-events@1.0.5:
     dependencies:
       stubs: 3.0.0
+    optional: true
 
-  stream-shift@1.0.3: {}
+  stream-shift@1.0.3:
+    optional: true
 
   string-width@4.2.3:
     dependencies:
       emoji-regex: 8.0.0
       is-fullwidth-code-point: 3.0.0
       strip-ansi: 6.0.1
+    optional: true
 
   string-width@5.1.2:
     dependencies:
       eastasianwidth: 0.2.0
       emoji-regex: 9.2.2
       strip-ansi: 7.2.0
+    optional: true
 
   string_decoder@1.3.0:
     dependencies:
@@ -6383,17 +6386,20 @@ snapshots:
   strip-ansi@6.0.1:
     dependencies:
       ansi-regex: 5.0.1
+    optional: true
 
   strip-ansi@7.2.0:
     dependencies:
       ansi-regex: 6.5.0
+    optional: true
 
   strnum@2.4.1:
     dependencies:
       anynum: 1.0.1
     optional: true
 
-  stubs@3.0.0: {}
+  stubs@3.0.0:
+    optional: true
 
   tar-fs@2.1.5:
     dependencies:
@@ -6420,6 +6426,7 @@ snapshots:
       stream-events: 1.0.5
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   teeny-request@9.0.0(encoding@0.1.13):
     dependencies:
@@ -6622,6 +6629,7 @@ snapshots:
   which@2.0.2:
     dependencies:
       isexe: 2.0.0
+    optional: true
 
   why-is-node-running@3.2.1: {}
 
@@ -6650,23 +6658,28 @@ snapshots:
       ansi-styles: 4.3.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
+    optional: true
 
   wrap-ansi@8.1.0:
     dependencies:
       ansi-styles: 6.2.3
       string-width: 5.1.2
       strip-ansi: 7.2.0
+    optional: true
 
-  wrappy@1.0.2: {}
+  wrappy@1.0.2:
+    optional: true
 
   ws@8.21.3: {}
 
   xml-naming@0.3.0:
     optional: true
 
-  y18n@5.0.8: {}
+  y18n@5.0.8:
+    optional: true
 
-  yargs-parser@21.1.1: {}
+  yargs-parser@21.1.1:
+    optional: true
 
   yargs@17.7.3:
     dependencies:
@@ -6677,6 +6690,7 @@ snapshots:
       string-width: 4.2.3
       y18n: 5.0.8
       yargs-parser: 21.1.1
+    optional: true
 
   yocto-queue@0.1.0:
     optional: true
